@@ -1,13 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
 *{
     margin: 0px;
     padding: 0px;
 }
 
+body{
+    background-color: var(--negro2);
+}
 
 :root{
     --violeta: #711EB0;
     --violeta-1: #45126B;
+    --negro2:  #363636;
+    --negro3: #131313;
+    --gris2: #5C5C5C;
+
+    --acento: #00CCFF;
+    --acento2: #00A0FF;
+    --blanco: #F4F4F4;
+
+    --rubik: 'Rubik';
     
+}
+
+h1 {
+    color: var(--blanco);
+    font-style: bold;
+    font-family: var(--rubik);
+    font-weight: 700;
+    font-size: 32p;
+    
+}
+
+h2 {
+    color: #FFF;
+    font-weight: 700;
+}
+
+h3 {
+    color: #FFF;
+    font-weight: 600;
+}
+
+h4 {
+    color: #FFF;
+    font-weight: 600;
+}
+
+h5 {
+    color: #FFF;
+    font-weight: 600;
+}
+
+p {
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 400;
 }
 
 header{
@@ -15,7 +65,6 @@ header{
     width: 100%;
     height: 80px;
     background-color: var(--violeta-1);
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -33,6 +82,13 @@ header{
 .logo{
     width: 135px;
     height: fit-content;
+    position: relative;
+    left: 10px;
+}
+
+.logo img{
+    width: 130px;
+    height: 70px;
 }
 
 .barraBusqueda{
@@ -41,6 +97,7 @@ header{
     position: relative;
     width: 490px;
     height: 50px;
+    left: 175px;
 }
 
 .barra{
@@ -60,9 +117,13 @@ header{
 .carrito{
     width: fit-content;
     height: fit-content;
+    position: absolute;
+    right: 110px;
 }
 
 .logoUser{
+    position: absolute;
     width: fit-content;
     height: fit-content;
+    right: 10px;
 }
