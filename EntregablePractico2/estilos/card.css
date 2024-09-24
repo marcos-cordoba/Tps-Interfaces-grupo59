@@ -22,26 +22,44 @@
 
 .imagen-juego{
     background-color: blue;
-    height: 210px;
+    height: 78%;
     width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
+.imagen-juego img{
+    width: fit-content;
+    height: fit-content;
+}
+
 .subImagen{
     display: flex;
     justify-content: space-between;
+    height: 22%;
+    background-color: #711EB0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     
 }
 
 .nombre-precio{
     width: 70%;
     height: 100%;
-    background-color: brown;
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    justify-content: space-around;
+    border-bottom-left-radius: 20px;
 }
 .boton{
     width: 30%;
     height: 100%;
-    background-color: burlywood;
+    /* background-color: burlywood; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-right-radius: 20px;
 }
 
