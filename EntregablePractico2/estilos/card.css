@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card{
+    width: 365px;
+    height: 270px;
+    background-color: beige;
+    border-radius: 20px;
+}
+
+.imagen-juego{
+    background-color: blue;
+    height: 210px;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.subImagen{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.nombre-precio{
+    width: 70%;
+    height: 100%;
+    background-color: brown;
+}
+.boton{
+    width: 30%;
+    height: 100%;
+    background-color: burlywood;
+}
+
