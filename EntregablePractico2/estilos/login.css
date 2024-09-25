@@ -1,0 +1,125 @@
+
+/* Contenedor principal del login */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background-color: #1f1f1f;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-box h2 {
+    color: #00d1ff;
+    margin-bottom: 20px;
+}
+
+/* Grupos de entrada */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    padding-left: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff; /* Fondo blanco */
+    color: #333; /* Color de texto más oscuro para mayor contraste */
+    font-size: 16px;
+    outline: none;
+}
+
+.input-group .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+/* Estilo del botón primario */
+.btn-primary {
+    width: 250px; /* Ancho del botón */
+    height: 40px; /* Alto del botón */
+    padding: 10px 15px; /* Ajusta el espacio interno del botón */
+    background-color: #00d1ff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Estilo de los botones de redes sociales */
+.btn-facebook, .btn-google {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.btn-facebook {
+    background-color: #3b5998;
+    color: white;
+}
+
+.btn-google {
+    background-color: #FFF;
+    color: var(--negro3);
+}
+
+.separator {
+    margin: 20px 0;
+    text-align: center;
+    color: #999;
+    position: relative;
+}
+
+.separator span {
+    background-color: #1f1f1f;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.separator:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #999;
+    z-index: 0;
+}
+
+/* Estilo para enlaces */
+.forgot-password {
+    display: block;
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.register {
+    color: white;
+}
+
+.register a {
+    color: #00d1ff;
+    font-weight: bold;
+}

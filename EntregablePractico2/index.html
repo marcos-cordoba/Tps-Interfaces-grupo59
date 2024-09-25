@@ -4,32 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/estilo.css">
-    <title>Gamix</title>
+    <link rel="stylesheet" href="estilos/login.css">
+    <link rel="icon" href="images/gamixIcon.svg">
+    <title>Registro</title>
 </head>
+
 <body>
-
-    <header>
-        <div class="menuHamburguesa">
-            <img src="images/menu.svg" alt="menu">
-        </div>
-        <div class="logo">
-            <img src="images/gamixIcon.svg" alt="gamix icono">
-        </div>
-        <div class="barraBusqueda">
-            <input class="barra" type="text">
-            <img class="lupa" src="images/lupa.svg" alt="lupa de buscador">
-        </div>
-        <div class="carrito">
-            <img src="images/carrito.svg" alt="carrito de compras">
-        </div>
-        <div class="logoUser">
-            <img src="images/logoUser.svg" alt="logo de usuario">
-        </div>
-    </header>
     <div>
-
-        <h1>hola mundo</h1>
-    </div>
+        <header>
+            <div class="menuHamburguesa">
+                <img src="images/menu.svg" alt="menu">
+            </div>
+            <div class="logo">
+                <img src="images/gamixIcon.svg" alt="gamix icono">
+            </div>
+            <div class="barraBusqueda">
+                <input class="barra" type="text">
+                <img class="lupa" src="images/lupa.svg" alt="lupa de buscador">
+            </div>
+            <div class="carrito">
+                <img src="images/carrito.svg" alt="carrito de compras">
+            </div>
+            <div class="logoUser">
+                <img src="images/logoUser.svg" alt="logo de usuario">
+            </div>
+        </header>
     
+        <div class="login-container">
+            <div class="login-box">
+                <h2>Iniciar sesión</h2>
+                <form>
+                    <div class="input-group">
+                        <input type="text" placeholder="Nombre de Usuario" required>
+                        <span class="icon"><i class="fas fa-user"></i></span>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" placeholder="Contraseña" required>
+                        <span class="icon"><i class="fas fa-lock"></i></span>
+                    </div>
+                    <button type="submit" class="btn-primary">Iniciar sesión</button>
+                    <div class="separator">
+                        <span>o</span>
+                    </div>
+                    <button type="button" class="btn-facebook">Iniciar sesión con Facebook</button>
+                    <button type="button" class="btn-google">Iniciar sesión con Google</button>
+                    <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                </form>
+            </div>
+            <div class="login-box">
+                <div class="register">
+                    <p>¿Todavía no tenés tu cuenta? <a href="#"><h3>Registrate</h3></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Información:</h3>
+                <ul>
+                    <li><a href="#">¿Quienes somos?</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="#">Carrera</a></li>
+                    <li><a href="#">Recursos Humanos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Sobre nosotros:</h3>
+                <ul>
+                    <li><a href="#">Productos Propios</a></li>
+                    <li><a href="#">Descarga la App</a></li>
+                    <li><a href="#">Torneos</a></li>
+                    <li><a href="#">Hacete Premium</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Términos y condiciones:</h3>
+                <ul>
+                    <li><a href="#">Política de cookies</a></li>
+                    <li><a href="#">Oficina de Legales</a></li>
+                    <li><a href="#">Documentación</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Oficinas:</h3>
+                <ul>
+                    <li><a href="#">Tandil</a></li>
+                    <li><a href="#">Miami</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Ayuda:</h3>
+                <ul>
+                    <li><a href="#">Reporta un Bug</a></li>
+                    <li><a href="#">Califícanos</a></li>
+                    <li><a href="#">Foros y Blogs</a></li>
+                    <li><a href="#">Noticias</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-container" style="justify-content: center; margin-top: 20px;">
+            <div class="social-icons">
+                <img src="images/facebook.svg" alt="Logo facebook"> <!-- Font Awesome icons -->
+                <img src="images/instagram.svg" alt="Logo instagram">
+                <img src="images/youtube.svg" alt="Logo youtube">
+                <img src="images/X.svg" alt="Logo X">
+                <img src="images/twitch.svg" alt="Logo twitch">
+            </div>
+        </div>
+        <div class="copyright">
+            Jugá a lo Grande @Gamix Gamix SA
+        </div>
+    </footer>
 </body>
 </html>
