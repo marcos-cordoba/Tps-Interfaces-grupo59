@@ -1,6 +1,24 @@
+@import url(estilo.css);
 *{
     margin: 0px;
     padding: 0px;
+}
+:root{
+    --violeta: #711EB0;
+    --violeta-1: #45126B;
+    --negro2:  #363636;
+    --negro3: #131313;
+    --gris2: #5C5C5C;
+    --verde: #00FF00;
+    --verde-1: #00A701;
+
+    --acento: #00CCFF;
+    --acento2: #00A0FF;
+    --acento3: #00FFFF;
+    --blanco: #F4F4F4;
+
+    --rubik: 'Rubik';
+    
 }
 
 .container{
@@ -18,25 +36,40 @@
     height: 270px;
     background-color: beige;
     border-radius: 20px;
+    margin: 5px;
 }
 
 .imagen-juego{
-    background-color: blue;
-    height: 78%;
+    /* background-color: blue; */
+    height: 210px;
     width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    cursor: pointer;
 }
-
 .imagen-juego img{
     width: fit-content;
     height: fit-content;
 }
 
+.imagen-juego:hover .imgJuego{
+    filter: contrast(0.5);
+}
+.titulo-card{
+    display: none;
+    padding-top: 5px;
+    padding-left: 5px;
+    position: absolute;
+    z-index: 1;
+}
+.imagen-juego:hover .titulo-card{
+    display: block;
+}
+
 .subImagen{
     display: flex;
     justify-content: space-between;
-    height: 22%;
+    height: 60px;
     background-color: #711EB0;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -53,7 +86,17 @@
     justify-content: space-around;
     border-bottom-left-radius: 20px;
 }
+.titulo-sub-img{
+    cursor: pointer;
+    
+}
+.gratis-text{
+    color: var(--acento2);
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
 .boton{
+    padding-right: 10px;
     width: 30%;
     height: 100%;
     /* background-color: burlywood; */
@@ -63,3 +106,28 @@
     border-bottom-right-radius: 20px;
 }
 
+.boton-jugar{
+    width: 122px;
+    height: 38px;
+    border-radius: 40px;
+    background-color: var(--acento);
+    border: 0px;
+}
+
+.boton-jugar:hover{
+    background-color: var(--acento3);
+    cursor: pointer;
+}
+
+.boton-comprar{
+    width: 122px;
+    height: 38px;
+    border-radius: 40px;
+    background-color: var(--verde);
+    border: 0px;
+}
+
+.boton-comprar:hover{
+    background-color: var(--verde-1);
+    cursor: pointer;
+}
