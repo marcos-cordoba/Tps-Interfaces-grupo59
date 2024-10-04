@@ -21,6 +21,8 @@ body{
     --acento2: #00A0FF;
     --acento3: #00FFFF;
     --blanco: #F4F4F4;
+    --verde: #00FF00;
+    --verde-1: #00A701;
 
     --rubik: 'Rubik';
     
@@ -50,20 +52,23 @@ h2 {
     color: var(--blanco);
     font-weight: 500;
     font-family: var(--rubik);
-    font-size: 24px;
+    font-size: 20px;
 }
 
 h3 {
     color:var(--blanco);
     font-weight: 600;
     font-family: var(--rubik);
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
 }
 
 h4 {
     color: #FFF;
     font-weight: 600;
+    font-family: var(--rubik);
+    font-size: 12px;
+    font-weight: 200;
 }
 
 h5 {
@@ -75,6 +80,7 @@ p {
     color: #FFF;
     font-size: 12px;
     font-weight: 400;
+    font-family: var(--rubik);
 }
 
 header{
