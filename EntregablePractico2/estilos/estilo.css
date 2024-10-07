@@ -4,10 +4,12 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body{
     background-color: var(--negro2);
+    font-family: var(--rubik);
 }
 
 :root{
@@ -18,16 +20,18 @@ body{
     --gris2: #5C5C5C;
 
     --acento: #00CCFF;
-    --acento2: #00A0FF;
+    --acento2: #00FFFF;
     --blanco: #F4F4F4;
+    --facebook:  #3b5998;
 
+    --verde: #32CD32;
     --rubik: 'Rubik';
     
 }
 
 .container{
     display: grid;
-    height: 100vh;
+    height: 25vh;
     grid-template-areas: 
     "header header header"
     "main main main"
@@ -81,7 +85,6 @@ header{
 }
 
 .menuHamburguesa{
-    
     width: fit-content;
     height: fit-content;
 }
@@ -119,6 +122,7 @@ header{
     box-sizing: border-box;
     border-radius: 20px;
 }
+
 .lupa{
     position: relative;
     right: 50px;
@@ -146,8 +150,101 @@ main{
     background-color: aqua;
 }
 
-footer{
-    height: 60px;
-    background-color: #711EB0;
-    grid-area: footer;
-}
+/* Estilos básicos para el footer */
+.fatFooter {
+    background-color: var(--negro3);
+    padding: 40px 0;
+    color: var(--blanco);
+  }
+  
+  .fatFooter .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footerColumn {
+    width: 18%;
+  }
+  
+  .footerColumn h3 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .footerColumn ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footerColumn ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footerColumn ul li a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 0.9em;
+  }
+  
+  .footerColumn ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .socialIcons a {
+    margin-right: 10px;
+    font-size: 1.5em;
+    color: var(--acento);
+  }
+  
+  .socialIcons a:hover {
+    color: var(--acento);
+  }
+  
+  /* Estilo para el address */
+  footer address {
+    font-style: var(--rubik);
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-top: 20px;
+  }
+  
+  /* Sección de botones */
+  .footerButtons {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footerButtons .btn {
+    background-color: var(--acento);
+    color: var(--blanco);
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  
+  .footerButtons .btn:hover {
+    background-color: var(--acento2); /* Color al hacer hover */
+    transform: scale(1.1); /* Agranda el botón suavemente */
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .fat-footer .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-column, .footer-buttons {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }

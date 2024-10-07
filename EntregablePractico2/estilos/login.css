@@ -1,0 +1,370 @@
+header{
+    opacity: 0.33;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#fondo{
+    width: 100%;
+}
+
+/* formulario en general */
+.form {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: 2s;
+}
+
+.formHidden {
+    pointer-events: none;
+    opacity: 0;
+    height: 0;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContainer input{
+    width: 90%;
+}
+
+/* formulario de Iniciar sesion */
+.loginBoxArriba {
+    background-color: var(--negro3);
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.loginBoxAbajo {
+    display: flex;               
+    flex-direction: column;    
+    justify-content: center;     
+    align-items: center;          
+    background-color: var(--negro3);
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+}
+
+
+.loginBoxArriba h2 {
+    color: var(--acento);
+    margin-bottom: 20px;
+}
+
+/* Grupos de entrada */
+.inputGroup {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.inputGroup input {
+    padding: 10px;
+    border-radius: 6px;
+    background-color:var(--blanco); /* Fondo blanco */
+    border: 1px solid var(--gris2);
+    box-sizing: border-box;
+    font-size: 14px; /* Reduce el tamaño de la fuente */
+}
+
+.inputGroup .fas{
+    position: absolute;
+    padding: 5px;
+    min-width: 5px;
+}
+
+/* Estilo del botón primario */
+.btnPrimary {
+    width: 200px; /* Ancho del botón */
+    height: 40px; /* Alto del botón */
+    padding: 10px 45px; /* Ajusta el espacio interno del botón */
+    background-color: var(--acento);
+    color: var(--blanco);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.btnPrimary:hover{
+    background-color: var(--acento2);
+}
+
+.btnRedes{
+    padding-top: 30px;
+}
+
+/* Estilo de los botones de redes sociales */
+.btnRedes a{
+    width: 50%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.btnFacebook:hover, .btnGoogle:hover{
+    opacity: 0.9;
+}
+
+.btnFacebook {
+    background-color: var(--facebook);
+    color: var(--blanco);
+}
+
+.btnFacebook img{
+    width: 20px;
+    height: 20px;
+}
+
+.btnGoogle {
+    background-color: var(--blanco);
+    color: var(--negro3);
+}
+
+.btnGoogle img{
+    width: 20px;
+    height: 20px;
+}
+
+.separator {
+    margin: 20px 0;
+    text-align: center;
+    color: var(--gris2);
+    position: relative;
+}
+
+.separator span {
+    background-color: var(--negro3);
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.separator:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--gris2);
+}
+
+/* Estilo para enlaces */
+.forgotPassword {
+    display: block;
+    color:var(--gris2);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.register p {
+    margin-right: 10px; /* Ajusta el espacio entre el texto y el enlace */
+}
+
+.register a {
+    text-decoration: none;
+    color: var(--blanco); /* Asegúrate de que el color coincida con el diseño general */
+}
+
+/*formulario del registro*/
+.formContainer {
+    background-color: var(--negro3);
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.formContainer h2 {
+    text-align: center;
+    color: var(--acento);
+    margin-bottom: 20px;
+}
+
+.formContainer input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--gris2);
+    border-radius: 4px;
+}
+
+.captcha {
+    display: flex;
+    width: 60%;
+    height: 50px; /* Un poco más pequeño que los input */
+    margin: 10px auto;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid var(--gris2);
+    border-radius: 4px;
+    background: var(--blanco);
+    padding: 0 10px;
+}
+
+.captcha input {
+    width: 20px;
+    height: 20px; /* Tamaño del checkbox */
+    margin-right: 8px;
+}
+
+.captcha p {
+    color: #333;
+    font-size: 14px;
+    margin: 0;
+    flex-grow: 1; /* El texto ocupa el espacio restante */
+}
+
+.captcha img {
+    width: 40px; /* Un poco más pequeño */
+    height: 40px;
+}
+
+.socialRegister {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* Animacion de que accedio bien */
+.successAnimation {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    opacity: 0;
+}
+.successAnimationAppear{
+    animation: appear 4s;
+}
+
+.successAnimation h2{
+    color: var(--verde);
+    margin: 5px 0;
+    font-family: var(--rubik);
+}
+
+.checkmark {
+    width: 5%;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: var(--verde);
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px var(--verde);
+    position: relative;
+    margin: 0 auto;
+}
+
+.checkmarkAnimation {
+    animation: fill .6s ease-in-out .6s forwards, scale .5s ease-in-out 1.3s both, disappear 1.9s ease 2.4s forwards;
+}
+
+.checkmarkCircle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: var(--verde);
+}
+
+.checkmarkCircleAnimation {
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmarkCheck {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+}
+
+.checkmarkCheckAnimation {
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 5px var(--verde);
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes appear {
+    0%,100% {
+        opacity: 0;
+    }
+
+    25%,75% {
+        opacity: 1;
+        z-index: 999;
+    }
+}
+  
+
