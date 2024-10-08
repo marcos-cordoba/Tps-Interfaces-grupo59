@@ -31,16 +31,7 @@ body{
     
 }
 
-.container{
-    display: grid;
-    height: 25vh;
-    grid-template-areas: 
-    "header header header"
-    "main main main"
-    "footer footer footer";
-    /* grid-template-columns: auto 1fr auto; */
-    grid-template-rows: auto 1fr auto;
-}
+
 
 h1 {
     color: var(--blanco);
@@ -159,10 +150,7 @@ header{
 }
 
 
-main{
-    grid-area: main;
-    background-color: aqua;
-}
+
 
 /* Estilos básicos para el footer */
 .fatFooter {
@@ -170,6 +158,7 @@ main{
     padding: 40px 0;
     color: var(--blanco);
     z-index: 1;
+    margin-top: 20px;
   }
   
   .fatFooter .container {

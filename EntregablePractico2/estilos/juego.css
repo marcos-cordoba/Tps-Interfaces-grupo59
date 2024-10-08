@@ -1,0 +1,102 @@
+
+.contenedor-pag-juego{
+    display: grid;
+    grid-template-areas: "header header"
+                          "titulo titulo"
+                          "juego recomendaciones"
+                          "comentarios recomendaciones"
+                          "footer footer";
+}
+
+.header-juego{
+    grid-area: header;
+}
+.footer-juego{
+    grid-area: footer;
+}
+
+
+
+.main-juego{
+    grid-area: juego;
+    /* background-color: brown; */
+    width: 950px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.recomendaciones{
+    grid-area: recomendaciones;
+}
+
+
+/* *juego */
+
+.titulo-juego{
+    grid-area: titulo;
+    margin-top: 15px;
+    width: 100%;
+    height: 70px;
+    /* background-color: aqua; */
+    display: flex;
+    
+    flex-direction: column;
+}
+.contenido-titulo{
+    display: flex;
+    align-items: center;
+}
+
+.titulo-juego div{
+    margin-left: 25px;
+}
+.img-titulo-juego{
+    width: 50px;
+    height: 50px;
+}
+.img-titulo-juego img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+span{
+    color: var(--acento);
+}
+
+.compartir{
+    width: 30px;
+    height: 30px;
+}
+.compartir img{
+    width: 100%;
+    height: 100%;
+}
+.divisor-juego{
+    background-color: var(--blanco);
+    margin: 8px;
+    width: 1200px;
+    height: 2px;
+}
+.juego{
+    margin-top: 7px;
+    margin-left: 20px;
+    width: 920px;
+    height: 425px;
+    /* background-color: white; */
+}
+.juego img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.descripcion{
+    margin-top: 20px;
+    margin-left:20px;
+    width: 920px;
+    height: 200px;
+    background-color: var(--negro3);
+    border: 1px var(--blanco) solid;
+    border-radius: 10px;
+}

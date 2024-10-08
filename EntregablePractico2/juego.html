@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilos/estilo.css">
+    <link rel="stylesheet" href="estilos/juego.css">
     <link rel="icon" href="images/gamixIcon.svg">
+    <link rel="stylesheet" href="estilos/card.css">
     <title>Registro</title>
 </head>
 <body>
-    <header>
+    <div class="contenedor-pag-juego">
+    <header class="header-juego">
         <div class="menuHamburguesa">
             <img src="images/menu.svg" alt="menu">
         </div>
@@ -27,10 +30,52 @@
             <img src="images/logoUser.svg" alt="logo de usuario">
         </div>
     </header>
+    <div class="titulo-juego">
+      <div class="contenido-titulo">
+          <div class="img-titulo-juego">
+            <img src="images/juegos/starwars.svg" alt="Star wars">
+          </div>
+          <div class="content-game-title">
+            <h2>Star Wars: 4 en Linea</h2>
+            <p>juegos retro / juegos de mesa / <span>4 en linea</span></p>
+          </div>
+          <div class="compartir">
+            <img src="images/compartir.svg" alt="">
+          </div>
+        </div>
+      <div class="divisor-juego"></div>
+      </div>
+    
+    <main class="main-juego">
+      
+      <div class="juego">
+        <img src="images/juegos/starwars.svg" alt="star wars">
+      </div>
+      <div class="descripcion"> 
+        
+      </div>
+    </main>
+    <aside class="recomendaciones">
+      <div class="card-pag-juego">
+        <div class="img-card-juego">
+            <img src="images/juegos/mario3D.svg" alt="mario3D">
+        </div>
+        <div class="contenido-card-juego">
+            <div class="titulo-genero-pag-juego">
+                <h3>Super Mario 3D</h3>
+                <p>Aventura</p>
+            </div>
+            <div class="precio-card-juego">
+                <h3 class="gratis-text">Gratis</h3>
+            </div>
+            <div class="btn-card-pag-juego">
+                <button class="btnCardJuego jugar"><h3>Jugar</h3></button>
+            </div>
+        </div>
+    </div>
+    </aside>
 
-    <h1>hola soy el juego</h1>
-
-    <footer class="fatFooter">
+    <footer class="fatFooter footer-juego">
         <div class="container">
           <!-- Sección redes -->
           <div class="footerColumn">
@@ -109,6 +154,7 @@
             <button class="btn">Contacto</button>
           </div>
         </div>
-      </footer> 
+      </footer>
+    </div> 
 </body>
 </html>
