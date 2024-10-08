@@ -155,6 +155,7 @@ main{
     background-color: var(--negro3);
     padding: 40px 0;
     color: var(--blanco);
+    z-index: 1;
   }
   
   .fatFooter .container {
@@ -199,9 +200,14 @@ main{
     font-size: 1.5em;
     color: var(--acento);
   }
+
+  .socialIcons i{
+    transition: all 0.9s cubic-bezier(0.33, 1, 0.68, 1);
+  }
   
-  .socialIcons a:hover {
+  .socialIcons i:hover {
     color: var(--acento);
+    transform: scale(2.1); /* Agranda el botón suavemente */
   }
   
   /* Estilo para el address */
@@ -227,12 +233,26 @@ main{
     font-size: 1em;
     cursor: pointer;
     border-radius: 5px;
-    transition: all 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+    transition: .3s;
   }
   
   .footerButtons .btn:hover {
-    background-color: var(--acento2); /* Color al hacer hover */
-    transform: scale(1.1); /* Agranda el botón suavemente */
+    animation: pulse 1s infinite;
+    transition: .3s;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+
+    70% {
+      transform: scale(.9);
+    }
+
+    100% {
+      transform: scale(1);
+    }
   }
   
   /* Responsive */

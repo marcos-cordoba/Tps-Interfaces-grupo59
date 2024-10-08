@@ -12,14 +12,14 @@
 
 <body>
     <div class="successAnimation">
-        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-            <circle class="checkmarkCircle" cx="26" cy="26" r="25" fill="none"/>
-            <path class="checkmarkCheck" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
-        </svg>
-        <h2>Felicidades! Ya estás registrado en Gamix</h2>
-        <h2>Ahora iniciá sesión</h2>
+      <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+          <circle class="checkmarkCircle" cx="26" cy="26" r="25" fill="none"/>
+          <path class="checkmarkCheck" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+      </svg>
+      <h2>Felicidades! Ya estás registrado en Gamix</h2>
+      <h2>Ahora iniciá sesión</h2>
     </div>
-
+    
     <header>
         <div class="menuHamburguesa">
             <img src="images/menu.svg" alt="menu">
@@ -54,20 +54,22 @@
                   <div class="separator">
                       <span>o</span>
                   </div>
-                  <div class="btnRedes">
-                    <a href="home.html" type="button" class="btnFacebook">
-                      <img src="images/facebook.svg" alt="facebook logo">
-                      Iniciar sesión con Facebook
-                    </a>  
-                  </div>
-                  <div class="btnRedes">
-                    <a href="home.html" type="button" class="btnGoogle">
-                      <img src="images/google.svg" alt="Google Logo"> 
-                      Iniciar sesión con Google
-                    </a>
+                  <div class="containerRedes">
+                    <div class="btnRedes">
+                      <a href="home.html" type="button" class="btnFacebook">
+                        <img src="images/facebook.svg" alt="facebook logo">
+                        Iniciar sesión con Facebook
+                      </a>  
+                    </div>
+                    <div class="btnRedes">
+                      <a href="home.html" type="button" class="btnGoogle">
+                        <img src="images/google.svg" alt="Google Logo"> 
+                        Iniciar sesión con Google
+                      </a>
+                    </div>
                   </div>
                   <div class="forgotPassword">
-                    <a>¿Olvidaste tu contraseña?</a>
+                    <a href="#">¿Olvidaste tu contraseña?</a>
                   </div>
               </form>
           </div>
@@ -102,17 +104,19 @@
                       <span>o</span>
                   </div>
                 </form>
-                <div class="btnRedes">
-                  <a type="button" class="btnFacebook botonRegistro">
-                    <img src="images/facebook.svg" alt="facebook logo">
-                    Registrarse con Facebook
-                  </a>  
-                </div>
-                <div class="btnRedes">
-                  <a type="button" class="btnGoogle botonRegistro">
-                    <img src="images/google.svg" alt="Google Logo"> 
-                    Registrarse con Google
-                  </a>
+                <div class="containerRedes">
+                  <div class="btnRedes">
+                    <a type="button" class="btnFacebook botonRegistro">
+                      <img src="images/facebook.svg" alt="facebook logo">
+                      Registrarse con Facebook
+                    </a>  
+                  </div>
+                  <div class="btnRedes">
+                    <a type="button" class="btnGoogle botonRegistro">
+                      <img src="images/google.svg" alt="Google Logo"> 
+                      Registrarse con Google
+                    </a>
+                  </div>
                 </div>
             </div>
         </div>
@@ -198,7 +202,7 @@
             <button class="btn">Contacto</button>
           </div>
         </div>
-      </footer>      
+      </footer>
     <script src="js/login.js"></script>
 </body>
 </html>
