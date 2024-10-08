@@ -20,9 +20,11 @@ body{
     --gris2: #5C5C5C;
 
     --acento: #00CCFF;
-    --acento2: #00FFFF;
+    --acento2: #00A0FF;
+    --acento3: #00FFFF;
     --blanco: #F4F4F4;
-    --facebook:  #3b5998;
+    --verde: #00FF00;
+    --verde-1: #00A701;
 
     --verde: #32CD32;
     --rubik: 'Rubik';
@@ -50,29 +52,41 @@ h1 {
 }
 
 h2 {
-    color: #FFF;
-    font-weight: 700;
+    color: var(--blanco);
+    font-weight: 500;
+    font-family: var(--rubik);
+    font-size: 20px;
 }
 
 h3 {
-    color: #FFF;
+    color:var(--blanco);
     font-weight: 600;
+    font-family: var(--rubik);
+    font-size: 14px;
+    font-weight: 500;
 }
 
 h4 {
-    color: #FFF;
+    color: var(--blanco);
     font-weight: 600;
+    font-family: var(--rubik);
+    font-size: 12px;
+    font-weight: 200;
 }
 
 h5 {
-    color: #FFF;
+    color: var(--blanco);
     font-weight: 600;
 }
 
 p {
-    color: #FFF;
+    color: var(--blanco);
     font-size: 12px;
     font-weight: 400;
+    font-family: var(--rubik);
+}
+.txt-negro{
+    color: var(--negro3);
 }
 
 header{
