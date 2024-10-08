@@ -59,12 +59,12 @@ h3 {
     color:var(--blanco);
     font-weight: 600;
     font-family: var(--rubik);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
 }
 
 h4 {
-    color: #FFF;
+    color: var(--blanco);
     font-weight: 600;
     font-family: var(--rubik);
     font-size: 12px;
@@ -72,15 +72,18 @@ h4 {
 }
 
 h5 {
-    color: #FFF;
+    color: var(--blanco);
     font-weight: 600;
 }
 
 p {
-    color: #FFF;
+    color: var(--blanco);
     font-size: 12px;
     font-weight: 400;
     font-family: var(--rubik);
+}
+.txt-negro{
+    color: var(--negro3);
 }
 
 header{
