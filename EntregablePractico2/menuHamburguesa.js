@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     // Selecciona el elemento del menú hamburguesa
     let menuHamburguesa = document.querySelector('.menuHamburguesa');
