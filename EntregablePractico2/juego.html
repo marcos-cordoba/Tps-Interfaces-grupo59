@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilos/estilo.css">
     <link rel="stylesheet" href="estilos/juego.css">
-    <link rel="icon" href="images/gamixIcon.svg">
     <link rel="stylesheet" href="estilos/card.css">
-    <title>Registro</title>
+    <link rel="stylesheet" href="estilos/comentario.css">
+    <link rel="icon" href="images/gamixIcon.svg">
+    <title>4 en linea</title>
 </head>
 <body>
     <div class="contenedor-pag-juego">
@@ -30,6 +31,8 @@
             <img src="images/logoUser.svg" alt="logo de usuario">
         </div>
     </header>
+    
+    <!--* titulo del juego -->
     <div class="titulo-juego">
       <div class="contenido-titulo">
           <div class="img-titulo-juego">
@@ -37,7 +40,7 @@
           </div>
           <div class="content-game-title">
             <h2>Star Wars: 4 en Linea</h2>
-            <p>juegos retro / juegos de mesa / <span>4 en linea</span></p>
+            <p>juegos de mesa / <span>4 en linea</span></p>
           </div>
           <div class="compartir">
             <img src="images/compartir.svg" alt="">
@@ -45,16 +48,42 @@
         </div>
       <div class="divisor-juego"></div>
       </div>
-    
+    <!--* juego -->
     <main class="main-juego">
       
       <div class="juego">
         <img src="images/juegos/starwars.svg" alt="star wars">
       </div>
-      <div class="descripcion"> 
-        
-      </div>
+      <aside class="descripcion"> 
+        <div class="contenido-descripcion">
+          <h3 class="titulo-descripcion">Informacion del Juego</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quasi magni reiciendis libero laborum nam provident dolor a blanditiis dolorem laudantium sed adipisci doloribus, commodi officia. Voluptatem voluptas eum nulla!</p>
+          <h3>Controles</h3>
+        </div>
+        <div class="imagenes-descripcion">
+          <img src="images/juegos/starwars.svg" alt="">
+          <img src="images/juegos/mario3D.svg" alt="">
+          <img src="images/juegos/starwars.svg" alt="">
+          <img src="images/juegos/mario3D.svg" alt="">
+        </div>
+
+      </aside>
     </main>
+
+    <!--* comentarios -->
+    <div class="comentarios">
+      <article class="bloque-comentar">
+        <section class="foto-nombre">
+            <img src="images/logoUser.svg" alt="logo usuario">
+            <h2 class="txt-negro">Tú</h2>
+        </section>
+        <div class="divisor"></div>
+        <section class="comentar">
+            <h3 class="txt-negro">¿Qué opinas de este juego?</h3>
+            <img class="lapicera-comentar" src="images/lapicera.svg" alt="comentar">
+        </section>
+    </article>
+    </div>
     <aside class="recomendaciones">
       <div class="card-pag-juego">
         <div class="img-card-juego">

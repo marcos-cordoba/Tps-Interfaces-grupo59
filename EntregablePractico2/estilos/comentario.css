@@ -13,7 +13,8 @@
     flex-direction: column;
 }
 .bloque-comentar{
-    width: 400px;
+    margin-left: 20px;
+    width: 700px;
     height: 85px;
     background-color: whitesmoke;
     display: flex;
@@ -74,7 +75,7 @@
 .botones-comentar{
     display: flex;
     flex-direction: row;
-    flex-direction: row-reverse;
+    
 }
 .botones-comentar button{
     background-color: transparent;

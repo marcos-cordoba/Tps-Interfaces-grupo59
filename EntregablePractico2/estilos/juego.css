@@ -3,7 +3,7 @@
     display: grid;
     grid-template-areas: "header header"
                           "titulo titulo"
-                          "juego recomendaciones"
+                          "juego juego"
                           "comentarios recomendaciones"
                           "footer footer";
 }
@@ -20,7 +20,7 @@
 .main-juego{
     grid-area: juego;
     /* background-color: brown; */
-    width: 950px;
+    width: 100%;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -77,13 +77,13 @@ span{
     background-color: var(--blanco);
     margin: 8px;
     width: 1200px;
-    height: 2px;
+    height: 1px;
 }
 .juego{
     margin-top: 7px;
-    margin-left: 20px;
-    width: 920px;
-    height: 425px;
+    /* margin-left: 20px; */
+    width: 1100px;
+    height: 530px;
     /* background-color: white; */
 }
 .juego img{
@@ -93,10 +93,42 @@ span{
 }
 .descripcion{
     margin-top: 20px;
-    margin-left:20px;
-    width: 920px;
+    /* margin-left:20px; */
+    width: 1100px;
     height: 200px;
     background-color: var(--negro3);
     border: 1px var(--blanco) solid;
     border-radius: 10px;
+    display: flex;
+}
+
+.contenido-descripcion{
+    width: 400px;
+    height: 100%;
+    /* background-color: aqua; */
+}
+.contenido-descripcion h3, p{
+    margin-top: 10p x;
+    margin-left: 5px;
+}
+.imagenes-descripcion{
+    width: 700px;
+    height: 100%;
+    /* background-color: bisque; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.imagenes-descripcion img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 1px var(--blanco) solid;
+    border-radius: 5px;
+}
+.comentarios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
