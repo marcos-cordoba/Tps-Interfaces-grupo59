@@ -4,25 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/card.css">
+    <link rel="stylesheet" href="estilos/estilo.css">
     <title>Document</title>
 </head>
-<body>
-        <div class="container">
+<body>  
+
+    <!-- *carrusel home -->
+        <div class="carrusel">
+
+            <!-- *card gratis home -->
             <div class="card">
                 <div class="imagen-juego">
-                    <img src="images/juegos/starwars.svg" alt="star wars">
+                    <h2 class="titulo-card">4 en linea: Star Wars</h2>
+                    <img class="imgJuego" src="images/juegos/starwars.svg" alt="star wars">
                 </div>
                 <div class="subImagen">
                     <div class="nombre-precio">
-                        <h3>4 en linea</h3>
-                        <h3>$20.000</h3>
+                        <h3 class="titulo-sub-img">4 en linea: star wars</h3>
+                        <h3 class="gratis-text">Gratis</h3>
                     </div>
                     <div class="boton">
-                        <button class="boton-jugar">jugar</button>
+                        <button class="boton-card jugar"><h3>jugar</h3></button>
                     </div>
                 </div>
             </div>
 
+            <!-- *card paga home -->
+            <div class="card">
+                <div class="imagen-juego">
+                    <h2 class="titulo-card">4 Super Mario 3D</h2>
+                    <img class="imgJuego" src="images/juegos/mario3D.svg" alt="star wars">
+                </div>
+                <div class="subImagen">
+                    <div class="nombre-precio">
+                        <h3 class="titulo-sub-img">4 en linea: star wars</h3>
+                        <h3>$20.000</h3>
+                    </div>
+                    <div class="boton">
+                        <button class="boton-card comprar"><h3>comprar</h3></button>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- *cards pagina del juego -->
+        <div class="container-pag-juego">
+                
+                <!-- *GRATIS -->
+                <div class="card-pag-juego">
+                    <div class="img-card-juego">
+                        <img src="images/juegos/mario3D.svg" alt="mario3D">
+                    </div>
+                    <div class="contenido-card-juego">
+                        <div class="titulo-genero-pag-juego">
+                            <h3>Super Mario 3D</h3>
+                            <p>Aventura</p>
+                        </div>
+                        <div class="precio-card-juego">
+                            <h3 class="gratis-text">Gratis</h3>
+                        </div>
+                        <div class="btn-card-pag-juego">
+                            <button class="btnCardJuego jugar"><h3>Jugar</h3></button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--* PAGA -->
+                   
+            <div class="card-pag-juego">
+                <div class="img-card-juego">
+                    <img src="images/juegos/mario3D.svg" alt="mario3D">
+                </div>
+                <div class="contenido-card-juego">
+                    <div class="titulo-genero-pag-juego">
+                        <h3>Super Mario 3D</h3>
+                        <p>Aventura</p>
+                    </div>
+                    <div class="precio-card-juego">
+                        <h3>$20.000</h3>
+                    </div>
+                    <div class="btn-card-pag-juego">
+                        <button class="btnCardJuego comprar"><h3>Comprar</h3></button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        
 </body>
 </html>
