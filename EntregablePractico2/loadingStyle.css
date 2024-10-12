@@ -1,0 +1,56 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #711EB0; /* Fondo violeta */
+    font-family: 'Arial', sans-serif;
+}
+
+.loader-container {
+    text-align: center;
+    color: #fff;
+}
+
+.loading-bar {
+    width: 300px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente para la barra */
+    border: 2px solid #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #00CCFF; /* Barra de carga celeste */
+    width: 0;
+    border-radius: 15px;
+    transition: width 0.3s ease;
+}
+
+.loading-text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.percentage {
+    font-size: 2rem;
+}
+
+/* Nueva animación */
+@keyframes completeAnimation {
+    0% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(1.1);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
