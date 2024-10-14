@@ -25,7 +25,7 @@ body{
     --blanco: #F4F4F4;
     --verde: #00FF00;
     --verde-1: #00A701;
-
+    --facebook: #39538b;
     --verde: #32CD32;
     --rubik: 'Rubik';
     
@@ -90,12 +90,12 @@ p {
 }
 
 header{
-    display: flex;
-    width: 100%;
-    height: 80px;
-    background-color: var(--violeta-1);
-    align-items: center;
-    grid-area: header;
+  display: flex;
+  width: 100%;
+  height: 80px;
+  background-color: var(--violeta-1);
+  align-items: center;
+  grid-area: header;
 }
 
 .menuHamburguesa{
@@ -224,6 +224,7 @@ main{
     padding: 40px 0;
     color: var(--blanco);
     z-index: 1;
+    margin-top: 20px;
   }
   
   .fatFooter .container {
@@ -268,61 +269,105 @@ main{
     font-size: 1.5em;
     color: var(--acento);
   }
+  
 
-  .socialIcons i{
-    transition: all 0.9s cubic-bezier(0.33, 1, 0.68, 1);
-  }
-  
-  .socialIcons i:hover {
-    color: var(--acento);
-    transform: scale(2.1); /* Agranda el botón suavemente */
-  }
-  
-  /* Estilo para el address */
-  footer address {
-    font-style: var(--rubik);
-    font-size: 0.9em;
-    line-height: 1.5;
-    margin-top: 20px;
-  }
-  
-  /* Sección de botones */
-  .footerButtons {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .footerButtons .btn {
-    background-color: var(--acento);
-    color: var(--blanco);
-    border: none;
-    padding: 10px 20px;
-    margin-bottom: 10px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: .3s;
-  }
-  
-  .footerButtons .btn:hover {
-    animation: pulse 1s infinite;
-    transition: .3s;
+.fatFooter .fatContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: wrap;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footerColumn {
+  width: 18%;
+}
+
+.footerColumn h3 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.footerColumn ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerColumn ul li {
+  margin-bottom: 10px;
+}
+
+.footerColumn ul li a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.footerColumn ul li a:hover {
+  text-decoration: underline;
+}
+
+.socialIcons a {
+  margin-right: 10px;
+  font-size: 1.5em;
+  color: var(--acento);
+}
+
+.socialIcons i{
+  transition: all 0.9s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.socialIcons i:hover {
+  color: var(--acento);
+  transform: scale(1.5); /* Agranda el botón suavemente */
+}
+
+/* Estilo para el address */
+footer address {
+  font-style: var(--rubik);
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+/* Sección de botones */
+.footerButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerButtons .btn {
+  background-color: var(--acento);
+  color: var(--blanco);
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+.footerButtons .btn:hover {
+  animation: pulse 1s infinite;
+  transition: .3s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
 
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-
-    70% {
-      transform: scale(.9);
-    }
-
-    100% {
-      transform: scale(1);
-    }
+  70% {
+    transform: scale(.9);
   }
-  
+
+  100% {
+    transform: scale(1);
+  }
+}
+
   /* Responsive */
   @media (max-width: 768px) {
     .fat-footer .container {
@@ -334,5 +379,6 @@ main{
       width: 100%;
       text-align: center;
       margin-bottom: 30px;
-    }
   }
+
+}

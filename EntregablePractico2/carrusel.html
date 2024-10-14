@@ -1,0 +1,94 @@
+<!-- <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuadrado con Animación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       
+        <div id="move" class="square"></div>
+
+        <a href="#move" class="arrow right-arrow">➡</a>
+        <a href="#moveL" class="arrowL left-arrow">---</a>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel de Cards</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="estilos/card.css">
+    <link rel="stylesheet" href="estilos/estilo.css">
+</head>
+<body>
+    <div class="carousel-container">
+        <!-- Input para controlar las posiciones -->
+        <input type="radio" name="carousel" id="slide1" >
+        <input type="radio" name="carousel" id="slide2" checked>
+        <input type="radio" name="carousel" id="slide3">
+
+        <!-- Carrusel -->
+        <div class="carousel">
+            
+
+            <div class="card" id="card1">
+                <div class="imagen-juego">
+                    <h2 class="titulo-card">4 en linea: Star Wars</h2>
+                    <img class="imgJuego" src="images/juegos/starwars.svg" alt="star wars">
+                </div>
+                <div class="subImagen">
+                    <div class="nombre-precio">
+                        <h3 class="titulo-sub-img">4 en linea: star wars</h3>
+                        <h3 class="gratis-text">Gratis</h3>
+                    </div>
+                    <div class="boton">
+                        <button class="boton-card jugar"><h3>jugar</h3></button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="card" id="card2">
+                <div class="imagen-juego">
+                    <h2 class="titulo-card">4 en linea: Star Wars</h2>
+                    <img class="imgJuego" src="images/juegos/starwars.svg" alt="star wars">
+                </div>
+                <div class="subImagen">
+                    <div class="nombre-precio">
+                        <h3 class="titulo-sub-img">4 en linea: star wars</h3>
+                        <h3 class="gratis-text">Gratis</h3>
+                    </div>
+                    <div class="boton">
+                        <button class="boton-card jugar"><h3>jugar</h3></button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="card3">
+                <div class="imagen-juego">
+                    <h2 class="titulo-card">4 en linea: Star Wars</h2>
+                    <img class="imgJuego" src="images/juegos/starwars.svg" alt="star wars">
+                </div>
+                <div class="subImagen">
+                    <div class="nombre-precio">
+                        <h3 class="titulo-sub-img">4 en linea: star wars</h3>
+                        <h3 class="gratis-text">Gratis</h3>
+                    </div>
+                    <div class="boton">
+                        <button class="boton-card jugar"><h3>jugar</h3></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <label for="slide3" class="next1">&#10095;</label> <!-- Clic para ir de 1 a 2 -->
+        <label for="slide2" class="next2">&#10095;</label> <!-- Clic para ir de 2 a 3 -->
+        <label for="slide1" class="prev2">&#10094;</label><!-- Clic para ir de 2 a 1 -->
+        <label for="slide2" class="prev1">&#10094;</label> <!-- Clic para ir de 3 a 2 -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,482 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 500px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: #00ccff;
+    transition: transform 1s ease-in-out;
+}
+
+/* Flecha derecha */
+/* .arrow {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.arrowL {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(50%);
+    cursor: pointer;
+} */
+
+/* ANIMACIÓN DE SKEW Y TRANSLATE */
+/* #move:target  {
+    transform: translateX(300px) skew(20deg, 10deg);
+}  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e1e;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Para ocultar la parte de las cards que se salen */
+}
+
+.carousel {
+    display: flex;
+    
+}
+
+/* Estilo para las cards */
+.card {
+    width: 150px;
+    height: 200px;
+    background-color: #00ccff;
+
+    transition: transform 0.8s ease-in-out  ;
+}
+
+
+
+/* Ocultamos los radios */
+#slide1 , #slide2 , #slide3{
+    display: none;
+}
+
+/* Mostrar la card correspondiente al radio button seleccionado */
+
+
+/* Animaciones para cada card */
+/* @keyframes wave2 {
+   
+    10% { transform: translateX(20px) scale(1.3) rotate3d(2, 2, 2, 40deg)}
+    20% { transform: translateX(40px) scale(1.3) rotate3d(2, 2, 2, 80deg)}
+    30% { transform: translateX(60px) scale(1.3) rotate3d(2, 2, 2, 120deg)}
+    40% { transform: translateX(80px) scale(1.3) rotate3d(2, 2, 2, 160deg) }
+    50% { transform: translateX(100px) scale(1.3) rotate3d(2, 2, 2, 200deg)  }
+    60% { transform: translateX(120px) scale(1.3)  rotate3d(2, 2, 2, 240deg) }
+    70% { transform: translateX(140px) scale(1.3) rotate3d(2, 2, 2, 280deg) }
+    80% { transform: translateX(160px) scale(1.3) rotate3d(2, 2, 2, 320deg) }
+    90% { transform: translateX(180px) scale(1.3) rotate3d(2, 2, 2, 360deg) }
+    100% { transform: translateX(200px) scale(1.3)  rotate3d(2, 2, 2, 360deg) }
+} */
+
+#slide1:checked ~ .carousel #card1 {
+    transform:translateX(80%) scale(1.3)   ;
+    z-index: 3;
+    animation: wave2 1s ease-in-out forwards;
+}
+
+#slide1:checked ~ .carousel #card2 {
+    transform: scale(1) translateX(30%) skew(2deg, 0);
+    z-index: 1;
+    opacity: 0.5;
+   
+}
+
+#slide1:checked ~ .carousel #card3 {
+    transform: scale(0.8) translateX(-150px) skew(2deg, 0);
+    opacity: 0.5;
+    
+}
+
+
+ @keyframes wave1 {
+      /* 0% {
+         transform:   scale(1.3); 
+    }
+  
+    80% {
+        transform:   scale(1.3);
+    }
+    85% {
+        transform:   scale(1.3);
+    }
+    86% {
+        transform:  skew(10deg)  scale(1.3);
+    }
+    90% { 
+        transform: skew(0deg)  scale(1.3);
+    }
+    95% {
+        transform: skew(-10deg) scale(1.3);
+    }
+    100% {
+        transform: skew(0deg) scale(1.3) ;
+    } */
+}/*
+    10% { transform:  scale(1.3) rotate3d(2, 2, 2, 40deg)}
+    20% { transform:  scale(1.3) rotate3d(2, 2, 2, 80deg)}
+    30% { transform:  scale(1.3) rotate3d(2, 2, 2, 120deg)}
+    40% { transform:  scale(1.3) rotate3d(2, 2, 2, 160deg) }
+    50% { transform:  scale(1.3) rotate3d(2, 2, 2, 200deg)  }
+    60% { transform:  scale(1.3)  rotate3d(2, 2, 2, 240deg) }
+    70% { transform:  scale(1.3) rotate3d(2, 2, 2, 280deg) }
+    80% { transform:  scale(1.3) rotate3d(2, 2, 2, 320deg) }
+    90% { transform:  scale(1.3) rotate3d(2, 2, 2, 360deg) }
+    100% { transform: scale(1.3)  rotate3d(2, 2, 2, 360deg) }
+} */
+#slide2:checked ~ .carousel #card1 {
+    transform: scale(0.8) translateX(50%) skew(2deg, 0);
+    z-index: 0;
+    opacity: 0.5;
+}
+
+#slide2:checked ~ .carousel #card2 {
+    transform: scale(1.3) translateX(0%); /* La segunda card es la central */
+   z-index: 3;
+   animation: wave1 1s linear;
+}
+
+#slide2:checked ~ .carousel #card3 {
+    transform: scale(0.8) translateX(-113px) ;
+    opacity: 0.5;
+    z-index: 0;
+    
+}
+
+@keyframes wave3 {
+    0% {
+         transform: skew(0deg) translateX(0) scale(0.8); 
+    }
+  
+    80% {
+        transform: skew(5deg) translateX(-80%) scale(1.3);
+    }
+    85% {
+        transform: skew(10deg) translateX(-80%) scale(1.3);
+    }
+    86% {
+        transform: skew(0deg) translateX(-80%)scale(1.3);
+    }
+    90% { 
+        transform: skew(-10deg) translateX(-80%)scale(1.3);
+    }
+    95% {
+        transform: skew(0deg) translateX(-80%) scale(1.3);
+    }
+    100% {
+        transform: skew(0deg) translateX(-80%) scale(1.3);
+    }
+}
+/*     
+    10% { transform: translateX(-20px) scale(1.3) rotate3d(2, 2, 0, 5deg)}
+    20% { transform: translateX(-40px) scale(1.3) rotate3d(2, 2, 0, 5deg)}
+    30% { transform: translateX(-60px) scale(1.3) rotate3d(2, 2, 0, 5deg)}
+    40% { transform: translateX(-80px) scale(1.3) rotate3d(2, 2, 0, 5deg) }
+    50% { transform: translateX(-100px) scale(1.3) rotate3d(2, 2, 0, 5deg)  }
+    60% { transform: translateX(-130px) scale(1.3)  rotate3d(2, 2, 0, 5deg) }
+    70% { transform: translateX(-150px) scale(1.3) rotate3d(2, 2, 0, 5deg) }
+    80% { transform: translateX(-170px) scale(1.3) rotate3d(2, 2, 0, 5deg) }
+    90% { transform: translateX(-190px) scale(1.3) rotate3d(2, 2, 0, 5deg) }
+    100% { transform: translateX(-200px) scale(1.3)  rotate3d(2, 2, 0, 5deg) }
+} */ 
+
+#slide3:checked ~ .carousel #card1 {
+    transform: scale(0.8) translateX(150px) skew(2deg, 0);
+    opacity: 0.4;
+}
+
+#slide3:checked ~ .carousel #card2 {
+    transform: scale(1) translateX(-100px);
+    opacity: 0.6;
+}
+
+#slide3:checked ~ .carousel #card3 {
+    transform: scale(1.3) translateX(-80%);
+    animation: wave3 1s  linear;
+}
+
+/* Estilos para las flechas */
+/* Control de las animaciones y transiciones */
+.next1, .next2, .prev1, .prev2 {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: #fff;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.next1{ right: 10%;
+         }
+/* Cambiar el z-index de .next2 cuando slide1 está seleccionado */
+#slide1:checked ~ .next2 {
+    z-index: 1; /* Mantener .next2 arriba cuando .next1 está activa */
+}
+/* Ocultar la flecha derecha cuando estamos en la última slide */
+#slide1:checked ~ .prev1 {
+    display: none; /* Ocultar la flecha derecha en la slide 3 */
+}
+
+
+
+/* Cambiar el z-index de .next1 cuando slide2 está seleccionado */
+#slide2:checked ~ .next1 {
+    z-index: 1; /* Mantener .next1 arriba cuando .next2 está activa */
+}
+#slide2:checked ~ .prev2 {
+    z-index: 1; /* Mantener .next1 arriba cuando .next2 está activa */
+}
+
+/* Ocultar la flecha derecha cuando estamos en la última slide */
+#slide3:checked ~ .next2 {
+    display: none; /* Ocultar la flecha derecha en la slide 3 */
+}
+
+
+
+.next2 { right:10%;
+     }
+.prev1 { left: 10%;
+    }
+.prev2 { left: 10%;
+     }
+
+/* Efecto al pasar el mouse */
+.next1:hover, .next2:hover, .prev1:hover, .prev2:hover {
+    opacity: 1;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* cards pagina del juego */
+.carrusel{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.imagen-juego{
+    background-color: blue;
+    width: 250px;
+    height: 140px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+
+
+.imagen-juego img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+.subImagen{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    background-color: var(--violeta);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+}
+
+.titulo-card{
+    display: none;
+    padding-top: 5px;
+    padding-left: 5px;
+    position: absolute;
+    z-index: 1;
+}
+
+.imagen-juego:hover .imgJuego{
+    filter: contrast(0.5);
+}
+
+.imagen-juego:hover .titulo-card{
+    display: block;
+}
+
+.nombre-precio{
+    width: 200px;
+    height: 100%;
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    padding-left: 8px;
+    justify-content: space-around;
+    border-bottom-left-radius: 20px;
+}
+
+.boton{
+    padding-right: 5px;
+    width: fit-content;
+    height: 100%;
+    /* background-color: burlywood; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-right-radius: 20px;
+}
+
+.boton-card{
+    width: 75px;
+    height: 28px;
+    border-radius: 40px;
+    background-color: var(--acento);
+    border: 0px;
+}
+
+.comprar{
+    background-color: var(--verde);
+}
+.comprar:hover{
+    background-color: var(--verde-1);
+    cursor: pointer;
+}
+.jugar{
+    background-color: var(--acento);
+}
+
+.jugar:hover{
+    background-color: var(--acento3);
+    cursor: pointer;
+}
+
+.gratis-text{
+    color: var(--acento);
+}
+
+.container-pag-juego{
+    background-color: blue;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.card-pag-juego{
+    margin: 5px;
+    width: 240px;
+    height: 90px;
+    background-color: var(--gris2);
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px var(--negro3);
+    cursor: pointer;
+}
+.card-pag-juego:hover{
+    border: 1px var(--acento) solid;
+}
+.img-card-juego{
+    width: 100px;
+    height: 100%;
+}
+.img-card-juego img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+.contenido-card-juego{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-areas: 
+    "titulo titulo"
+    "precio boton";
+    grid-template-rows: 1fr 1fr;
+}
+
+.titulo-genero-pag-juego{
+    padding-left: 5px;
+    /* background-color: black; */
+    grid-area: titulo;
+}
+.precio-card-juego{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: brown; */
+    grid-area: precio;
+}
+.btn-card-pag-juego{
+    display: flex;
+    /* background-color: cadetblue; */
+    grid-area: boton;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnCardJuego{
+    border: 0px;
+    /* border: 1px var(--negro3) solid; */
+    width: 80px;
+    height: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 3px var(--negro3); 
+    cursor: pointer;
+}
