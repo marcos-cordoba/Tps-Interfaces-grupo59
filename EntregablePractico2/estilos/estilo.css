@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-
 *{
     margin: 0px;
     padding: 0px;
@@ -25,21 +24,10 @@ body{
     --blanco: #F4F4F4;
     --verde: #00FF00;
     --verde-1: #00A701;
-
+    --facebook: #39538b;
     --verde: #32CD32;
     --rubik: 'Rubik';
     
-}
-
-.container{
-    display: grid;
-    height: 25vh;
-    grid-template-areas: 
-    "header header header"
-    "main main main"
-    "footer footer footer";
-    /* grid-template-columns: auto 1fr auto; */
-    grid-template-rows: auto 1fr auto;
 }
 
 h1 {
@@ -90,12 +78,12 @@ p {
 }
 
 header{
-    display: flex;
-    width: 100%;
-    height: 80px;
-    background-color: var(--violeta-1);
-    align-items: center;
-    grid-area: header;
+  display: flex;
+  width: 100%;
+  height: 80px;
+  background-color: var(--violeta-1);
+  align-items: center;
+  grid-area: header;
 }
 
 .menuHamburguesa{
@@ -159,7 +147,7 @@ header{
 }
 .menuCategorias{
     width: 80px;
-    height: 1000px;
+    height: 150%;
     background-color: #131313;
     position: absolute;
     top:80px;
@@ -220,119 +208,160 @@ main{
 
 /* Estilos básicos para el footer */
 .fatFooter {
-    background-color: var(--negro3);
-    padding: 40px 0;
-    color: var(--blanco);
-    z-index: 1;
+  width: 100%;
+  background-color: var(--negro3);
+  padding: 40px 0;
+  color: var(--blanco);
+  z-index: 1;
+}
+
+.fatFooter .fatContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: wrap;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footerColumn {
+  width: 18%;
+}
+
+.footerColumn h3 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.footerColumn ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerColumn ul li {
+  margin-bottom: 10px;
+}
+
+.footerColumn ul li a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.footerColumn ul li a:hover {
+  text-decoration: underline;
+}
+
+.socialIcons a {
+  margin-right: 10px;
+  font-size: 1.5em;
+  color: var(--acento);
+}
+
+.socialIcons i{
+  transition: all 0.9s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.socialIcons i:hover {
+  color: var(--acento);
+  transform: scale(1.5); /* Agranda el botón suavemente */
+}
+
+/* Estilo para el address */
+footer address {
+  font-style: var(--rubik);
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+/* Sección de botones */
+.footerButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerButtons .btn {
+  background-color: var(--acento);
+  color: var(--blanco);
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+.footerButtons .btn:hover {
+  animation: pulse 1s infinite;
+  transition: .3s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
-  
-  .fatFooter .container {
+
+  70% {
+    transform: scale(.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+
+  .fatContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+  }
+
+  .socialIcons{
     display: flex;
+    flex-direction: row;
+  }
+
+  header {
     justify-content: space-between;
-    align-items: flex-start;
-    max-width: 100%;
-    margin: 0 auto;
     padding: 0 20px;
   }
-  
-  .footerColumn {
-    width: 18%;
-  }
-  
-  .footerColumn h3 {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-  }
-  
-  .footerColumn ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footerColumn ul li {
-    margin-bottom: 10px;
-  }
-  
-  .footerColumn ul li a {
-    color: var(--blanco);
-    text-decoration: none;
-    font-size: 0.9em;
-  }
-  
-  .footerColumn ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  .socialIcons a {
-    margin-right: 10px;
-    font-size: 1.5em;
-    color: var(--acento);
+
+  .menuHamburguesa img {
+      width: 70px;
+      height: 70px;
   }
 
-  .socialIcons i{
-    transition: all 0.9s cubic-bezier(0.33, 1, 0.68, 1);
-  }
-  
-  .socialIcons i:hover {
-    color: var(--acento);
-    transform: scale(2.1); /* Agranda el botón suavemente */
-  }
-  
-  /* Estilo para el address */
-  footer address {
-    font-style: var(--rubik);
-    font-size: 0.9em;
-    line-height: 1.5;
-    margin-top: 20px;
-  }
-  
-  /* Sección de botones */
-  .footerButtons {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .footerButtons .btn {
-    background-color: var(--acento);
-    color: var(--blanco);
-    border: none;
-    padding: 10px 20px;
-    margin-bottom: 10px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: .3s;
-  }
-  
-  .footerButtons .btn:hover {
-    animation: pulse 1s infinite;
-    transition: .3s;
+  .logo img {
+      width: 110px;
+      height: 60px;
   }
 
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-
-    70% {
-      transform: scale(.9);
-    }
-
-    100% {
-      transform: scale(1);
-    }
+  .barraBusqueda {
+      width: 350px;
+      left: 0;
+      margin-left: 20px;
   }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .fat-footer .container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .footer-column, .footer-buttons {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 30px;
-    }
+
+  .barra {
+      display: none;
   }
+
+  .lupa {
+      display: none;
+  }
+
+  .carrito {
+      display: none;
+  }
+
+  .logoUser {
+      right: 10px;
+  }
+
+}
