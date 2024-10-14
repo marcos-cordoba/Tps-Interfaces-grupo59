@@ -160,9 +160,10 @@ header{
 .menuCategorias{
     width: 80px;
     height: 150%;
-    background-color: #131313;
+    background-color: var(--violeta-1);
     position: absolute;
-    top:80px;
+    top:60px;
+    left: -14px;
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -175,7 +176,7 @@ header{
     transition: opacity 0.8s ease;
 }
 .menuCategorias:hover {
-    width: 190px; /* Se expande mostrando los nombres */
+    width: 190px; 
     align-items: center; 
 }
 .nombreCategoria {
@@ -185,14 +186,14 @@ header{
     font-weight: 700;
     font-size: 32p;
     width: 80px;
-    opacity: 0; /* Nombres ocultos por defecto */
+    opacity: 0; 
     transition: opacity 0.3s ease;
     display: flex;
     align-items: center; 
     
 }
 .menuCategorias:hover .nombreCategoria {
-    opacity: 1; /* Nombres aparecen al hacer hover */
+    opacity: 1; 
     
 }
 .menuCategorias:hover .iconoCategoria {
@@ -201,11 +202,11 @@ header{
     transform: translateX(-50px);
 }
 .iconoCategoria {
-    width: 40px; /* Ajusta el tamaño del icono según prefieras */
+    width: 40px; 
     height: 48px;
     
-    margin-bottom: 10px; /* Añadir espacio entre los iconos */
-    cursor: pointer; /* Cambia el cursor cuando pases sobre el ícono */
+    margin-bottom: 10px; 
+    cursor: pointer; 
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -277,7 +278,7 @@ main{
 
 .socialIcons i:hover {
   color: var(--acento);
-  transform: scale(1.5); /* Agranda el botón suavemente */
+  transform: scale(1.5); 
 }
 
 /* Estilo para el address */
