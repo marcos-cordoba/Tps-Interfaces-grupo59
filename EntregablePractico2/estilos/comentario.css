@@ -12,7 +12,7 @@
     align-items: center;
     flex-direction: column;
 }
-.bloque-comentar{
+/* .bloque-comentar{
     margin-left: 20px;
     width: 700px;
     height: 85px;
@@ -91,4 +91,109 @@
     height: 18px;
     margin-right: 4px;
     margin-top: 2px;
+} */
+
+.comentar,
+.cajaComentarios {
+    margin-bottom: 30px;
 }
+
+.comentar h2,
+.cajaComentarios h2 {
+    padding: 15px;
+}
+
+.comentario {
+    box-sizing: border-box;
+    display: flex;
+    width: 80%;
+    text-align: initial;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    /* padding-left: 40px; */
+}
+
+.comentarioArriba {
+    display: flex;
+}
+
+.comentario .separacion {
+    width: 100%;
+}
+.comentario input {
+    width: -webkit-fill-available;
+    display: flex;
+    padding: 10px 13px 30px 13px;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 15px;
+}
+
+.comentario button {
+    margin-left: auto;
+}
+
+.cajaComentarios {
+    gap: 10px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cajaComentarios>h3 {
+    padding: 15px 0;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.comentario h5,
+.comentario p {
+    margin: 1em 0;
+}
+
+.cajaComentarios p {
+    display: flex;
+    color: rgba(255, 255, 255, 0.45);
+    justify-content: center;
+    align-items: center;
+}
+
+.valoracion {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comentario .valoracion img {
+    width: 50px;
+    height: 30px;
+    align-items: center;
+}
+
+.boton-comentario{
+    width: 80px;
+    height: 30px;
+    background-color: var(--acento2);
+    border: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px var(--negro3);
+}
+
+.boton-comentario:hover{
+    background-color: var(--acento);
+}
+
