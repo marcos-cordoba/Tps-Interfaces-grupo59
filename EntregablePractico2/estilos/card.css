@@ -2,14 +2,52 @@
 *{
     margin: 0px;
     padding: 0px;
+    
 }
-
+body{
+    overflow-x:  hidden;
+}
 /* cards pagina del juego */
+.flechaIzquierda{
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    z-index:1;
+    position: absolute;
+    left: 10px;
+}
+.flechaDerecha{
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    z-index:1;
+    position: absolute;
+    right: 10px;
+}
+/* .carrusel-izq{
+    transform: translateX(-10%);
+} */
+/* .carrusel-der{
+    transform: translateX(10%);
+} */
+
 .carrusel{
-    height: 200px;
+    height: 250px;
     width: 100%;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    overflow-x:  hidden;
+   
+}
+.contenidoCarrusel{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    
 }
 .card{
     width: 250px;
@@ -40,7 +78,7 @@
 .subImagen{
     display: flex;
     justify-content: space-between;
-    height: 40px;
+    height: 60px;
     background-color: var(--violeta);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -65,7 +103,7 @@
 
 .nombre-precio{
     width: 200px;
-    height: 100%;
+    height: 10%;
     /* background-color: brown; */
     display: flex;
     flex-direction: column;
@@ -86,27 +124,44 @@
 }
 
 .boton-card{
-    width: 75px;
-    height: 28px;
+    width: 90px;
+    height: 30px;
     border-radius: 40px;
     background-color: var(--acento);
     border: 0px;
+    cursor: pointer;
+    color: var(--blanco);
+    overflow: hidden;
 }
 
 .comprar{
     background-color: var(--verde);
 }
-.comprar:hover{
-    background-color: var(--verde-1);
-    cursor: pointer;
-}
+
 .jugar{
     background-color: var(--acento);
 }
 
-.jugar:hover{
-    background-color: var(--acento3);
-    cursor: pointer;
+/* animacion para los botones de comprar y gratis */
+.boton-card .fas{
+    font-size: 15px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.boton-card h3{
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+
+.boton-card:hover h3{
+    transform: translateX(-5px);
+}
+
+.boton-card:hover .fas{
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .gratis-text{
@@ -124,7 +179,7 @@
 }
 .card-pag-juego{
     margin: 5px;
-    width: 240px;
+    width: 280px;
     height: 90px;
     background-color: var(--gris2);
     display: flex;
@@ -149,6 +204,7 @@
 
 
 .contenido-card-juego{
+    margin-top: 3px;
     display: grid;
     height: 100%;
     width: 100%;
@@ -188,4 +244,129 @@
     cursor: pointer;
 }
 
+
+
+
+/* *big card */
+.containerCardGrande{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bigCard {
+    box-sizing: border-box;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 450px;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.bigCard:hover .bigCardShadow{
+    display: block;
+    z-index: 1;
+}
+/* .bigCard:hover .btn-jugar-bigCard{
+    display: block;
+    z-index: 10;
+} */
+.bigCard:hover .playIcon{
+    z-index: 1;
+}
+.bigCard:hover .bigCardInfo{
+    display: block;
+}
+
+
+.bigCardShadow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 10%, transparent 100%);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: height 0.5s;
+    z-index: 0;
+}
+
+
+.cardImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardImage img{
+    width: 100%;
+    height: 100%;
+}
+
+.playIcon {
+   width: 50px;
+   height: 50px;
+   z-index: 1;
+   background-color: aliceblue;
+   position: absolute;
+}
+
+.playIcon img {
+    width: 100%;
+    display: block;
+}
+
+.bigCardInfo h3{
+    opacity: 0.9;
+    /* display: none; */
+}
+
+.bigCardInfo h3,
+.bigCardInfo h2 {
+    margin: 5px;
+}
+
+.bigCardInfo {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    transition: 300ms;
+    width: 100%;
+    justify-content: center;
+    z-index: 2;
+}
+.btn-bigCard{
+    width: 150px;
+    height: 100%;
+    /* background-color: aqua; */
+    position: absolute;
+    right: 5px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* display: none; */
+}
+.btn-jugar-bigCard{
+    background-color: var(--acento);
+    border: 0px;
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--negro3);
+    position: relative;
+    z-index: 5;
+    bottom: 10px;
+    top: 40px;
+}
 
