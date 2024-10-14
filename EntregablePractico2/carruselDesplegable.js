@@ -9,8 +9,8 @@ flechasIzq.forEach((flecha, index) => {
         
         // Incrementar el desplazamiento hacia la izquierda
         
-        if (desplazamiento[index]<50&&desplazamiento[index]<0) {
-            desplazamiento[index] += 10; 
+        if (desplazamiento[index]<30&&desplazamiento[index]<0) {
+            desplazamiento[index] += 12; 
             carruselAsociado.style.transform = `translateX(${desplazamiento[index]}%)`;
         }
     });
@@ -24,8 +24,8 @@ flechasIzq.forEach((flecha, index) => {
                 const carruselAsociado = carruseles[index];
                 
                 // Incrementar el desplazamiento hacia la izquierda
-                if (desplazamiento[index]>(-50)) {
-                    desplazamiento[index] -= 10; 
+                if (desplazamiento[index]>(-24)) {
+                    desplazamiento[index] -= 12; 
                     carruselAsociado.style.transform = `translateX(${desplazamiento[index]}%)`;
                 }
                 
