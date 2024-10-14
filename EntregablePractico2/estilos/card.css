@@ -142,7 +142,7 @@
 }
 .card-pag-juego{
     margin: 5px;
-    width: 240px;
+    width: 280px;
     height: 90px;
     background-color: var(--gris2);
     display: flex;
@@ -167,6 +167,7 @@
 
 
 .contenido-card-juego{
+    margin-top: 3px;
     display: grid;
     height: 100%;
     width: 100%;
