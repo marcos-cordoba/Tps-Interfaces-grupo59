@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilos/estilo.css">
+    <link rel="stylesheet" href="estilos/juego.css">
+    <link rel="stylesheet" href="estilos/card.css">
+    <link rel="stylesheet" href="estilos/comentario.css">
     <link rel="icon" href="images/gamixIcon.svg">
-    <title>Registro</title>
+    <title>4 en linea</title>
 </head>
 <body>
-    <header>
+    <div class="contenedor-pag-juego">
+    <header class="header-juego">
         <div class="menuHamburguesa">
             <img src="images/menu.svg" alt="menu">
         </div>
@@ -27,88 +31,346 @@
             <img src="images/logoUser.svg" alt="logo de usuario">
         </div>
     </header>
-
-    <h1>hola soy el juego</h1>
-
-    <footer class="fatFooter">
-        <div class="fatContainer">
-          <!-- Sección redes -->
-          <div class="footerColumn">
-            <h3>Seguinos:</h3>
-            <div class="socialIcons">
-              <a href="#"><i class="fab fa-facebook"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-            </div>
-            <address>
-              Tandil<br>
-              Portugal 512<br>
-              2494112233
-            </address>
+    
+    <!--* titulo del juego -->
+    <div class="titulo-juego">
+      <div class="contenido-titulo">
+          <div class="img-titulo-juego">
+            <img src="images/juegos/starwars.svg" alt="Star wars">
           </div>
-      
-          <!-- Sección Information -->
-          <div class="footerColumn">
-            <h3>Informacion:</h3>
-            <ul>
-              <li><a href="#">¿Quienes somos?</a></li>
-              <li><a href="#">Contactanos</a></li>
-              <li><a href="#">Carrera</a></li>
-              <li><a href="#">Recursos Humanos</a></li>
-            </ul>
+          <div class="content-game-title">
+            <h2>Star Wars: 4 en Linea</h2>
+            <p>juegos de mesa / <span>4 en linea</span></p>
           </div>
-      
-          <!-- Sección Sobre nosotros -->
-          <div class="footerColumn">
-            <h3>Sobre nosotros:</h3>
-            <ul>
-              <li><a href="#">Productos Propios</a></li>
-              <li><a href="#">Descarga la App</a></li>
-              <li><a href="#">Torneos</a></li>
-              <li><a href="#">Hacete Premium</a></li>
-            </ul>
-          </div>
-      
-          <!-- Sección terminos y condiciones -->
-          <div class="footerColumn">
-            <h3>Terminos y condiciones:</h3>
-            <ul>
-              <li><a href="#">Politicas de cookies</a></li>
-              <li><a href="#">Oficina de legales</a></li>
-              <li><a href="#">Documentación</a></li>
-            </ul>
-          </div>
-
-          <!-- Sección oficinas -->
-          <div class="footerColumn">
-            <h3>Oficinas:</h3>
-            <ul>
-              <li><a href="#">Tandil</a></li>
-              <li><a href="#">Miami</a></li>
-              <li><a href="">Frankfurt</a></li>
-            </ul>
-          </div>
-      
-          <!-- Sección ayuda -->
-          <div class="footerColumn">
-            <h3>Ayuda:</h3>
-            <ul>
-              <li><a href="#">Reporta un bug</a></li>
-              <li><a href="#">Calificanos</a></li>
-              <li><a href="#">Foros y Blogs</a></li>
-              <li><a href="#">Noticias</a></li>
-            </ul>
-          </div>
-      
-          <!-- Sección de Botones -->
-          <div class="footerButtons">
-            <button class="btn">Visitar</button>
-            <button class="btn">Donar</button>
-            <button class="btn">Contacto</button>
+          <div class="compartir">
+            <img src="images/compartir.svg" alt="">
           </div>
         </div>
-      </footer> 
+      <div class="divisor-juego"></div>
+      </div>
+    <!--* juego -->
+    <main class="main-juego">
+      
+      <div class="juego">
+        <img src="images/juegos/starwars.svg" alt="star wars">
+        <button class="btn-jugar-juego"><h3>Jugar</h3></button>
+      </div>
+      <aside class="descripcion"> 
+        <div class="contenido-descripcion">
+          <h3 class="titulo-descripcion">Informacion del Juego</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quasi magni reiciendis libero laborum nam provident dolor a blanditiis dolorem laudantium sed adipisci doloribus, commodi officia. Voluptatem voluptas eum nulla!</p>
+          <h3>Controles</h3>
+        </div>
+        <div class="imagenes-descripcion">
+          <img src="images/juegos/starwars.svg" alt="">
+          <img src="images/juegos/mario3D.svg" alt="">
+          <img src="images/juegos/starwars.svg" alt="">
+          <img src="images/juegos/mario3D.svg" alt="">
+        </div>
+
+      </aside>
+    </main>
+
+    <!--* comentarios -->
+    <div class="cajaComentarios">
+      <h3 class="titulo">Comentarios (4)</h3>
+      <div class="comentario">
+          <div class="comentarioArriba">
+              <div class="perfil">
+                  <img src="images/Fotos de perfil/Foto de perfil.svg" alt="Foto de perfil">
+              </div>
+              <input type="text" placeholder="Haz un comentario de este juego">
+          </div>
+          <button class="boton-comentario">
+              <h4>Publicar</h4>
+          </button>
+      </div>
+      <div class="comentario">
+          <div class="comentarioArriba">
+              <div class="perfil">
+                  <img src="images/Fotos de perfil/Foto de perfil.svg" alt="Foto de perfil">
+                  <h5>Tú</h5>
+                  <p>3/11/2021</p>
+              </div>
+          </div>
+          <img class="separacion" src="images/Linea.svg" alt="Separador">
+          <h5>Malisimo, a veces no carga el tablero , está muy verde todavía</h5>
+        </div>
+
+        <div class="comentario">
+            <div class="comentarioArriba">
+                <div class="perfil">
+                    <img src="images/Fotos de perfil/Foto de perfil 2.svg" alt="Foto de perfil">
+                    <h5>Roberto Fernandez</h5>
+                    <p>8/8/2021</p>
+                </div>
+            </div>
+            <img class="separacion" src="images/Linea.svg" alt="Separador">
+            <h5>Mis hijos y yo nos hemos vuelto adictos a este juego. Es fácil de entender pero difícil de
+                dominar.
+                Una excelente manera de pasar tiempo en familia.</h5>
+        </div>
+
+        <div class="comentario">
+            <div class="comentarioArriba">
+                <div class="perfil">
+                    <img src="images/Fotos de perfil/Foto de perfil 3.svg" alt="Foto de perfil">
+                    <h5>Esteban Orellano</h5>
+                    <p>15/8/2023</p>
+                </div>
+            </div>
+            <img class="separacion" src="images/Linea.svg" alt="Separador">
+            <h5>gran juego para pasar el rato con amigos</h5>
+        </div>
+
+        <div class="comentario">
+            <div class="comentarioArriba">
+                <div class="perfil">
+                    <img src="images/Fotos de perfil/Foto de perfil 4.svg" alt="Foto de perfil">
+                    <h5>Gonzalo Lucio</h5>
+                    <p>17/9/2023</p>
+                </div>
+            </div>
+            <img class="separacion" src="images/Linea.svg" alt="Separador">
+            <h5>Juegazo. Muy divertido!</h5>
+        </div>
+    </div>
+    <!-- *recomendaciones -->
+    <aside class="recomendaciones">
+      <div class="card-pag-juego">
+        <div class="img-card-juego">
+          <img src="images/juegos/mario3D.svg" alt="mario3D">
+        </div>
+        <div class="contenido-card-juego">
+          <div class="titulo-genero-pag-juego">
+            <h3>Super Mario 3D</h3>
+            <p>Aventura</p>
+          </div>
+          <div class="precio-card-juego">
+            <h3 class="gratis-text">Gratis</h3>
+          </div>
+          <div class="btn-card-pag-juego">
+            <button class="btnCardJuego jugar">
+              <h3>Jugar</h3>
+            </button>
+          </div>
+        </div>
+      </div>
+    
+      <!-- *GRATIS -->
+      <div class="card-pag-juego">
+        <div class="img-card-juego">
+          <img src="images/juegos/mario3D.svg" alt="mario3D">
+        </div>
+        <div class="contenido-card-juego">
+          <div class="titulo-genero-pag-juego">
+            <h3>Super Mario 3D</h3>
+            <p>Aventura</p>
+          </div>
+          <div class="precio-card-juego">
+            <h3 class="gratis-text">Gratis</h3>
+          </div>
+          <div class="btn-card-pag-juego">
+            <button class="btnCardJuego jugar">
+              <h3>Jugar</h3>
+            </button>
+          </div>
+        </div>
+      </div>
+    
+    
+      <!--* PAGA -->
+    
+      <div class="card-pag-juego">
+        <div class="img-card-juego">
+          <img src="images/juegos/mario3D.svg" alt="mario3D">
+        </div>
+        <div class="contenido-card-juego">
+          <div class="titulo-genero-pag-juego">
+            <h3>Super Mario 3D</h3>
+            <p>Aventura</p>
+          </div>
+          <div class="precio-card-juego">
+            <h3>$20.000</h3>
+          </div>
+          <div class="btn-card-pag-juego">
+            <button class="btnCardJuego comprar">
+              <h3>Comprar</h3>
+            </button>
+          </div>
+        </div>
+      </div>
+    
+      <!-- *GRATIS -->
+      <div class="card-pag-juego">
+        <div class="img-card-juego">
+          <img src="images/juegos/mario3D.svg" alt="mario3D">
+        </div>
+        <div class="contenido-card-juego">
+          <div class="titulo-genero-pag-juego">
+            <h3>Super Mario 3D</h3>
+            <p>Aventura</p>
+          </div>
+          <div class="precio-card-juego">
+            <h3 class="gratis-text">Gratis</h3>
+          </div>
+          <div class="btn-card-pag-juego">
+            <button class="btnCardJuego jugar">
+              <h3>Jugar</h3>
+            </button>
+          </div>
+        </div>
+      </div>
+    
+    
+      <!--* PAGA -->
+    
+      <div class="card-pag-juego">
+        <div class="img-card-juego">
+          <img src="images/juegos/mario3D.svg" alt="mario3D">
+        </div>
+        <div class="contenido-card-juego">
+          <div class="titulo-genero-pag-juego">
+            <h3>Super Mario 3D</h3>
+            <p>Aventura</p>
+          </div>
+          <div class="precio-card-juego">
+            <h3>$20.000</h3>
+          </div>
+          <div class="btn-card-pag-juego">
+            <button class="btnCardJuego comprar">
+              <h3>Comprar</h3>
+            </button>
+          </div>
+        </div>
+      </div>
+    
+      <!-- *GRATIS -->
+      <div class="card-pag-juego">
+        <div class="img-card-juego">
+          <img src="images/juegos/mario3D.svg" alt="mario3D">
+        </div>
+        <div class="contenido-card-juego">
+          <div class="titulo-genero-pag-juego">
+            <h3>Super Mario 3D</h3>
+            <p>Aventura</p>
+          </div>
+          <div class="precio-card-juego">
+            <h3 class="gratis-text">Gratis</h3>
+          </div>
+          <div class="btn-card-pag-juego">
+            <button class="btnCardJuego jugar">
+              <h3>Jugar</h3>
+            </button>
+          </div>
+        </div>
+      </div>
+    
+    
+      <!--* PAGA -->
+    
+      <div class="card-pag-juego">
+        <div class="img-card-juego">
+          <img src="images/juegos/mario3D.svg" alt="mario3D">
+        </div>
+        <div class="contenido-card-juego">
+          <div class="titulo-genero-pag-juego">
+            <h3>Super Mario 3D</h3>
+            <p>Aventura</p>
+          </div>
+          <div class="precio-card-juego">
+            <h3>$20.000</h3>
+          </div>
+          <div class="btn-card-pag-juego">
+            <button class="btnCardJuego comprar">
+              <h3>Comprar</h3>
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <footer class="fatFooter footer-juego">
+      <div class="fatContainer">
+        <!-- Sección redes -->
+        <div class="footerColumn">
+          <h3>Seguinos:</h3>
+          <div class="socialIcons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <address>
+            Tandil<br>
+            Portugal 512<br>
+            2494112233
+          </address>
+        </div>
+    
+        <!-- Sección Information -->
+        <div class="footerColumn">
+          <h3>Informacion:</h3>
+          <ul>
+            <li><a href="#">¿Quienes somos?</a></li>
+            <li><a href="#">Contactanos</a></li>
+            <li><a href="#">Carrera</a></li>
+            <li><a href="#">Recursos Humanos</a></li>
+          </ul>
+        </div>
+    
+        <!-- Sección Sobre nosotros -->
+        <div class="footerColumn">
+          <h3>Sobre nosotros:</h3>
+          <ul>
+            <li><a href="#">Productos Propios</a></li>
+            <li><a href="#">Descarga la App</a></li>
+            <li><a href="#">Torneos</a></li>
+            <li><a href="#">Hacete Premium</a></li>
+          </ul>
+        </div>
+    
+        <!-- Sección terminos y condiciones -->
+        <div class="footerColumn">
+          <h3>Terminos y condiciones:</h3>
+          <ul>
+            <li><a href="#">Politicas de cookies</a></li>
+            <li><a href="#">Oficina de legales</a></li>
+            <li><a href="#">Documentación</a></li>
+          </ul>
+        </div>
+
+        <!-- Sección oficinas -->
+        <div class="footerColumn">
+          <h3>Oficinas:</h3>
+          <ul>
+            <li><a href="#">Tandil</a></li>
+            <li><a href="#">Miami</a></li>
+            <li><a href="">Frankfurt</a></li>
+          </ul>
+        </div>
+    
+        <!-- Sección ayuda -->
+        <div class="footerColumn">
+          <h3>Ayuda:</h3>
+          <ul>
+            <li><a href="#">Reporta un bug</a></li>
+            <li><a href="#">Calificanos</a></li>
+            <li><a href="#">Foros y Blogs</a></li>
+            <li><a href="#">Noticias</a></li>
+          </ul>
+        </div>
+    
+        <!-- Sección de Botones -->
+        <div class="footerButtons">
+          <button class="btn">Visitar</button>
+          <button class="btn">Donar</button>
+          <button class="btn">Contacto</button>
+        </div>
+      </div>
+    </footer>
+</div>
+     
 </body>
 </html>
