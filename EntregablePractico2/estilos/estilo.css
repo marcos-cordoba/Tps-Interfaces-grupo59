@@ -312,56 +312,37 @@ footer address {
   }
 }
 
-@media screen and (max-width: 1080px) {
-
-  .fatContainer {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 100%;
-      height: 100%;
-  }
-
-  .socialIcons{
-    display: flex;
-    flex-direction: row;
-  }
-
+@media screen and (min-width: 360px)  and (max-width: 768px) {
   header {
-    justify-content: space-between;
-    padding: 0 20px;
+      height: 40px; /* El alto del header permanece */
+      padding: 0 15px;
   }
 
   .menuHamburguesa img {
-      width: 70px;
-      height: 70px;
+      width: 35px; /* Tamaño más pequeño para dispositivos móviles */
+      height: 35px;
   }
 
   .logo img {
-      width: 110px;
-      height: 60px;
+      width: 40px; /* Logo más pequeño para móviles */
   }
 
-  .barraBusqueda {
-      width: 350px;
-      left: 0;
-      margin-left: 20px;
+  .logoUser img {
+      width: 35px; /* Ícono de usuario más pequeño para móviles */
+      height: 35px;
   }
-
-  .barra {
-      display: none;
+  .barraBusqueda{
+    display: none;
   }
-
-  .lupa {
-      display: none;
+  .carrito{
+    width: 30px;
+    height: 30px;
   }
-
-  .carrito {
-      display: none;
+  .carrito img{
+    width: 100%;
+    height: 100%;
   }
-
-  .logoUser {
-      right: 10px;
+  .carrusel{
+    overflow: hidden;
   }
-
 }
