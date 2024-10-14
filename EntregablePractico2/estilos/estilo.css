@@ -325,3 +325,56 @@ footer address {
   }
 }
 
+@media screen and (max-width: 1280px) {
+
+  .fatContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+  }
+
+  .socialIcons{
+    display: flex;
+    flex-direction: row;
+  }
+
+  header {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .menuHamburguesa img {
+      width: 70px;
+      height: 70px;
+  }
+
+  .logo img {
+      width: 110px;
+      height: 60px;
+  }
+
+  .barraBusqueda {
+      width: 350px;
+      left: 0;
+      margin-left: 20px;
+  }
+
+  .barra {
+      display: none;
+  }
+
+  .lupa {
+      display: none;
+  }
+
+  .carrito {
+      display: none;
+  }
+
+  .logoUser {
+      right: 10px;
+  }
+
+}
