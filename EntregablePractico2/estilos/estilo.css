@@ -80,8 +80,9 @@ p {
 header{
   display: flex;
   width: 100%;
-  height: 80px;
+  height: 60px;
   background-color: var(--violeta-1);
+  /* justify-content:  space-around; */
   align-items: center;
   grid-area: header;
 }
@@ -92,20 +93,21 @@ header{
 }
 
 .menuHamburguesa img{
-    width: 90px;
-    height: 90px;
+    width: 55px;
+    height: 55px;
+    margin-top: 10px;
 }
 
 .logo{
-    width: 135px;
-    height: fit-content;
+    width: 95px;
+    height: 50px;
     position: relative;
-    left: 10px;
+    /* left: 5px; */
 }
 
 .logo img{
-    width: 130px;
-    height: 70px;
+    width: 100%;
+    height: 100%;
 }
 
 .barraBusqueda{
@@ -113,8 +115,10 @@ header{
     align-items: center;
     position: relative;
     width: 490px;
-    height: 50px;
-    left: 175px;
+    height: 35px;
+    left: 250px;
+    
+    
 }
 
 .barra{
@@ -133,10 +137,14 @@ header{
 }
 
 .carrito{
-    width: fit-content;
-    height: fit-content;
+    width: 50px;
+    height: 30px;
     position: absolute;
-    right: 110px;
+    right: 70px;
+}
+.carrito img{
+  width: 100%;
+  height: 100%;
 }
 
 .logoUser{
@@ -144,6 +152,10 @@ header{
     width: fit-content;
     height: fit-content;
     right: 10px;
+}
+.logoUser img{
+  width: 40px;
+  height: 40px;
 }
 .menuCategorias{
     width: 80px;
@@ -312,37 +324,42 @@ footer address {
   }
 }
 
-@media screen and (min-width: 360px)  and (max-width: 768px) {
-  header {
-      height: 40px; /* El alto del header permanece */
-      padding: 0 15px;
-  }
+@media screen   and (max-width: 900px) { 
 
-  .menuHamburguesa img {
-      width: 35px; /* Tamaño más pequeño para dispositivos móviles */
-      height: 35px;
+  header{
+    height: 40px;
   }
+  .menuHamburguesa img{
+    width: 35px;
+    height: 35px;
+}
 
-  .logo img {
-      width: 40px; /* Logo más pequeño para móviles */
-  }
+.logo{
+  width: 50px;
+  height: 35px;
+  position: relative;
+  left: 10px;
+}
 
-  .logoUser img {
-      width: 35px; /* Ícono de usuario más pequeño para móviles */
-      height: 35px;
-  }
-  .barraBusqueda{
-    display: none;
-  }
-  .carrito{
-    width: 30px;
-    height: 30px;
-  }
-  .carrito img{
-    width: 100%;
-    height: 100%;
-  }
-  .carrusel{
-    overflow: hidden;
-  }
+
+.barraBusqueda{
+  display: none;
+}
+
+
+.carrito{
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  right: 110px;
+}
+
+.logoUser{
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  right: 10px;
+}
+
+
 }
