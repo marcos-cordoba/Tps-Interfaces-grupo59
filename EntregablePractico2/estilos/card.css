@@ -312,7 +312,7 @@ body{
 
 .bigCard:hover .bigCardShadow{
     display: block;
-    z-index: 1;
+    z-index: 2;
 }
 /* .bigCard:hover .btn-jugar-bigCard{
     display: block;
@@ -323,6 +323,7 @@ body{
 }
 .bigCard:hover .bigCardInfo{
     display: block;
+    /* z-index: 2; */
 }
 
 
@@ -386,7 +387,7 @@ body{
     transition: 300ms;
     width: 100%;
     justify-content: center;
-    z-index: 2;
+    z-index: 1;
 }
 .btn-bigCard{
     width: 150px;
@@ -408,8 +409,12 @@ body{
     border-radius: 10px;
     box-shadow: 0px 0px 10px var(--negro3);
     position: relative;
-    z-index: 5;
+    z-index: 10;
     bottom: 10px;
     top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
