@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilos/estilo.css">
     <link rel="stylesheet" href="estilos/card.css">
-    <link rel="icon" href="images/gamixIcon.svg">
+    <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="icon" href="images/gamixIcon.svg">   
     <title>Gamix</title>
 </head>
 <body>
@@ -99,6 +100,79 @@
             <img src="images/Opcion (12).svg" alt="">
             <span class="nombreCategoria">Home</span>
         </div>
+    </div>
+    <div id="TopJuegoDeLaSemana"><h1>TOP 3 JUEGOS DE LA SEMANA</h1></div>
+    <div class="carousel-container">
+        <!-- Input para controlar las posiciones -->
+        <input type="radio" name="carousel" id="slide1" >
+        <input type="radio" name="carousel" id="slide2" checked>
+        <input type="radio" name="carousel" id="slide3">
+
+        <!-- Carrusel -->
+        <div class="carousel">
+                <div class="cardGrande containerCardGrande" id="card1">
+                    <article class="bigCard">
+                        <div class="cardImage">
+                            <img src="images/juegos/megaman11.png"
+                                alt="FIFA 22">
+                        </div>
+                        <div class="bigCardShadow">
+                            <div class="btn-bigCard">
+                                <button class="btn-jugar-bigCard"><h3>Jugar</h3></button>
+                            </div>
+                        </div>
+                        
+                        <div class="bigCardInfo">
+                            <h3>Accion</h3>
+                            <h2>megaman 11</h2>
+                           
+                        </div>
+                    </article>
+                </div>
+            
+                <div class="cardGrande containerCardGrande" id="card2">
+                    <article class="bigCard">
+                        <div class="cardImage">
+                            <img src="images/juegos/starwars.svg"
+                                alt="FIFA 22">
+                        </div>
+                        <div class="bigCardShadow">
+                            <div class="btn-bigCard">
+                                <button class="btn-jugar-bigCard"><h3>Jugar</h3></button>
+                            </div>
+                        </div>
+                        
+                        <div class="bigCardInfo">
+                            <h3>Estrategia</h3>
+                            <h2>4 en linea: Star Wars</h2>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="cardGrande containerCardGrande" id="card3">
+                    <article class="bigCard">
+                        <div class="cardImage">
+                            <img src="images/juegos/tetris.svg"
+                                alt="FIFA 22">
+                        </div>
+                        <div class="bigCardShadow">
+                            <div class="btn-bigCard">
+                                <button class="btn-jugar-bigCard"><h3>Jugar</h3></button>
+                            </div>
+                        </div>
+                        
+                        <div class="bigCardInfo">
+                            <h3>Retro</h3>
+                            <h2>Tetris</h2>
+                           
+                        </div>
+                    </article>
+                </div>
+        </div>
+        <label for="slide3" class="next1">&#10095;</label> <!-- Clic para ir de 1 a 2 -->
+        <label for="slide2" class="next2">&#10095;</label> <!-- Clic para ir de 2 a 3 -->
+        <label for="slide1" class="prev2">&#10094;</label><!-- Clic para ir de 2 a 1 -->
+        <label for="slide2" class="prev1">&#10094;</label> <!-- Clic para ir de 3 a 2 -->
     </div>
 
     <h2>Recomendados para vos</h2>
