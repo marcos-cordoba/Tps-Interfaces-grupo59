@@ -163,7 +163,7 @@ header{
     background-color: var(--violeta-1);
     position: absolute;
     top:60px;
-    left: -14px;
+    left: -5px;
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -217,7 +217,7 @@ header{
 
 main{
     grid-area: main;
-    background-color: aqua;
+   
 }
 
 /* Estilos básicos para el footer */

@@ -55,19 +55,7 @@ body, html {
 /* #move:target  {
     transform: translateX(300px) skew(20deg, 10deg);
 }  */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #1e1e1e;
-}
 
 .carousel-container {
     position: relative;
@@ -85,13 +73,6 @@ body {
 }
 
 /* Estilo para las cards */
-.card {
-    width: 150px;
-    height: 200px;
-    background-color: #00ccff;
-
-    
-}
 
 
 
@@ -230,7 +211,7 @@ body {
 } */ 
 
 #slide3:checked ~ .carousel #card1 {
-    transform: scale(0.8) translateX(120px) skew(2deg, 0);
+    transform: scale(0.8) translateX(120px);
     opacity: 0.4;
 }
 

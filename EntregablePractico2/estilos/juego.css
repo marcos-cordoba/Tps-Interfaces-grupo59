@@ -46,7 +46,7 @@
     height: 70px;
     /* background-color: aqua; */
     display: flex;
-    
+    padding-left: 78px;
     flex-direction: column;
 }
 .contenido-titulo{

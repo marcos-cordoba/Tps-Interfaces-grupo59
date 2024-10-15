@@ -30,7 +30,7 @@ body{
 } */
 
 .carrusel{
-    height: 700px;
+    height: 800px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -44,7 +44,7 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+    overflow: hidden;
     
 }
 .containerCardGrande{
@@ -168,6 +168,9 @@ body{
 
 .jugar{
     background-color: var(--acento);
+}
+.card:hover{
+    z-index: 100;
 }
 
 /* animacion para los botones de comprar y gratis */
