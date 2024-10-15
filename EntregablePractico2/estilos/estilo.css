@@ -169,7 +169,7 @@ header{
     align-items: center; 
     justify-content: space-around;
     padding: 10px 0;
-    z-index: 3;
+    z-index: 5;
 }
 .open{
     transform: translateX(-200px);
