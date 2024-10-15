@@ -159,7 +159,7 @@ header{
 }
 .menuCategorias{
     width: 80px;
-    height: 150%;
+    height: 165%;
     background-color: var(--violeta-1);
     position: absolute;
     top:60px;
