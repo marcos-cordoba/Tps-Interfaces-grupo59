@@ -172,6 +172,11 @@ body{
     cursor: pointer;
     color: var(--blanco);
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    outline: none;
 }
 
 .comprar{
@@ -187,10 +192,49 @@ body{
 
 /* animacion para los botones de comprar y gratis */
 .boton-card .fas{
-    font-size: 15px;
-    transform: translateX(100%);
+    font-size: 10px;
+    transform: translateX(90%);
     opacity: 0;
     transition: all 0.5s ease;
+    display:none;
+}
+
+/* a probar  */
+.boton-card:active {
+    animation: button-jump 0.4s ease forwards;
+}
+
+/* Animación de salto del botón */
+@keyframes button-jump {
+    0% {
+        transform: translateY(0);
+    }
+    15%{
+        transform: translateY(-5px)rotate3d(1, 0, 1, 15deg)
+    }
+    30% {
+        transform: translateY(-5px)rotate3d(1, 0, 1, -15deg);;
+    }
+    60% {
+        transform: translateY(-5px)rotate3d(1, 0, 1, 15deg);
+    }
+    90%{
+        transform: translateY(0px)rotate3d(1, 0, 1, -15deg);
+    }
+    100% {
+        transform: translateY(0) rotate3d(1, 0, 1, 0deg);
+    }
+}
+
+
+
+/*  */
+
+
+
+.boton-card:hover .fas{
+   
+    display:block;
 }
 
 .boton-card h3{
@@ -199,7 +243,7 @@ body{
 }
 
 .boton-card:hover h3{
-    transform: translateX(-5px);
+    transform: translateX(-1px);
 }
 
 .boton-card:hover .fas{

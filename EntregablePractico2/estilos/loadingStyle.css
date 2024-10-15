@@ -55,3 +55,22 @@ body, html {
         transform: scaleX(1);
     }
 }
+
+.loading img {
+    
+    animation: rotate 2s linear infinite; /* 2s es la duración de la animación */
+}
+
+/* Animación de rotación */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.espacio{
+    height: 20px;
+}
