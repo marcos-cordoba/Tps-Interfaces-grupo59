@@ -45,15 +45,18 @@
           <div class="compartir">
             <img src="images/compartir.svg" alt="">
           </div>
-      </div>
+        </div>
       <div class="divisor-juego"></div>
     </div>
     <!--* juego -->
     <main class="main-juego">
       
       <div class="juego">
-        <img src="images/juegos/starwars.svg" alt="star wars">
-        <button class="btn-jugar-juego"><h3>Jugar</h3></button>
+        <!-- <img src="images/juegos/starwars.svg" alt="star wars">
+        <button class="btn-jugar-juego"><h3>Jugar</h3></button> -->
+        <p id="resultados" style="position: absolute; top: 500px; right: 500px;font-size: 50px;"></p>
+        <canvas id="canvas" width="1100" height="530" style="border:1px solid #000000;"></canvas>
+        <script src="canvas.js"></script>
       </div>
       <aside class="descripcion"> 
         <div class="contenido-descripcion">
@@ -372,6 +375,6 @@
       </div>
     </footer>
 </div>
-     
+     <script src="canvas.js"></script>
 </body>
 </html>
