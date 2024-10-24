@@ -1,0 +1,68 @@
+header{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: var(--violeta-1);
+    align-items: center;
+    grid-area: header;
+}
+
+.menuHamburguesa{
+    
+    width: fit-content;
+    height: fit-content;
+}
+
+.menuHamburguesa img{
+    width: 90px;
+    height: 90px;
+}
+
+.logo{
+    width: 135px;
+    height: fit-content;
+    position: relative;
+    left: 10px;
+}
+
+.logo img{
+    width: 130px;
+    height: 70px;
+}
+
+.barraBusqueda{
+    display:flex;
+    align-items: center;
+    position: relative;
+    width: 490px;
+    height: 50px;
+    left: 175px;
+}
+
+.barra{
+    width: 100%;
+    height: 100%;
+    padding-right: 40px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.lupa{
+    position: relative;
+    right: 50px;
+    height: 25px;
+    z-index: 1;
+}
+
+.carrito{
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    right: 110px;
+}
+
+.logoUser{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    right: 10px;
+}

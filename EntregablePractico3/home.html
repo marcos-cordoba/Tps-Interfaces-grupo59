@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <link rel="stylesheet" href="estilos/card.css">
+    <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="icon" href="images/gamixIcon.svg">   
+    <title>Gamix</title>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="menuHamburguesa">
+            <img src="images/menu.svg" alt="menu">
+        </div>
+        <div class="logo">
+            <a href="loading.html"><img src="images/gamixIcon.svg" alt="gamix icono"></a>
+        </div>
+        <div class="barraBusqueda">
+            <input class="barra" type="text">
+            <img class="lupa" src="images/lupa.svg" alt="lupa de buscador">
+        </div>
+        <div class="carrito">
+            <img src="images/carrito.svg" alt="carrito de compras">
+        </div>
+        <div class="logoUser">
+            <img src="images/logoUser.svg" alt="logo de usuario">
+        </div>
+    </header>
+
+    <div class="menuCategorias">
+        <div class="iconoCategoria">
+            <img src="images/home1.svg" alt="">
+            <span class="nombreCategoria">Home</span>
+        </div>
+        <div class="iconoCategoria">
+            <img src="images/tendencia2.svg" alt="">
+            <span class="nombreCategoria">Tendencia</span>
+        </div>
+        <div class="iconoCategoria">
+            <img src="images/new3.svg" alt="">
+            <span class="nombreCategoria">Nuevos</span>
+        </div>
+        <div class="iconoCategoria">
+            <img src="images/4 (2).png" alt="">
+            <span class="nombreCategoria">Recientes</span>
+        </div>
+        <div class="iconoCategoria">
+            <img src="images/Opcion.svg" alt="">
+            <span class="nombreCategoria">Torneos</span>
+        </div>
+        <div class="iconoCategoria">
+            <img src="images/Opcion (1).svg" alt="">
+            <span class="nombreCategoria">Multijugador</span>
+        </div>
+        <div class="iconoCategoria">
+            <img src="images/Opcion (2).svg" alt="">
+            <span class="nombreCategoria">Home</span>
+        </div>
+        <div class="iconoCategoria">
+            <img src="images/Opcion (3).svg" alt="">
+            <span class="nombreCategoria">Lucha</span>
+        </div>
+        <div class="iconoCategoria">
+            <img src="images/Opcion (4).svg" alt="">
+            <span class="nombreCategoria">Pokemón</span>
+        </div>
+        <div class="iconoCategoria">
+            <img src="images/Opcion (5).svg" alt="">
+            <span class="nombreCategoria">Pacman</span>
+        </div>
+        <div class="iconoCategoria">
+            <img src="images/Opcion (6).svg" alt="">
+            <span class="nombreCategoria">Amor</span>
+        </div>
+        <div class="iconoCategoria">
+            <img src="images/Opcion (7).svg" alt="">
+            <span class="nombreCategoria">Basket</span>
+        </div>
+        <div class="iconoCategoria">
+            <img src="images/Opcion (8).svg" alt="">
+            <span class="nombreCategoria">Gameplay</span>
+        </div>
+        <div class="iconoCategoria">
+            <img src="images/Opcion (9).svg" alt="">
+            <span class="nombreCategoria">Arcade</span>
+        </div>
+        <div class="iconoCategoria">
+            <img src="images/Opcion (10).svg" alt="">
+            <span class="nombreCategoria">Puzzle</span>
+        </div>
+        <div class="iconoCategoria">
+            <img src="images/Opcion (11).svg" alt="">
+            <span class="nombreCategoria">Home</span>
+        </div>
+        <div class="iconoCategoria">
+            <img src="images/Opcion (12).svg" alt="">
+            <span class="nombreCategoria">Home</span>
+        </div>
+    </div>
+    <div id="TopJuegoDeLaSemana"><h1>TOP 3 JUEGOS DE LA SEMANA</h1></div>
+    <div class="carousel-container">
+        <!-- Input para controlar las posiciones -->
+        <input type="radio" name="carousel" id="slide1" >
+        <input type="radio" name="carousel" id="slide2" checked>
+        <input type="radio" name="carousel" id="slide3">
+
+        <!-- Carrusel -->
+        <div class="carousel">
+                <div class="cardGrande containerCardGrande" id="card1">
+                    <article class="bigCard">
+                        <div class="cardImage">
+                            <img src="images/juegos/megaman11.png"
+                                alt="FIFA 22">
+                        </div>
+                        <div class="bigCardShadow">
+                            <div class="btn-bigCard">
+                                <button class="btn-jugar-bigCard"><h3>Jugar</h3></button>
+                            </div>
+                        </div>
+                        
+                        <div class="bigCardInfo">
+                            <h3>Accion</h3>
+                            <h2>megaman 11</h2>
+                           
+                        </div>
+                    </article>
+                </div>
+            
+                <div class="cardGrande containerCardGrande" id="card2">
+                    <article class="bigCard">
+                        <div class="cardImage">
+                            <img src="images/juegos/starwars.svg"
+                                alt="FIFA 22">
+                        </div>
+                        <div class="bigCardShadow">
+                            <div class="btn-bigCard">
+                                <a class="btn-jugar-bigCard" href="./juego.html" ><h3>Jugar</h3></a>
+                            </div>
+                        </div>
+                        
+                        <div class="bigCardInfo">
+                            <h3>Estrategia</h3>
+                            <h2>4 en linea: Star Wars</h2>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="cardGrande containerCardGrande" id="card3">
+                    <article class="bigCard">
+                        <div class="cardImage">
+                            <img src="images/juegos/tetris.svg"
+                                alt="FIFA 22">
+                        </div>
+                        <div class="bigCardShadow">
+                            <div class="btn-bigCard">
+                                <button class="btn-jugar-bigCard"><h3>Jugar</h3></button>
+                            </div>
+                        </div>
+                        
+                        <div class="bigCardInfo">
+                            <h3>Retro</h3>
+                            <h2>Tetris</h2>
+                           
+                        </div>
+                    </article>
+                </div>
+        </div>
+        <label for="slide3" class="next1">&#10095;</label> <!-- Clic para ir de 1 a 2 -->
+        <label for="slide2" class="next2">&#10095;</label> <!-- Clic para ir de 2 a 3 -->
+        <label for="slide1" class="prev2">&#10094;</label><!-- Clic para ir de 2 a 1 -->
+        <label for="slide2" class="prev1">&#10094;</label> <!-- Clic para ir de 3 a 2 -->
+    </div>
+
+    <h2>Recomendados para vos</h2>
+    <!-- *carrusel home -->
+    <div class="carrusel">
+        
+        <div class="flechaIzquierda">&#10094;</div>
+        <div class="flechaDerecha">&#10095;</div>
+        <div class="contenidoCarrusel">
+        <!-- *card paga home -->
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">Real Football Online</h2>
+                <img class="imgJuego" src="images/juegos/realFootball.svg" alt="Real Football">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">Real Football Online</h3>
+                    <h3>$20.000</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-card comprar">
+                        <h3>Comprar</h3>
+                        <i class="fas fa-shopping-cart icon-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- *card gratis home -->
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">4 en linea: Star Wars</h2>
+                <img class="imgJuego" src="images/juegos/starwars.svg" alt="star wars">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">4 en linea: Star Wars</h3>
+                </div>
+                <div class="boton">
+                    <a href="juego.html">
+                        <button class="boton-card jugar">
+                            <h3>Gratis</h3>
+                            <i class="fas fa-play-circle icon-play-circle"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- *card paga home -->
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">Sims Magia Potagia</h2>
+                <img class="imgJuego" src="images/juegos/simsMagia.svg" alt="sims magia">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">Sims Magia Potagia</h3>
+                    <h3>$150</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-card comprar">
+                        <h3>Comprar</h3>
+                        <i class="fas fa-shopping-cart icon-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- *card gratis home -->
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">Mario Kart 8 Deluxe</h2>
+                <img class="imgJuego" src="images/juegos/marioDeluxe.svg" alt="mario kart">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">Mario Kart 8 Deluxe</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-card jugar">
+                        <h3>Gratis</h3>
+                        <i class="fas fa-play-circle icon-play-circle"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- *card paga home -->
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">Call of Duty</h2>
+                <img class="imgJuego" src="images/juegos/callOfDuty.svg" alt="call of duty">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">Call of Duty</h3>
+                    <h3>$20.000</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-card comprar">
+                        <h3>Comprar</h3>
+                        <i class="fas fa-shopping-cart icon-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- *card paga home -->
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">SimCity</h2>
+                <img class="imgJuego" src="images/juegos/simCity.png" alt="simcity">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">SimCity</h3>
+                    <h3>$20.000</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-card comprar">
+                        <h3>Comprar</h3>
+                        <i class="fas fa-shopping-cart icon-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- *card paga home -->
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">Super Mario 64</h2>
+                <img class="imgJuego" src="images/juegos/superMario64.png" alt="super mario 64">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">Super Mario 64</h3>
+                    <h3>$20</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-card comprar">
+                        <h3>Comprar</h3>
+                        <i class="fas fa-shopping-cart icon-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+
+    <h2>Juegos Deportivos</h2>
+    <!-- *carrusel home -->
+    <div class="carrusel">
+        
+        <div class="flechaIzquierda">&#10094;</div>
+        <div class="flechaDerecha">&#10095;</div>
+        <div class="contenidoCarrusel">
+        <!-- *card paga home -->
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">Rugby24</h2>
+                <img class="imgJuego" src="images/juegos/rugby24.svg" alt="rugby">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">Rugby24</h3>
+                    <h3>$15.000</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-card comprar">
+                        <h3>Comprar</h3>
+                        <i class="fas fa-shopping-cart icon-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- *card gratis home -->
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">2K21  Edition</h2>
+                <img class="imgJuego" src="images/juegos/nba.svg" alt="nba">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">2K21 Mamba Forever Edition</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-card jugar">
+                        <h3>Gratis</h3>
+                        <i class="fas fa-play-circle icon-play-circle"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- *card paga home -->
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">MotorFest</h2>
+                <img class="imgJuego" src="images/juegos/motorFest.svg" alt="motor fest">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">Rugby24</h3>
+                    <h3>$11.000</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-card comprar">
+                        <h3>Comprar</h3>
+                        <i class="fas fa-shopping-cart icon-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- *card gratis home -->
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">FIFA 22</h2>
+                <img class="imgJuego" src="images/juegos/fifa22.svg" alt="fifa 22">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">FIFA 22</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-card jugar">
+                        <h3>Gratis</h3>
+                        <i class="fas fa-play-circle icon-play-circle"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- *card paga home -->
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">Football Manager</h2>
+                <img class="imgJuego" src="images/juegos/footballManager.svg" alt="football manager">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">Football Manager</h3>
+                    <h3>$20.000</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-card comprar">
+                        <h3>Comprar</h3>
+                        <i class="fas fa-shopping-cart icon-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- *card paga home -->
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">Gran Turismo 6</h2>
+                <img class="imgJuego" src="images/juegos/granTurismo6.png" alt="gran turismo 6">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">Gran Turismo 6</h3>
+                    <h3>$14.565</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-card comprar">
+                        <h3>Comprar</h3>
+                        <i class="fas fa-shopping-cart icon-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- *card paga home -->
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">Madden NFL 2024</h2>
+                <img class="imgJuego" src="images/juegos/maddenNfl2024.png" alt="nfl 2024">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">Madden NFL 2024</h3>
+                    <h3>$30.000</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-card comprar">
+                        <h3>Comprar</h3>
+                        <i class="fas fa-shopping-cart icon-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <h2>Juegos Retro</h2>
+    <!-- *carrusel home -->
+    <div class="carrusel">
+        <div class="flechaIzquierda">&#10094;</div>
+        <div class="flechaDerecha">&#10095;</div>
+        <!-- *card paga home -->
+         <div class="contenidoCarrusel">
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">Pacman</h2>
+                <img class="imgJuego" src="images/juegos/pacman.svg" alt="pacman">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">Pacman</h3>
+                    <h3>$237</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-card comprar">
+                        <h3>Comprar</h3>
+                        <i class="fas fa-shopping-cart icon-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- *card gratis home -->
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">Tetris</h2>
+                <img class="imgJuego" src="images/juegos/tetris.svg" alt="tetris">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">Tetris</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-card jugar">
+                        <h3>Gratis</h3>
+                        <i class="fas fa-play-circle icon-play-circle"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- *card paga home -->
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">4 Super Mario 3D</h2>
+                <img class="imgJuego" src="images/juegos/mario3D.svg" alt="star wars">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">4 en linea: star wars</h3>
+                    <h3>$20.000</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-card comprar">
+                        <h3>Comprar</h3>
+                        <i class="fas fa-shopping-cart icon-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- *card gratis home -->
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">Sonic Lost Word</h2>
+                <img class="imgJuego" src="images/juegos/sonicLost.svg" alt="sonic lost word">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">Sonic Lost Word</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-card jugar">
+                        <h3>Gratis</h3>
+                        <i class="fas fa-play-circle icon-play-circle"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- *card paga home -->
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">Castlevania</h2>
+                <img class="imgJuego" src="images/juegos/castlevania.svg" alt="castlevania">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">castlevania</h3>
+                    <h3>$14.876</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-card comprar">
+                        <h3>Comprar</h3>
+                        <i class="fas fa-shopping-cart icon-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- *card paga home -->
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">The Legend of Zelda</h2>
+                <img class="imgJuego" src="images/juegos/theLegendOfZelda.png" alt="the legend of zelda">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">The Legend of Zelda</h3>
+                    <h3>$14.876</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-card comprar">
+                        <h3>Comprar</h3>
+                        <i class="fas fa-shopping-cart icon-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- *card paga home -->
+        <div class="card">
+            <div class="imagen-juego">
+                <h2 class="titulo-card">Megaman 11</h2>
+                <img class="imgJuego" src="images/juegos/megaman11.png" alt="megaman 11">
+            </div>
+            <div class="subImagen">
+                <div class="nombre-precio">
+                    <h3 class="titulo-sub-img">Megaman 11</h3>
+                    <h3>$300</h3>
+                </div>
+                <div class="boton">
+                    <button class="boton-card comprar">
+                        <h3>Comprar</h3>
+                        <i class="fas fa-shopping-cart icon-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <h2>Tendencias del dia</h2>
+        <!-- *carrusel home -->
+        <div class="carrusel">
+            <div class="flechaIzquierda">&#10094;</div>
+            <div class="flechaDerecha">&#10095;</div>
+            <!-- *card paga home -->
+            <div class="contenidoCarrusel">
+            <div class="card">
+                <div class="imagen-juego">
+                    <h2 class="titulo-card">Elden Ring</h2>
+                    <img class="imgJuego" src="images/juegos/eldenRing.svg" alt="elden ring">
+                </div>
+                <div class="subImagen">
+                    <div class="nombre-precio">
+                        <h3 class="titulo-sub-img">Elden Ring</h3>
+                        <h3>$15.555</h3>
+                    </div>
+                    <div class="boton">
+                        <button class="boton-card comprar">
+                            <h3>Comprar</h3>
+                            <i class="fas fa-shopping-cart icon-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- *card gratis home -->
+            <div class="card">
+                <div class="imagen-juego">
+                    <h2 class="titulo-card">Prince Of Presia</h2>
+                    <img class="imgJuego" src="images/juegos/princeOfPresia.svg" alt="principe de persia">
+                </div>
+                <div class="subImagen">
+                    <div class="nombre-precio">
+                        <h3 class="titulo-sub-img">Prince Of Presia</h3>
+                    </div>
+                    <div class="boton">
+                        <button class="boton-card jugar">
+                            <h3>Gratis</h3>
+                            <i class="fas fa-play-circle icon-play-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- *card paga home -->
+            <div class="card">
+                <div class="imagen-juego">
+                    <h2 class="titulo-card">God Of War</h2>
+                    <img class="imgJuego" src="images/juegos/godOfWar.svg" alt="god of war">
+                </div>
+                <div class="subImagen">
+                    <div class="nombre-precio">
+                        <h3 class="titulo-sub-img">God Of War</h3>
+                        <h3>$13.000</h3>
+                    </div>
+                    <div class="boton">
+                        <button class="boton-card comprar">
+                            <h3>Comprar</h3>
+                            <i class="fas fa-shopping-cart icon-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- *card gratis home -->
+            <div class="card">
+                <div class="imagen-juego">
+                    <h2 class="titulo-card">Blasphemous</h2>
+                    <img class="imgJuego" src="images/juegos/blasphemous.svg" alt="blasphemous">
+                </div>
+                <div class="subImagen">
+                    <div class="nombre-precio">
+                        <h3 class="titulo-sub-img">Blasphemous</h3>
+                    </div>
+                    <div class="boton">
+                        <button class="boton-card jugar">
+                            <h3>Gratis</h3>
+                            <i class="fas fa-play-circle icon-play-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- *card paga home -->
+            <div class="card">
+                <div class="imagen-juego">
+                    <h2 class="titulo-card">Sims 4</h2>
+                    <img class="imgJuego" src="images/juegos/sims4.svg" alt="sims 4">
+                </div>
+                <div class="subImagen">
+                    <div class="nombre-precio">
+                        <h3 class="titulo-sub-img">Sims 4</h3>
+                        <h3>$20.000</h3>
+                    </div>
+                    <div class="boton">
+                        <button class="boton-card comprar">
+                            <h3>Comprar</h3>
+                            <i class="fas fa-shopping-cart icon-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- *card paga home -->
+            <div class="card">
+                <div class="imagen-juego">
+                    <h2 class="titulo-card">Guitar Hero 3</h2>
+                    <img class="imgJuego" src="images/juegos/guitarHero3.png" alt="guitar hero 3">
+                </div>
+                <div class="subImagen">
+                    <div class="nombre-precio">
+                        <h3 class="titulo-sub-img">Guitar Hero 3</h3>
+                        <h3>$135</h3>
+                    </div>
+                    <div class="boton">
+                        <button class="boton-card comprar">
+                            <h3>Comprar</h3>
+                            <i class="fas fa-shopping-cart icon-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- *card paga home -->
+            <div class="card">
+                <div class="imagen-juego">
+                    <h2 class="titulo-card">Hitman Absolution</h2>
+                    <img class="imgJuego" src="images/juegos/hitman.png" alt="Hitman">
+                </div>
+                <div class="subImagen">
+                    <div class="nombre-precio">
+                        <h3 class="titulo-sub-img">Hitman Absolution</h3>
+                        <h3>$15.887</h3>
+                    </div>
+                    <div class="boton">
+                        <button class="boton-card comprar">
+                            <h3>Comprar</h3>
+                            <i class="fas fa-shopping-cart icon-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <footer class="fatFooter">
+        <div class="fatContainer">
+        <!-- Sección redes -->
+        <div class="footerColumn">
+            <h3>Seguinos:</h3>
+            <div class="socialIcons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <address>
+            Tandil<br>
+            Portugal 512<br>
+            2494112233
+            </address>
+        </div>
+    
+        <!-- Sección Information -->
+        <div class="footerColumn">
+            <h3>Informacion:</h3>
+            <ul>
+            <li><a href="#">¿Quienes somos?</a></li>
+            <li><a href="#">Carrera</a></li>
+            <li><a href="#">Recursos Humanos</a></li>
+            </ul>
+        </div>
+    
+        <!-- Sección Sobre nosotros -->
+        <div class="footerColumn">
+            <h3>Sobre nosotros:</h3>
+            <ul>
+            <li><a href="#">Productos Propios</a></li>
+            <li><a href="#">Descarga la App</a></li>
+            <li><a href="#">Torneos</a></li>
+            <li><a href="#">Hacete Premium</a></li>
+            </ul>
+        </div>
+    
+        <!-- Sección terminos y condiciones -->
+        <div class="footerColumn">
+            <h3>Terminos y condiciones:</h3>
+            <ul>
+            <li><a href="#">Politicas de cookies</a></li>
+            <li><a href="#">Oficina de legales</a></li>
+            <li><a href="#">Documentación</a></li>
+            </ul>
+        </div>
+
+        <!-- Sección oficinas -->
+        <div class="footerColumn">
+            <h3>Oficinas:</h3>
+            <ul>
+            <li><a href="#">Tandil</a></li>
+            <li><a href="#">Miami</a></li>
+            <li><a href="">Frankfurt</a></li>
+            </ul>
+        </div>
+    
+        <!-- Sección ayuda -->
+        <div class="footerColumn">
+            <h3>Ayuda:</h3>
+            <ul>
+            <li><a href="#">Reporta un bug</a></li>
+            <li><a href="#">Calificanos</a></li>
+            <li><a href="#">Foros y Blogs</a></li>
+            <li><a href="#">Noticias</a></li>
+            </ul>
+        </div>
+    
+        <!-- Sección de Botones -->
+        <div class="footerButtons">
+            <button class="btn">Visitar</button>
+            <button class="btn">Donar</button>
+            <button class="btn">Contacto</button>
+        </div>
+        </div>
+    </footer>
+
+    <script src="js/menuHamburguesa.js"></script>
+    <script src="carruselDesplegable.js"></script>
+</body>
+</html>

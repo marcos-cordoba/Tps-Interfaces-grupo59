@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+body{
+    overflow-x:  hidden;
+}
+/* cards pagina del juego */
+.flechaIzquierda{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+    border-radius: 10px; /* Bordes redondeados */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 50px;
+    height: 160px;
+    z-index:4;
+    position: absolute;
+    left: 12px;
+}
+.flechaDerecha{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+    border-radius: 10px; /* Bordes redondeados */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    width: 50px;
+    height: 160px;
+    z-index:4;
+    position: absolute;
+    right: 10px;
+}
+
+.flechaIzquierda:hover, .flechaDerecha:hover{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.carrusel{
+    height: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contenidoCarrusel{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.containerCardGrande{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bigCard {
+    box-sizing: border-box;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 450px;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.cardGrande{
+    box-sizing: border-box;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 450px;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    z-index: 0;
+    transition: transform 0.8s ease-in-out  ;
+}
+
+.card{
+    width: 250px;
+    height: 180px;
+    background-color: beige;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.imagen-juego{
+    background-color: blue;
+    width: 250px;
+    height: 140px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+
+.imagen-juego img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+}
+
+.subImagen{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    background-color: var(--violeta);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+}
+
+.titulo-card{
+    display: none;
+    padding-top: 5px;
+    padding-left: 5px;
+    position: absolute;
+    z-index: 1;
+}
+
+.imagen-juego:hover .imgJuego{
+    filter: contrast(0.5);
+}
+
+.imagen-juego:hover .titulo-card{
+    display: block;
+}
+
+.nombre-precio{
+    width: 200px;
+    height: 10%;
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    padding-left: 8px;
+    justify-content: space-around;
+    border-bottom-left-radius: 20px;
+}
+
+.boton{
+    padding-right: 5px;
+    width: fit-content;
+    height: 100%;
+    /* background-color: burlywood; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-right-radius: 20px;
+}
+
+.boton-card{
+    width: 90px;
+    height: 30px;
+    border-radius: 40px;
+    background-color: var(--acento);
+    border: 0px;
+    cursor: pointer;
+    color: var(--blanco);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    outline: none;
+}
+
+.comprar{
+    background-color: var(--verde);
+}
+
+.jugar{
+    background-color: var(--acento);
+}
+.card:hover{
+    z-index: 3;
+}
+
+/* animacion para los botones de comprar y gratis */
+.boton-card .fas{
+    font-size: 10px;
+    transform: translateX(90%);
+    opacity: 0;
+    transition: all 0.5s ease;
+    display:none;
+}
+
+/* a probar  */
+.boton-card:active {
+    animation: button-jump 0.4s ease forwards;
+}
+
+/* Animación de salto del botón */
+@keyframes button-jump {
+    0% {
+        transform: translateY(0);
+    }
+    15%{
+        transform: translateY(-5px)rotate3d(1, 0, 1, 15deg)
+    }
+    30% {
+        transform: translateY(-5px)rotate3d(1, 0, 1, -15deg);;
+    }
+    60% {
+        transform: translateY(-5px)rotate3d(1, 0, 1, 15deg);
+    }
+    90%{
+        transform: translateY(0px)rotate3d(1, 0, 1, -15deg);
+    }
+    100% {
+        transform: translateY(0) rotate3d(1, 0, 1, 0deg);
+    }
+}
+
+
+
+/*  */
+
+
+
+.boton-card:hover .fas{
+   
+    display:block;
+}
+
+.boton-card h3{
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+
+.boton-card:hover h3{
+    transform: translateX(-1px);
+}
+
+.boton-card:hover .fas{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.gratis-text{
+    color: var(--acento);
+}
+
+.container-pag-juego{
+    background-color: blue;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.card-pag-juego{
+    margin: 5px;
+    width: 280px;
+    height: 90px;
+    background-color: var(--gris2);
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px var(--negro3);
+    cursor: pointer;
+}
+.card-pag-juego:hover{
+    border: 1px var(--acento) solid;
+}
+.img-card-juego{
+    width: 100px;
+    height: 100%;
+}
+.img-card-juego img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+.contenido-card-juego{
+    margin-top: 3px;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-areas: 
+    "titulo titulo"
+    "precio boton";
+    grid-template-rows: 1fr 1fr;
+}
+
+.titulo-genero-pag-juego{
+    padding-left: 5px;
+    /* background-color: black; */
+    grid-area: titulo;
+}
+.precio-card-juego{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: brown; */
+    grid-area: precio;
+}
+.btn-card-pag-juego{
+    display: flex;
+    /* background-color: cadetblue; */
+    grid-area: boton;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnCardJuego{
+    border: 0px;
+    /* border: 1px var(--negro3) solid; */
+    width: 80px;
+    height: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 3px var(--negro3); 
+    cursor: pointer;
+}
+
+
+
+
+/* *big card */
+.containerCardGrande{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bigCard {
+    box-sizing: border-box;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 450px;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.bigCard:hover .bigCardShadow{
+    display: block;
+    z-index: 2;
+}
+/* .bigCard:hover .btn-jugar-bigCard{
+    display: block;
+    z-index: 10;
+} */
+.bigCard:hover .playIcon{
+    z-index: 1;
+}
+.bigCard:hover .bigCardInfo{
+    display: block;
+    /* z-index: 2; */
+}
+
+
+.bigCardShadow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 10%, transparent 100%);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: height 0.5s;
+    z-index: 0;
+}
+
+
+.cardImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardImage img{
+    width: 100%;
+    height: 100%;
+}
+
+.playIcon {
+   width: 50px;
+   height: 50px;
+   z-index: 1;
+   background-color: aliceblue;
+   position: absolute;
+}
+
+.playIcon img {
+    width: 100%;
+    display: block;
+}
+
+.bigCardInfo h3{
+    opacity: 0.9;
+    /* display: none; */
+}
+
+.bigCardInfo h3,
+.bigCardInfo h2 {
+    margin: 5px;
+}
+
+.bigCardInfo {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    transition: 300ms;
+    width: 100%;
+    justify-content: center;
+    z-index: 1;
+}
+.btn-bigCard{
+    width: 150px;
+    height: 100%;
+    /* background-color: aqua; */
+    position: absolute;
+    right: 5px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* display: none; */
+}
+.btn-jugar-bigCard{
+    background-color: var(--acento);
+    border: 0px;
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--negro3);
+    position: relative;
+    z-index: 10;
+    bottom: 10px;
+    top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
