@@ -50,10 +50,6 @@
     right: 20px;
   }
 
-  #TopJuegoDeLaSemana h1{
-    display: none;
-  }
-
   /* Menu hamburguesa */
   .menuCategorias{
     top: 40px;
@@ -173,10 +169,6 @@
   }
 
   /* carrusel */
-  .carousel-container{
-    display: none;
-  }
-
   .card{
     width: 225px;
   }
@@ -187,6 +179,49 @@
 
   .subImagen{
     height: 50px;
+  }
+
+  /* carrusel grande */
+  #TopJuegoDeLaSemana h1 {
+    font-size: 24px; /* Ajusta el tamaño a lo que necesites */
+  }
+
+   .bigCard{
+    width: 140px;
+  }
+
+  .carousel-container{
+    height: 140px;
+    margin-left: 40px;
+  }
+
+  .btn-bigCard{
+    width: 130px;
+    height: 90%;
+  }
+
+  .btn-jugar-bigCard{
+    width: 70px;
+    height: 20px;
+  }
+
+  .bigCardInfo{
+    padding: 0;
+  }
+
+  .bigCardInfo h3, .bigCardInfo h2{
+    margin-top: -8px;
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+    color: white; /* Cambia el color a blanco para más contraste */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+  }
+
+  .bigCardInfo h2{
+    font-size: 12px;
+  }
+
+  .next1, .next2, .next3, .prev1, .prev2, .prev3{
+    top: 60%;
   }
 
 }
