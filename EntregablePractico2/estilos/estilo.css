@@ -73,6 +73,7 @@ p {
     font-weight: 400;
     font-family: var(--rubik);
 }
+
 .txt-negro{
     color: var(--negro3);
 }
@@ -82,7 +83,6 @@ header{
   width: 100%;
   height: 60px;
   background-color: var(--violeta-1);
-  /* justify-content:  space-around; */
   align-items: center;
   grid-area: header;
 }
@@ -102,7 +102,6 @@ header{
     width: 95px;
     height: 50px;
     position: relative;
-    /* left: 5px; */
 }
 
 .logo img{
@@ -116,9 +115,7 @@ header{
     position: relative;
     width: 490px;
     height: 35px;
-    left: 250px;
-    
-    
+    left: 370px;
 }
 
 .barra{
@@ -142,6 +139,7 @@ header{
     position: absolute;
     right: 70px;
 }
+
 .carrito img{
   width: 100%;
   height: 100%;
@@ -153,10 +151,12 @@ header{
     height: fit-content;
     right: 10px;
 }
+
 .logoUser img{
   width: 40px;
   height: 40px;
 }
+
 .menuCategorias{
     width: 80px;
     height: 165%;
@@ -171,14 +171,17 @@ header{
     padding: 10px 0;
     z-index: 5;
 }
+
 .open{
     transform: translateX(-200px);
     transition: opacity 0.8s ease;
 }
+
 .menuCategorias:hover {
     width: 190px; 
     align-items: center; 
 }
+
 .nombreCategoria {
     color: var(--blanco);
     font-style: bold;
@@ -192,15 +195,18 @@ header{
     align-items: center; 
     
 }
+
 .menuCategorias:hover .nombreCategoria {
     opacity: 1; 
     
 }
+
 .menuCategorias:hover .iconoCategoria {
     align-items: center;
     justify-content: flex-start;
     transform: translateX(-50px);
 }
+
 .iconoCategoria {
     width: 40px; 
     height: 48px;
@@ -213,11 +219,8 @@ header{
     transform: translateX(-8px);
 }
 
-
-
 main{
     grid-area: main;
-   
 }
 
 /* Estilos básicos para el footer */
@@ -325,165 +328,3 @@ footer address {
     transform: scale(1);
   }
 }
-
-@media screen and (max-width: 768px) {
-  #TopJuegoDeLaSemana h1{
-    display: none;
-  }
-  html {
-    overflow-x: hidden;
-}
-.menuCategorias{
-  height: 146%;
-  overflow-y: hidden;
-}
-.barraBusqueda {
-  display: none;
-}
-.logo {
-  width: 95px;
-  height: 50px;
-  position: relative;
-  right: 234px
-}
-
-  .fatContainer {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 100%;
-      height: 100%;
-  }
-
-  .socialIcons{
-    display: flex;
-    flex-direction: row;
-  }
-
-  header {
-    justify-content: space-between;
-    
-  }
-
-  .menuHamburguesa img {
-      width: 70px;
-      height: 70px;
-  }
-  
-
-.fatFooter .fatContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: wrap;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.footerColumn {
-  width: 18%;
-}
-
-.footerColumn h3 {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
-
-.footerColumn ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footerColumn ul li {
-  margin-bottom: 10px;
-}
-
-.footerColumn ul li a {
-  color: var(--blanco);
-  text-decoration: none;
-  font-size: 0.9em;
-}
-
-.footerColumn ul li a:hover {
-  text-decoration: underline;
-}
-
-.socialIcons a {
-  margin-right: 10px;
-  font-size: 1.5em;
-  color: var(--acento);
-}
-
-.socialIcons i{
-  transition: all 0.9s cubic-bezier(0.33, 1, 0.68, 1);
-}
-
-.socialIcons i:hover {
-  color: var(--acento);
-  transform: scale(1.5); /* Agranda el botón suavemente */
-}
-
-/* Estilo para el address */
-footer address {
-  font-style: var(--rubik);
-  font-size: 0.9em;
-  line-height: 1.5;
-  margin-top: 20px;
-}
-
-/* Sección de botones */
-.footerButtons {
-  display: flex;
-  flex-direction: column;
-}
-
-.footerButtons .btn {
-  background-color: var(--acento);
-  color: var(--blanco);
-  border: none;
-  padding: 10px 20px;
-  margin-bottom: 10px;
-  font-size: 1em;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: .3s;
-}
-
-.footerButtons .btn:hover {
-  animation: pulse 1s infinite;
-  transition: .3s;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-
-  70% {
-    transform: scale(.9);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-}
-  /* Responsive */
-  /* @media (max-width: 768px) {
-   
-    
-
-
-    
-    .fat-footer .container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .footer-column, .footer-buttons {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 30px;
-  }
-
-  } */
