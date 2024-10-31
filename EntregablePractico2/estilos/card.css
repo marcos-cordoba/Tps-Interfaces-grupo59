@@ -89,6 +89,15 @@ body{
     z-index: 0;
     transition: transform 0.8s ease-in-out  ;
 }
+.nombre-precio h3{
+    width: 150px;
+}
+.titulo-card {
+    width: 220px;            
+    white-space: nowrap;     
+    overflow: hidden;        
+    text-overflow: ellipsis; 
+}
 
 .card{
     width: 250px;
