@@ -90,6 +90,7 @@ header{
 .menuHamburguesa{
     width: fit-content;
     height: fit-content;
+    cursor: pointer;
 }
 
 .menuHamburguesa img{
@@ -150,6 +151,7 @@ header{
     width: fit-content;
     height: fit-content;
     right: 10px;
+    cursor: pointer;
 }
 
 .logoUser img{

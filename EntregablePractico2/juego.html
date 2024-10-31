@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="estilos/juego.css">
     <link rel="stylesheet" href="estilos/card.css">
     <link rel="stylesheet" href="estilos/comentario.css">
+    <link rel="stylesheet" href="estilos/menuUsuario.css">
+
     <link rel="icon" href="images/gamixIcon.svg">
     <title>4 en linea</title>
 </head>
@@ -31,7 +33,127 @@
             <img src="images/logoUser.svg" alt="logo de usuario">
         </div>
     </header>
-    
+
+     <!-- *menu usuario -->
+     <div class="menuUsuario">
+      <ul>
+          <li>
+              <div class="iconCategoria">
+                  <img src="images/icons/logoPerfil.svg" alt="logo perfil">
+              </div>
+              <div class="categoriaPerfil">
+                  <p>Mi perfil</p>
+              </div>
+          </li>
+          <li>
+              <div class="iconCategoria">
+                  <img class="iconM" src="images/icons/editar-perfil.svg" alt="">
+              </div> 
+              <div class="categoriaPerfil">
+                  <p>Editar perfil</p>
+              </div>
+          </li>
+          <li>
+              <div  class="iconCategoria">
+                      <img class="iconM" src="images/icons/configuracion.svg" alt="configuracion">
+              </div> 
+              <div class="categoriaPerfil">
+                  <p>Configuración</p>
+              </div>
+          </li>
+          <li><div  class="iconCategoria">
+              <img class="ineaPerfil" src="images/icons/menuLine.svg" alt="">
+          </li>
+          <li><div class="iconCategoria">
+              <img class="iconM" src="images/icons/soporte.svg" alt="soporte tecnico">
+          </div> <div class="categoriaPerfil">
+              <p>soporte Tecnico</p>
+          </div></li>
+          <li><div class="iconCategoria">
+              <img class="iconM" src="images/icons/download.svg" alt="Descargas">
+          </div> <div class="categoriaPerfil">
+              <p>Descarga la App</p>
+          </div></li>
+          <li><div class="iconCategoria">
+              <img class="iconM" src="images/icons/cerrar-sesion.svg" alt="Cerrar Sesion">
+          </div> <div class="categoriaPerfil">
+              <p>Cerrar Sesion</p>
+          </div></li>
+      </ul>
+
+  </div>
+  <!-- * menu categorias -->
+  <div class="menuCategorias">
+      <div class="iconoCategoria">
+          <img src="images/home1.svg" alt="">
+          <span class="nombreCategoria">Home</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/tendencia2.svg" alt="">
+          <span class="nombreCategoria">Tendencia</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/new3.svg" alt="">
+          <span class="nombreCategoria">Nuevos</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/4 (2).png" alt="">
+          <span class="nombreCategoria">Recientes</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion.svg" alt="">
+          <span class="nombreCategoria">Torneos</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (1).svg" alt="">
+          <span class="nombreCategoria">Multijugador</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (2).svg" alt="">
+          <span class="nombreCategoria">Home</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (3).svg" alt="">
+          <span class="nombreCategoria">Lucha</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (4).svg" alt="">
+          <span class="nombreCategoria">Pokemón</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (5).svg" alt="">
+          <span class="nombreCategoria">Pacman</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (6).svg" alt="">
+          <span class="nombreCategoria">Amor</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (7).svg" alt="">
+          <span class="nombreCategoria">Basket</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (8).svg" alt="">
+          <span class="nombreCategoria">Gameplay</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (9).svg" alt="">
+          <span class="nombreCategoria">Arcade</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (10).svg" alt="">
+          <span class="nombreCategoria">Puzzle</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (11).svg" alt="">
+          <span class="nombreCategoria">Home</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (12).svg" alt="">
+          <span class="nombreCategoria">Home</span>
+      </div>
+  </div>
+    <div class="contenedor-titulo">
     <!--* titulo del juego -->
     <div class="titulo-juego">
       <div class="contenido-titulo">
@@ -48,15 +170,16 @@
         </div>
       <div class="divisor-juego"></div>
     </div>
+  </div>
     <!--* juego -->
     <main class="main-juego">
       
       <div class="juego">
-        <!-- <img src="images/juegos/starwars.svg" alt="star wars">
-        <button class="btn-jugar-juego"><h3>Jugar</h3></button> -->
-        <p id="resultados" style="position: absolute; top: 500px; right: 500px;font-size: 50px;"></p>
+        <img src="images/juegos/starwars.svg" alt="star wars">
+        <button class="btn-jugar-juego"><h3>Jugar</h3></button>
+        <!-- <p id="resultados" style="position: absolute; top: 500px; right: 500px;font-size: 50px;"></p>
         <canvas id="canvas" width="1100" height="530" style="border:1px solid #000000;"></canvas>
-        <script src="canvas.js"></script>
+        <script src="canvas.js"></script> -->
       </div>
       <aside class="descripcion"> 
         <div class="contenido-descripcion">
@@ -375,6 +498,8 @@
       </div>
     </footer>
 </div>
+<script src="js/menuHamburguesa.js"></script>
+<script src="js/menuUsuario.js"></script>
      <script src="canvas.js"></script>
 </body>
 </html>
