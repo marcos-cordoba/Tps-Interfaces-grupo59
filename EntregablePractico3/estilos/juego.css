@@ -89,12 +89,18 @@ span{
 }
 
 .juego{
-    margin-top: 7px;
+    margin-top: 0px;
     width: 1100px;
     height: 530px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid black;
+}
+#contenedorJuego{
+    display: none; /* Ocultamos el juego al inicio */
+    text-align: center;
+    margin-top: 20px;
 }
 
 .juego img{
@@ -147,7 +153,7 @@ span{
     justify-content: center;
 }
 
-.btn-jugar-juego{
+#btn-jugar-juego{
     z-index: 1;
     background-color: var(--acento);
     width: 100px;
@@ -155,6 +161,13 @@ span{
     border: 1px solid var(--negro3);
     border-radius: 10px;
     position: absolute;
+    top:400px;
     cursor: pointer;
     box-shadow: 0px 0px 10px var(--negro3);
+}
+
+.victoria{
+    color:aqua;
+    font-size: 50px;
+    
 }

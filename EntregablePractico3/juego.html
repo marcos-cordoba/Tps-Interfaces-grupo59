@@ -51,12 +51,31 @@
     <!--* juego -->
     <main class="main-juego">
       
+      <button id="btn-jugar-juego"><h3>Jugar</h3></button> 
+
+      <div id="opciones-modo" style="display: none;">
+        <h3>Elige el modo de juego:</h3>
+        <button class="modo" data-filas="5" data-columnas="6">Tablero 5x6</button>
+        <button class="modo" data-filas="6" data-columnas="7">Tablero 6x7</button>
+        <button class="modo" data-filas="7" data-columnas="8">Tablero 7x8</button>
+        <div>
+          <label for="nombreJugadorRojo">Nombre Jugador Rojo:</label>
+          <input type="text" id="nombreJugadorRojo" placeholder="Ingrese el nombre del jugador rojo">
+        </div>
+        <div>
+            <label for="nombreJugadorAzul">Nombre Jugador Azul:</label>
+            <input type="text" id="nombreJugadorAzul" placeholder="Ingrese el nombre del jugador azul">
+        </div>
+      </div>
+
+      
       <div class="juego">
-        <!-- <img src="images/juegos/starwars.svg" alt="star wars">
-        <button class="btn-jugar-juego"><h3>Jugar</h3></button> -->
-        <p id="resultados" style="position: absolute; top: 500px; right: 500px;font-size: 50px;"></p>
-        <canvas id="canvas" width="1100" height="530" style="border:1px solid #000000;"></canvas>
-        <script src="canvas.js"></script>
+        <!-- <img src="images/juegos/starwars.svg" alt="star wars"> -->
+        <div id="contenedorJuego">
+          <p id="resultados" style="position: absolute; top: 500px; right: 500px;font-size: 50px;"></p>
+          <canvas id="canvas" width="1100" height="530" style="border:1px solid #000000;"></canvas>
+          <script src="canvas.js"></script>
+        </div>
       </div>
       <aside class="descripcion"> 
         <div class="contenido-descripcion">
