@@ -15,6 +15,10 @@
     grid-area: footer;
 }
 
+.fatFooter{
+    width: 130%;
+}
+
 .main-juego{
     grid-area: juego;
     width: 100%;
@@ -176,4 +180,8 @@ span{
 #resultados{
     position:absolute;
     font-size: xx-large;
+}
+
+p a span{
+    color: var(--blanco);
 }

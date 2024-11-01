@@ -130,8 +130,7 @@ body{
     height: 60px;
     background-color: var(--violeta);
     border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    
+    border-bottom-right-radius: 20px; 
 }
 
 .titulo-card{
@@ -172,12 +171,16 @@ body{
     border-bottom-right-radius: 20px;
 }
 
-.boton-card{
+.boton a{
+    text-decoration: none; /* Quita el subrayado */
+}
+
+.boton-card {
     width: 90px;
     height: 30px;
     border-radius: 40px;
     background-color: var(--acento);
-    border: 0px;
+    border: none;
     cursor: pointer;
     color: var(--blanco);
     overflow: hidden;
@@ -186,79 +189,60 @@ body{
     justify-content: center;
     transition: background-color 0.3s ease, transform 0.2s ease;
     outline: none;
+    position: relative; /* Para que el ícono use esta referencia */
 }
 
-.comprar{
+/* Estilos específicos de fondo para botones */
+.comprar {
     background-color: var(--verde);
 }
 
-.jugar{
+.jugar {
     background-color: var(--acento);
 }
-.card:hover{
-    z-index: 3;
-}
 
-/* animacion para los botones de comprar y gratis */
-.boton-card .fas{
-    font-size: 10px;
-    transform: translateX(90%);
+/* Configuración del ícono con posición absoluta */
+.boton-card .fas {
+    font-size: 16px; /* Ajusta el tamaño si es necesario */
+    position: absolute;
+    right: 36%; /* Ajusta para mover más al centro */
     opacity: 0;
-    transition: all 0.5s ease;
-    display:none;
+    transform: translateX(20px);
+    transition: opacity 0.5s, transform 0.5s;
 }
 
-/* a probar  */
+/* Animación de salto en clic */
 .boton-card:active {
     animation: button-jump 0.4s ease forwards;
 }
 
+/* Transición para el texto */
+.boton-card h3 {
+    display: inline-block;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Hover: oculta el texto y muestra el ícono */
+.boton-card:hover h3 {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.boton-card:hover .fas {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 /* Animación de salto del botón */
 @keyframes button-jump {
-    0% {
-        transform: translateY(0);
-    }
-    15%{
-        transform: translateY(-5px)rotate3d(1, 0, 1, 15deg)
-    }
-    30% {
-        transform: translateY(-5px)rotate3d(1, 0, 1, -15deg);;
-    }
-    60% {
-        transform: translateY(-5px)rotate3d(1, 0, 1, 15deg);
-    }
-    90%{
-        transform: translateY(0px)rotate3d(1, 0, 1, -15deg);
-    }
-    100% {
-        transform: translateY(0) rotate3d(1, 0, 1, 0deg);
-    }
+    0% { transform: translateY(0); }
+    15% { transform: translateY(-5px) rotate3d(1, 0, 1, 15deg); }
+    30% { transform: translateY(-5px) rotate3d(1, 0, 1, -15deg); }
+    60% { transform: translateY(-5px) rotate3d(1, 0, 1, 15deg); }
+    90% { transform: translateY(0) rotate3d(1, 0, 1, -15deg); }
+    100% { transform: translateY(0) rotate3d(1, 0, 1, 0deg); }
 }
 
-
-
-/*  */
-
-
-
-.boton-card:hover .fas{
-   
-    display:block;
-}
-
-.boton-card h3{
-    display: inline-block;
-    transition: all 0.5s ease;
-}
-
-.boton-card:hover h3{
-    transform: translateX(-1px);
-}
-
-.boton-card:hover .fas{
-    transform: translateX(0);
-    opacity: 1;
-}
 
 .gratis-text{
     color: var(--acento);

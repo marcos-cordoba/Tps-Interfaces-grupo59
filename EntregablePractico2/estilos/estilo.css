@@ -261,7 +261,7 @@ main{
 }
 
 .footerColumn ul li {
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 
 .footerColumn ul li a {
@@ -307,11 +307,11 @@ footer address {
   background-color: var(--acento);
   color: var(--blanco);
   border: none;
-  padding: 10px 20px;
+  padding: 5px 15px; /* Ajusta el padding */
   margin-bottom: 10px;
-  font-size: 1em;
+  font-size: 0.9em; /* Ajusta el tamaño de la fuente */
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 15px; /* Ajusta el border-radius */
   transition: .3s;
 }
 

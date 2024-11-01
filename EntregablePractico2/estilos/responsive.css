@@ -84,11 +84,6 @@
     width: 18%;
   }
 
-  .footerColumn h3 {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-  }
-
   .footerColumn ul {
     list-style: none;
     padding: 0;
@@ -222,6 +217,20 @@
 
   .next1, .next2, .next3, .prev1, .prev2, .prev3{
     top: 60%;
+  }
+
+  .boton-card{
+    right: 20px;
+  }
+
+  .nombre-precio {
+    padding: 8px; /* Reduce el padding */
+    overflow: visible; /* Permite que el texto se muestre sin cortar */
+    white-space: normal; /* Permite saltos de línea en pantallas más pequeñas */
+  }
+
+  .titulo-sub-img {
+    font-size: 1,5vh; /* Reduce el tamaño de fuente */
   }
 
 }
