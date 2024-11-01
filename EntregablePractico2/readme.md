@@ -1,0 +1,1 @@
+para poder ingresar al home. En el login el nombre de usuario es admin y la contrasea es admin

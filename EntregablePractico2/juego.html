@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="estilos/juego.css">
     <link rel="stylesheet" href="estilos/card.css">
     <link rel="stylesheet" href="estilos/comentario.css">
+    <link rel="stylesheet" href="estilos/menuUsuario.css">
+
     <link rel="icon" href="images/gamixIcon.svg">
     <title>4 en linea</title>
 </head>
@@ -25,13 +27,133 @@
             <img class="lupa" src="images/lupa.svg" alt="lupa de buscador">
         </div>
         <div class="carrito">
-            <img src="images/carrito.svg" alt="carrito de compras">
+            <a href="loading.html"><img src="images/carrito.svg" alt="carrito de compras"></a>
         </div>
         <div class="logoUser">
             <img src="images/logoUser.svg" alt="logo de usuario">
         </div>
     </header>
-    
+
+     <!-- *menu usuario -->
+     <div class="menuUsuario">
+      <ul>
+          <li>
+              <div class="iconCategoria">
+                  <img src="images/icons/logoPerfil.svg" alt="logo perfil">
+              </div>
+              <div class="categoriaPerfil">
+                  <p>Mi perfil</p>
+              </div>
+          </li>
+          <li>
+              <div class="iconCategoria">
+                  <img class="iconM" src="images/icons/editar-perfil.svg" alt="">
+              </div> 
+              <div class="categoriaPerfil">
+                  <p>Editar perfil</p>
+              </div>
+          </li>
+          <li>
+              <div  class="iconCategoria">
+                      <img class="iconM" src="images/icons/configuracion.svg" alt="configuracion">
+              </div> 
+              <div class="categoriaPerfil">
+                  <p>Configuración</p>
+              </div>
+          </li>
+          <li><div  class="iconCategoria">
+              <img class="ineaPerfil" src="images/icons/menuLine.svg" alt="">
+          </li>
+          <li><div class="iconCategoria">
+              <img class="iconM" src="images/icons/soporte.svg" alt="soporte tecnico">
+          </div> <div class="categoriaPerfil">
+              <p>soporte Tecnico</p>
+          </div></li>
+          <li><div class="iconCategoria">
+              <img class="iconM" src="images/icons/download.svg" alt="Descargas">
+          </div> <div class="categoriaPerfil">
+              <p>Descarga la App</p>
+          </div></li>
+          <li><div class="iconCategoria">
+              <img class="iconM" src="images/icons/cerrar-sesion.svg" alt="Cerrar Sesion">
+          </div> <div class="categoriaPerfil">
+              <p>Cerrar Sesion</p>
+          </div></li>
+      </ul>
+
+  </div>
+  <!-- * menu categorias -->
+  <div class="menuCategorias">
+      <div class="iconoCategoria">
+          <img src="images/home1.svg" alt="">
+          <span class="nombreCategoria">Home</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/tendencia2.svg" alt="">
+          <span class="nombreCategoria">Tendencia</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/new3.svg" alt="">
+          <span class="nombreCategoria">Nuevos</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/4 (2).png" alt="">
+          <span class="nombreCategoria">Recientes</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion.svg" alt="">
+          <span class="nombreCategoria">Torneos</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (1).svg" alt="">
+          <span class="nombreCategoria">Multijugador</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (2).svg" alt="">
+          <span class="nombreCategoria">Home</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (3).svg" alt="">
+          <span class="nombreCategoria">Lucha</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (4).svg" alt="">
+          <span class="nombreCategoria">Pokemón</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (5).svg" alt="">
+          <span class="nombreCategoria">Pacman</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (6).svg" alt="">
+          <span class="nombreCategoria">Amor</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (7).svg" alt="">
+          <span class="nombreCategoria">Basket</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (8).svg" alt="">
+          <span class="nombreCategoria">Gameplay</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (9).svg" alt="">
+          <span class="nombreCategoria">Arcade</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (10).svg" alt="">
+          <span class="nombreCategoria">Puzzle</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (11).svg" alt="">
+          <span class="nombreCategoria">Home</span>
+      </div>
+      <div class="iconoCategoria">
+          <img src="images/Opcion (12).svg" alt="">
+          <span class="nombreCategoria">Home</span>
+      </div>
+  </div>
+    <div class="contenedor-titulo">
     <!--* titulo del juego -->
     <div class="titulo-juego">
       <div class="contenido-titulo">
@@ -40,23 +162,29 @@
           </div>
           <div class="content-game-title">
             <h2>Star Wars: 4 en Linea</h2>
-            <p>juegos de mesa / <span>4 en linea</span></p>
+            <p>
+              <a href="loading.html"><span>juegos de mesa</span></a> / 
+              <a href="juego.html"><span>4 en linea</span></a>
+            </p>
           </div>
           <div class="compartir">
-            <img src="images/compartir.svg" alt="">
+            <a href="juego.html#fondo">
+              <img src="images/compartir.svg" alt="compartir">
+            </a>
           </div>
         </div>
       <div class="divisor-juego"></div>
     </div>
+  </div>
     <!--* juego -->
     <main class="main-juego">
       
       <div class="juego">
-        <!-- <img src="images/juegos/starwars.svg" alt="star wars">
-        <button class="btn-jugar-juego"><h3>Jugar</h3></button> -->
-        <p id="resultados" style="position: absolute; top: 500px; right: 500px;font-size: 50px;"></p>
+        <img src="images/juegos/starwars.svg" alt="star wars">
+        <button class="btn-jugar-juego"><h3>Jugar</h3></button>
+        <!-- <p id="resultados" style="position: absolute; top: 500px; right: 500px;font-size: 50px;"></p>
         <canvas id="canvas" width="1100" height="530" style="border:1px solid #000000;"></canvas>
-        <script src="canvas.js"></script>
+        <script src="canvas.js"></script> -->
       </div>
       <aside class="descripcion"> 
         <div class="contenido-descripcion">
@@ -294,7 +422,7 @@
       </div>
     </aside>
 
-    <footer class="fatFooter footer-juego">
+    <footer class="fatFooter">
       <div class="fatContainer">
         <!-- Sección redes -->
         <div class="footerColumn">
@@ -309,18 +437,25 @@
           <address>
             Tandil<br>
             Portugal 512<br>
-            2494112233
+            Teléfono: 2494112233<br>
+            Email: info@tuempresa.com
           </address>
         </div>
     
         <!-- Sección Information -->
         <div class="footerColumn">
-          <h3>Informacion:</h3>
+          <h3>Información:</h3>
           <ul>
-            <li><a href="#">¿Quienes somos?</a></li>
-            <li><a href="#">Contactanos</a></li>
+            <li><a href="#">¿Quiénes somos?</a></li>
+            <li><a href="#">Contáctanos</a></li>
             <li><a href="#">Carrera</a></li>
             <li><a href="#">Recursos Humanos</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Testimonios</a></li>
+            <li><a href="#">Eventos</a></li>
           </ul>
         </div>
     
@@ -332,16 +467,28 @@
             <li><a href="#">Descarga la App</a></li>
             <li><a href="#">Torneos</a></li>
             <li><a href="#">Hacete Premium</a></li>
+            <li><a href="#">Nuestra Historia</a></li>
+            <li><a href="#">Misión y Visión</a></li>
+            <li><a href="#">Equipo</a></li>
+            <li><a href="#">Noticias y Actualizaciones</a></li>
+            <li><a href="#">Colaboraciones</a></li>
           </ul>
         </div>
     
-        <!-- Sección terminos y condiciones -->
+        <!-- Sección Términos y condiciones -->
         <div class="footerColumn">
-          <h3>Terminos y condiciones:</h3>
+          <h3>Condiciones:</h3>
           <ul>
-            <li><a href="#">Politicas de cookies</a></li>
-            <li><a href="#">Oficina de legales</a></li>
+            <li><a href="#">Políticas de Cookies</a></li>
+            <li><a href="#">Oficina de Legales</a></li>
             <li><a href="#">Documentación</a></li>
+            <li><a href="#">Términos de Uso</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Condiciones de Servicio</a></li>
+            <li><a href="#">Políticas de Reembolso</a></li>
+            <li><a href="#">Limitación de Responsabilidad</a></li>
+            <li><a href="#">Resolución de Conflictos</a></li>
+            <li><a href="#">Actualizaciones de Términos</a></li>
           </ul>
         </div>
 
@@ -351,7 +498,14 @@
           <ul>
             <li><a href="#">Tandil</a></li>
             <li><a href="#">Miami</a></li>
-            <li><a href="">Frankfurt</a></li>
+            <li><a href="#">Frankfurt</a></li>
+            <li><a href="#">Buenos Aires</a></li>
+            <li><a href="#">Madrid</a></li>
+            <li><a href="#">Nueva York</a></li>
+            <li><a href="#">Sao Paulo</a></li>
+            <li><a href="#">Londres</a></li>
+            <li><a href="#">Tokyo</a></li>
+            <li><a href="#">Sidney</a></li>
           </ul>
         </div>
     
@@ -363,6 +517,12 @@
             <li><a href="#">Calificanos</a></li>
             <li><a href="#">Foros y Blogs</a></li>
             <li><a href="#">Noticias</a></li>
+            <li><a href="#">Guía de Inicio Rápido</a></li>
+            <li><a href="#">Documentación</a></li>
+            <li><a href="#">Política de Devoluciones</a></li>
+            <li><a href="#">Contacto con Soporte</a></li>
+            <li><a href="#">Tutoriales y Recursos</a></li>
+            <li><a href="#">Webinars y Capacitación</a></li>
           </ul>
         </div>
     
@@ -371,10 +531,15 @@
           <button class="btn">Visitar</button>
           <button class="btn">Donar</button>
           <button class="btn">Contacto</button>
+          <button class="btn">Suscribete</button>
+          <button class="btn">FAQs</button>
+          <button class="btn">Eventos</button>
         </div>
-      </div>
     </footer>
+
 </div>
+<script src="js/menuHamburguesa.js"></script>
+<script src="js/menuUsuario.js"></script>
      <script src="canvas.js"></script>
 </body>
 </html>

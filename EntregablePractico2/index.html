@@ -41,36 +41,40 @@
         <div class="form">
           <div class="loginBoxArriba">
               <h2>Iniciar sesión</h2>
-              <form >
-                  <div class="inputGroup">
-                      <input type="text" placeholder="Nombre de Usuario" required>
-                      <i class="fas fa-user"></i>
+              <form id="loginForm" onsubmit="procesarFormulario(event)">
+                <div class="inputGroup">
+                  <input type="text" id="user" placeholder="Nombre de Usuario" required>
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="inputGroup">
+                  <input type="password" id="password" placeholder="Contraseña" required>
+                  <i class="fas fa-lock"></i>
+                </div>
+  
+                <!-- Mensaje de Éxito/Error -->
+                <div class="feedback" id="feedbackMessage"></div>
+
+                <button type="submit" class="btnPrimary">Iniciar sesión</button>
+                <div class="separator">
+                    <span>o</span>
+                </div>
+                <div class="containerRedes">
+                  <div class="btnRedes">
+                    <a href="loading.html" type="button" class="btnFacebook">
+                      <img src="images/facebook.svg" alt="facebook logo">
+                      Iniciar sesión con Facebook
+                    </a>  
                   </div>
-                  <div class="inputGroup">
-                      <input type="password" placeholder="Contraseña " required>
-                      <i class="fas fa-lock"></i>
+                  <div class="btnRedes">
+                    <a href="loading.html" type="button" class="btnGoogle">
+                      <img src="images/google.svg" alt="Google Logo"> 
+                      Iniciar sesión con Google
+                    </a>
                   </div>
-                  <a href="loading.html" type="submit" class="btnPrimary">Iniciar sesión</a>
-                  <div class="separator">
-                      <span>o</span>
-                  </div>
-                  <div class="containerRedes">
-                    <div class="btnRedes">
-                      <a href="loading.html" type="button" class="btnFacebook">
-                        <img src="images/facebook.svg" alt="facebook logo">
-                        Iniciar sesión con Facebook
-                      </a>  
-                    </div>
-                    <div class="btnRedes">
-                      <a href="loading.html" type="button" class="btnGoogle">
-                        <img src="images/google.svg" alt="Google Logo"> 
-                        Iniciar sesión con Google
-                      </a>
-                    </div>
-                  </div>
-                  <div class="forgotPassword">
-                    <a href="#">¿Olvidaste tu contraseña?</a>
-                  </div>
+                </div>
+                <div class="forgotPassword">
+                  <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
               </form>
           </div>
           <!-- Caja de Registro -->
@@ -98,7 +102,7 @@
                         <p>No soy un robot</p>
                         <img src="images/reCaptcha.png" alt="reCaptcha">
                     </div>
-
+                    
                     <button type="submit" class="btnPrimary botonRegistro">Registrarse</button>
                     <div class="separator">
                       <span>o</span>
@@ -138,18 +142,25 @@
             <address>
               Tandil<br>
               Portugal 512<br>
-              2494112233
+              Teléfono: 2494112233<br>
+              Email: info@tuempresa.com
             </address>
           </div>
       
           <!-- Sección Information -->
           <div class="footerColumn">
-            <h3>Informacion:</h3>
+            <h3>Información:</h3>
             <ul>
-              <li><a href="#">¿Quienes somos?</a></li>
-              <li><a href="#">Contactanos</a></li>
+              <li><a href="#">¿Quiénes somos?</a></li>
+              <li><a href="#">Contáctanos</a></li>
               <li><a href="#">Carrera</a></li>
               <li><a href="#">Recursos Humanos</a></li>
+              <li><a href="#">Política de Privacidad</a></li>
+              <li><a href="#">Términos y Condiciones</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Testimonios</a></li>
+              <li><a href="#">Eventos</a></li>
             </ul>
           </div>
       
@@ -161,16 +172,28 @@
               <li><a href="#">Descarga la App</a></li>
               <li><a href="#">Torneos</a></li>
               <li><a href="#">Hacete Premium</a></li>
+              <li><a href="#">Nuestra Historia</a></li>
+              <li><a href="#">Misión y Visión</a></li>
+              <li><a href="#">Equipo</a></li>
+              <li><a href="#">Noticias y Actualizaciones</a></li>
+              <li><a href="#">Colaboraciones</a></li>
             </ul>
           </div>
       
-          <!-- Sección terminos y condiciones -->
+          <!-- Sección Términos y condiciones -->
           <div class="footerColumn">
-            <h3>Terminos y condiciones:</h3>
+            <h3>Condiciones:</h3>
             <ul>
-              <li><a href="#">Politicas de cookies</a></li>
-              <li><a href="#">Oficina de legales</a></li>
+              <li><a href="#">Políticas de Cookies</a></li>
+              <li><a href="#">Oficina de Legales</a></li>
               <li><a href="#">Documentación</a></li>
+              <li><a href="#">Términos de Uso</a></li>
+              <li><a href="#">Política de Privacidad</a></li>
+              <li><a href="#">Condiciones de Servicio</a></li>
+              <li><a href="#">Políticas de Reembolso</a></li>
+              <li><a href="#">Limitación de Responsabilidad</a></li>
+              <li><a href="#">Resolución de Conflictos</a></li>
+              <li><a href="#">Actualizaciones de Términos</a></li>
             </ul>
           </div>
 
@@ -180,7 +203,14 @@
             <ul>
               <li><a href="#">Tandil</a></li>
               <li><a href="#">Miami</a></li>
-              <li><a href="">Frankfurt</a></li>
+              <li><a href="#">Frankfurt</a></li>
+              <li><a href="#">Buenos Aires</a></li>
+              <li><a href="#">Madrid</a></li>
+              <li><a href="#">Nueva York</a></li>
+              <li><a href="#">Sao Paulo</a></li>
+              <li><a href="#">Londres</a></li>
+              <li><a href="#">Tokyo</a></li>
+              <li><a href="#">Sidney</a></li>
             </ul>
           </div>
       
@@ -192,6 +222,12 @@
               <li><a href="#">Calificanos</a></li>
               <li><a href="#">Foros y Blogs</a></li>
               <li><a href="#">Noticias</a></li>
+              <li><a href="#">Guía de Inicio Rápido</a></li>
+              <li><a href="#">Documentación</a></li>
+              <li><a href="#">Política de Devoluciones</a></li>
+              <li><a href="#">Contacto con Soporte</a></li>
+              <li><a href="#">Tutoriales y Recursos</a></li>
+              <li><a href="#">Webinars y Capacitación</a></li>
             </ul>
           </div>
       
@@ -200,8 +236,10 @@
             <button class="btn">Visitar</button>
             <button class="btn">Donar</button>
             <button class="btn">Contacto</button>
+            <button class="btn">Suscribete</button>
+            <button class="btn">FAQs</button>
+            <button class="btn">Eventos</button>
           </div>
-        </div>
       </footer>
     <script src="js/login.js"></script>
 </body>
