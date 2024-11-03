@@ -57,16 +57,17 @@
 
       <div id="opciones-modo" style="display: none;">
         <h3>Elige el modo de juego:</h3>
-        <button class="modo" data-filas="5" data-columnas="6">Tablero 5x6</button>
-        <button class="modo" data-filas="6" data-columnas="7">Tablero 6x7</button>
-        <button class="modo" data-filas="7" data-columnas="8">Tablero 7x8</button>
-        <div>
-          <label for="nombreJugadorRojo">Nombre Jugador Rojo:</label>
-          <input type="text" id="nombreJugadorRojo" placeholder="Ingrese el nombre del jugador rojo">
+        <button class="modo" data-filas="6" data-columnas="7" data-cantidad-victoria="4">4 en linea</button>
+        <button class="modo" data-filas="7" data-columnas="8" data-cantidad-victoria="5">5 en linea</button>
+        <button class="modo" data-filas="8" data-columnas="9" data-cantidad-victoria="6">6 en linea</button>
+        <button class="modo" data-filas="9" data-columnas="10" data-cantidad-victoria="7">7 en linea</button>
+        <div class="menuJuego">
+          <label for="nombreJugadorRojo">Nombre Jugador Jedi:</label>
+          <input type="text" id="nombreJugadorRojo" placeholder="Ingrese el nombre del jugador Jedi">
         </div>
-        <div>
-            <label for="nombreJugadorAzul">Nombre Jugador Azul:</label>
-            <input type="text" id="nombreJugadorAzul" placeholder="Ingrese el nombre del jugador azul">
+        <div class="menuJuego">
+            <label for="nombreJugadorAzul">Nombre Jugador Sith:</label>
+            <input type="text" id="nombreJugadorAzul" placeholder="Ingrese el nombre del jugador Sith">
         </div>
       </div>
 

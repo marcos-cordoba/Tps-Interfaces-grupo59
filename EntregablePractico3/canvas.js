@@ -1,8 +1,5 @@
-
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-
-
 
 // Clase Celda
 class Celda {
@@ -65,6 +62,11 @@ class Tablero {
         this.celdas = []; // Matriz de objetos Celda
         this.posicionesObjetivo = [];
         this.color = "#000000";
+        this.victoria = 0;
+    }
+
+    setVictoria(victoria){
+        this.victoria = victoria;
     }
 
     setFilasYColumnas(filas, columnas) {
@@ -135,21 +137,21 @@ class Tablero {
 
         for (let [df, dc] of direcciones) {
             let conteo = 1;
-            for (let paso = 1; paso < 4; paso++) {
+            for (let paso = 1; paso < this.victoria; paso++) {
                 const f = fila + paso * df;
                 const c = columna + paso * dc;
                 if (f >= 0 && f < this.filas && c >= 0 && c < this.columnas && this.celdas[f][c].equipo === equipo) {
                     conteo++;
                 } else break;
             }
-            for (let paso = 1; paso < 4; paso++) {
+            for (let paso = 1; paso < this.victoria; paso++) {
                 const f = fila - paso * df;
                 const c = columna - paso * dc;
                 if (f >= 0 && f < this.filas && c >= 0 && c < this.columnas && this.celdas[f][c].equipo === equipo) {
                     conteo++;
                 } else break;
             }
-            if (conteo >= 4) return true;
+            if (conteo >= this.victoria) return true;
         }
         return false;
     }
@@ -243,6 +245,8 @@ document.querySelectorAll(".modo").forEach(boton => {
     boton.addEventListener("click", (e) => {
         f = e.target.getAttribute("data-filas");
         c = e.target.getAttribute("data-columnas");
+        cantVictoria = e.target.getAttribute("data-cantidad-victoria");
+        tablero.setVictoria(cantVictoria)
         tablero.setFilasYColumnas(f,c);
         let cantFichas = (f * c ) /2;
         nombreJugadorRojo = document.getElementById('nombreJugadorRojo').value;
@@ -404,28 +408,10 @@ canvas.addEventListener("mouseup", () => {
         }
 
         if (filaDisponible !== -1) {
-            // Ajustar la posición de la ficha con las nuevas coordenadas y tamaños
-            tablero.celdas[filaDisponible][columna].ocupar(turnoRojo ? "rojo" : "azul");
-            // Asegúrate de usar 60 en lugar de 80 para que coincida con el nuevo tamaño de celda
-            fichaSeleccionada.x = 380 + columna * 60 + 30; // Centro de la celda de 60x60
-            fichaSeleccionada.y = 140 + filaDisponible * 60 + 30;
-            fichaSeleccionada.fija = true;
-            
-
-            // Verificar si hay una victoria después de colocar la ficha
-            if (tablero.verificarVictoria(filaDisponible, columna, turnoRojo ? "rojo" : "azul")) {
-                if(turnoRojo){
-                    document.getElementById("resultados").innerHTML = `<p class="victoria">¡Victoria para ${nombreJugadorRojo}!</p>`;
-                }
-                else{
-                    document.getElementById("resultados").innerHTML = `<p class="victoria">¡Victoria para ${nombreJugadorAzul}!</p>`;
-                }
-                setTimeout(reiniciarJuego, 3000);
-            } else {
-                turnoRojo = !turnoRojo;
-            }
+            // Iniciar la animación de caída
+            animarCaida(fichaSeleccionada, filaDisponible, columna);
         } else {
-            fichaSeleccionada.resetPosicion(); // Si no hay lugar, la ficha vuelve a su posición inicial
+            fichaSeleccionada.resetPosicion();
         }
     } else {
         fichaSeleccionada.resetPosicion();
@@ -434,6 +420,45 @@ canvas.addEventListener("mouseup", () => {
     fichaSeleccionada = null;
     dibujar();
 });
+
+function animarCaida(ficha, filaDestino, columnaDestino) {
+    const velocidadCaida = 4; // Incremento de caída en píxeles (ajusta este valor para controlar la velocidad)
+    const yDestino = 140 + filaDestino * 60 + 30; // La posición final en el eje Y (centrado)
+    const xDestino = 380 + columnaDestino * 60 + 30; // La posición final en el eje X (centrado)
+
+    function pasoCaida() {
+        // Mueve la ficha hacia abajo en incrementos
+        if (ficha.y < yDestino) {
+            ficha.y += velocidadCaida; // Incrementa la posición Y de la ficha
+            // Dibuja el tablero y la ficha en su nueva posición
+            tablero.dibujar();
+            dibujar();
+            // Continúa la animación en el siguiente cuadro
+            requestAnimationFrame(pasoCaida);
+        } else {
+            // La ficha ha llegado a su posición final
+            ficha.y = yDestino;
+            ficha.x = xDestino; // Ajusta la posición X para que quede centrada
+            ficha.fija = true;
+
+            tablero.celdas[filaDestino][columnaDestino].ocupar(turnoRojo ? "rojo" : "azul");
+
+            // Verificar si hay una victoria después de colocar la ficha
+            if (tablero.verificarVictoria(filaDestino, columnaDestino, turnoRojo ? "rojo" : "azul")) {
+                document.getElementById("resultados").innerHTML = `<p class="victoria">¡Victoria para ${turnoRojo ? nombreJugadorRojo : nombreJugadorAzul}!</p>`;
+                setTimeout(reiniciarJuego, 3000);
+            } else {
+                turnoRojo = !turnoRojo;
+            }
+            
+            fichaSeleccionada = null; // Liberar la selección actual
+            dibujar();
+        }
+    }
+
+    // Inicia el primer paso de la animación
+    requestAnimationFrame(pasoCaida);
+}
 
 
 
