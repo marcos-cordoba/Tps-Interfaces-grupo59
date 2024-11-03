@@ -190,6 +190,10 @@ class Ficha {
         ctx.stroke();
     }
     
+    limpiar(){
+        this.x = -130;
+        this.y = -130;
+    }
 
     // Método para regresar a su posición inicial
     resetPosicion() {
@@ -463,12 +467,18 @@ function animarCaida(ficha, filaDestino, columnaDestino) {
 
 
 function reiniciarJuego() {
+    // Limpia el tablero y resetea fichas
     tablero.celdas.forEach(fila => fila.forEach(celda => celda.ocupar(null)));
-    fichasRojas.forEach(ficha => ficha.resetPosicion());
-    fichasAzules.forEach(ficha => ficha.resetPosicion());
+    fichasRojas.forEach(ficha => ficha.limpiar());
+    fichasAzules.forEach(ficha => ficha.limpiar());
     turnoRojo = true;
     document.getElementById("resultados").innerHTML = ``;
     dibujar();
+    // Oculta el contenedor del juego
+    contenedorJuego.style.display = "none";
+    // Muestra las opciones de modo
+    opcionesModo.style.display = "block";
 }
+
 
 imagenFicha.onload = imagenAzul.onload = dibujar;
