@@ -35,15 +35,27 @@
 
 
 /* *juego */
-.titulo-juego{
+.contenedor-titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     grid-area: titulo;
-    margin-top: 15px;
     width: 100%;
+    height: fit-content;
+    
+}
+
+
+.titulo-juego{
+    /* grid-area: titulo; */
+    margin-top: 15px;
+    width: 1100px;
     height: 70px;
     display: flex;
     /* padding-left: 100px; */
     flex-direction: column;
-    margin-left: 130px;
+    /* margin-left: 4.5%; */
+    /* place-self: start center; */
 }
 
 .contenido-titulo{
@@ -51,7 +63,7 @@
     align-items: center;
 }
 
-.titulo-juego div{
+.titulo-juego .contenido-titulo div{
     margin-left: 25px;
 }
 
