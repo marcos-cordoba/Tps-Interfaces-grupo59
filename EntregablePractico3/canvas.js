@@ -64,6 +64,7 @@ class Tablero {
     constructor() {
         this.celdas = []; // Matriz de objetos Celda
         this.posicionesObjetivo = [];
+        this.color = "#000000";
     }
 
     setFilasYColumnas(filas, columnas) {
@@ -87,8 +88,8 @@ class Tablero {
         }
     }
 
-    
-    dibujar() {
+   
+    dibujar(posObjetivo) {
         const anchoCelda = 40;
         const altoCelda = 40;
         const radioCirculo = 22.5; // Tamaño reducido del círculo
@@ -97,14 +98,22 @@ class Tablero {
         this.posicionesObjetivo.forEach(pos => {
             const x = pos.x + anchoCelda; // Centro de la celda
             const y = pos.y + altoCelda +15; // Centro de la celda
-    
+            
             // Dibujar flecha
             ctx.beginPath();
             ctx.moveTo(x, y + 25); // Parte superior de la flecha
             ctx.lineTo(x + 15, y); // Parte izquierda de la flecha
             ctx.lineTo(x - 15, y); // Parte derecha de la flecha
             ctx.closePath();
-            ctx.fillStyle = "white"; // Color de la flecha
+            
+            if (pos === posObjetivo) {
+                ctx.fillStyle = "#FFFFFF"; // Cambiar el color de la flecha al pasar por la posición objetivo
+            } else {
+                ctx.fillStyle = this.color; // Color por defecto de la flecha
+            }
+            
+            
+
             ctx.fill();
     
             ctx.strokeStyle = "white";
@@ -289,7 +298,7 @@ function iniciarReloj() {
 }
 iniciarReloj();
 
-function dibujar() {
+function dibujar(posObjetivo) {
     
     ctx.clearRect(0, 20, canvas.width, canvas.height);
     
@@ -315,7 +324,7 @@ function dibujar() {
 
 
     
-    tablero.dibujar();
+    tablero.dibujar(posObjetivo);
     
     
     
@@ -343,7 +352,31 @@ canvas.addEventListener("mousemove", e => {
         fichaSeleccionada.x = e.offsetX - offsetX;
         fichaSeleccionada.y = e.offsetY - offsetY;
         
-        dibujar();
+        // Ajustamos la detección de la posición objetivo con el nuevo tamaño de 60x60
+        let posObjetivo = tablero.posicionesObjetivo.find(pos =>
+            fichaSeleccionada.x > pos.x && fichaSeleccionada.x < pos.x + 60 &&
+            fichaSeleccionada.y > pos.y && fichaSeleccionada.y < pos.y + 60
+        );
+        
+        if (posObjetivo) {
+            const columna = tablero.posicionesObjetivo.indexOf(posObjetivo);
+            let filaDisponible = -1;
+
+            // Buscar la primera fila disponible desde abajo hacia arriba
+            for (let i = f - 1; i >= 0; i--) {
+                
+                if (!tablero.celdas[i][columna].estaOcupada()) {
+                    filaDisponible = i;
+                    break;
+                }
+            }
+            console.log("filaDisplonible"+filaDisponible);
+            if (filaDisponible == -1) {
+                posObjetivo=null;
+            }
+            
+        }    
+        dibujar(posObjetivo);
     }
 });
 
@@ -397,7 +430,7 @@ canvas.addEventListener("mouseup", () => {
     } else {
         fichaSeleccionada.resetPosicion();
     }
-
+    tablero.dibujar(null);
     fichaSeleccionada = null;
     dibujar();
 });
