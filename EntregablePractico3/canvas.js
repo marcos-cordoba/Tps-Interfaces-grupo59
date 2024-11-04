@@ -238,7 +238,8 @@ let nombreJugadorAzul = null;
 botonInicio.addEventListener("click", () => {
     opcionesModo.style.display = "block";
      // Mostramos el juego
-    botonInicio.style.display = "none"; // Ocultamos el botón de inicio
+    botonInicio.style.display = "none"; 
+    juego.style.display = "none";// Ocultamos el botón de inicio
     juego.style.border = "none";
     
 });
@@ -247,6 +248,7 @@ botonInicio.addEventListener("click", () => {
 // Manejar el clic en cada opción de modo de juego
 document.querySelectorAll(".modo").forEach(boton => {
     boton.addEventListener("click", (e) => {
+        juego.style.display = "block";
         f = e.target.getAttribute("data-filas");
         c = e.target.getAttribute("data-columnas");
         cantVictoria = e.target.getAttribute("data-cantidad-victoria");
