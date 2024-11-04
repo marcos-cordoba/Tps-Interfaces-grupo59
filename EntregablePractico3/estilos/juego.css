@@ -122,7 +122,7 @@ span{
 }
 
 .descripcion{
-    margin-top: 20px;
+    margin-top: 30px;
     width: 1100px;
     height: 200px;
     background-color: var(--negro3);
@@ -187,7 +187,12 @@ span{
 .opciones-modo{
     width: 1100px;
     height: 530px;
-    background-image: url("../images/juegos/starwars.svg");
+    background-image: url("../images/juegos/fondo-starwars.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -201,18 +206,29 @@ span{
 .modo{
     width: 150px;
     height: 30px;
+    margin-top: 8px;
+    background-color: var(--acento);
+    border: 0px;
+    border-radius: 8px;
+    cursor: pointer;
+    /* box-shadow: 0px 0px 4px var(--blanco); */
+    
+}
+.modo-seleccionado{
+    border: 2px solid var(--blanco);
 }
 
 .contenedor-modos-jugadores{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
+    align-items: center;
 }
 
 .div-interno-modos{
+    margin-top: 60px;
     display: flex;
     justify-content: space-around;
+    width: 100%;
 
 }
 
@@ -224,3 +240,56 @@ span{
     display: flex;
     flex-direction: column;
 }
+
+.nombre-jugador{
+    color: var(--blanco);
+}
+
+.nombre-jugador, .input-n-jugador{
+    margin-top: 10px;
+}
+
+.invisibilisar{
+    display: none;
+}
+
+
+.fichas-jugar {
+    display: flex;
+    justify-content: space-around; /* Centra el contenido en el eje horizontal */
+    align-items: center;
+    /* gap: 100px;  */
+    width: 100%;
+    margin-top: 50px;
+}
+
+.btn-empezar-partida {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px; /* Ajusta el tamaño del botón según sea necesario */
+    height: 50px;
+}
+
+.btn-empezar-partida button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--acento);
+    box-shadow: 0px 0px 4px var(--blanco);
+}
+
+
+/* .fichas{
+    margin: 30px;
+} */
+
+.ficha{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+}
+

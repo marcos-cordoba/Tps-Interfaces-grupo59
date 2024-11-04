@@ -62,8 +62,8 @@
           
           <div class="div-interno-modos">
             <div class="container-j1">
-              <label for="nombreJugadorRojo">Nombre Jugador Rojo:</label>
-              <input type="text" id="nombreJugadorRojo" placeholder="Ingrese el nombre del jugador rojo">
+              <label class="nombre-jugador" for="nombreJugadorRojo">Nombre Jugador Rojo:</label>
+              <input class="input-n-jugador" type="text" id="nombreJugadorRojo" placeholder="Ingrese el nombre del jugador rojo">
             </div>
   
             <div class="modos">
@@ -75,9 +75,25 @@
             </div>
             
             <div class="container-j2">
-                <label for="nombreJugadorAzul">Nombre Jugador Azul:</label>
-                <input type="text" id="nombreJugadorAzul" placeholder="Ingrese el nombre del jugador azul">
+                <label class="nombre-jugador" for="nombreJugadorAzul">Nombre Jugador Azul:</label>
+                <input class="input-n-jugador" type="text" id="nombreJugadorAzul" placeholder="Ingrese el nombre del jugador azul">
             </div>
+          </div>
+
+          <div class="fichas-jugar">
+            
+
+              <div class="fichas">
+                <div class="ficha"></div>
+              </div>
+              
+              <div class="btn-empezar-partida">
+                <button><h3>comenzar-partida</h3></button>
+              </div>
+              
+              <div class="fichas">
+                <div class="ficha"></div>
+              </div>
           </div>
 
 
@@ -89,6 +105,7 @@
       
       <div class="juego">
         <!-- <img src="images/juegos/starwars.svg" alt="star wars"> -->
+      
         <div id="contenedorJuego">
           <p id="resultados" style="position: absolute; top: 500px; right: 500px;font-size: 50px;"></p>
           <canvas id="canvas" width="1100" height="530" style="border:1px solid #000000;"></canvas>
@@ -413,5 +430,6 @@
     </footer>
 </div>
      <script src="canvas.js"></script>
+     <!-- <script src="js/btn-jugar.js"></script> -->
 </body>
 </html>
