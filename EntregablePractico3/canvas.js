@@ -20,10 +20,10 @@ class Celda {
 
     dibujar() {
         // Definimos el tamaño reducido (75% de 80 es 60)
-        const anchoCelda = 60;
-        const altoCelda = 60;
-        const radioCirculo = 22.5; // 75% de 30
-        const offset = (80 - anchoCelda) / 2; // Ajuste para centrar el área más pequeña
+        let anchoCelda = ladoCelda;
+        let altoCelda = ladoCelda;
+        let radioCirculo = 20; // 75% de 30
+        let offset = (80 - anchoCelda) / 2; // Ajuste para centrar el área más pequeña
 
         // Si hay una imagen de fondo, dibújala
         if (this.imagenFondo && this.imagenFondo.complete) {
@@ -72,10 +72,15 @@ class Tablero {
     setFilasYColumnas(filas, columnas) {
         this.filas = filas;
         this.columnas = columnas;
-        const anchoCelda = 60; // Nuevo ancho de la celda
-        const altoCelda = 60; // Nuevo alto de la celda
-        const xInicial = 370; // Posición inicial en x
-        const yInicial = 130; // Posición inicial en y
+        const anchoCelda = ladoCelda; // Nuevo ancho de la celda
+        const altoCelda = ladoCelda; // Nuevo alto de la celda
+        
+        let anchoTablero = columnas * anchoCelda; // Número de columnas por el ancho de cada celda
+        let altoTablero = filas * altoCelda; // Número de filas por el alto de cada celda
+
+        // Calcular la posición inicial para centrar el tablero
+        let xInicial = (canvasWidth - anchoTablero) / 2;
+        let yInicial = (canvasHeight - altoTablero) / 2;
     
         this.celdas = Array.from({ length: filas }, (_, i) => 
             Array.from({ length: columnas }, (_, j) => 
@@ -92,20 +97,20 @@ class Tablero {
 
    
     dibujar(posObjetivo) {
-        const anchoCelda = 40;
-        const altoCelda = 40;
-        const radioCirculo = 22.5; // Tamaño reducido del círculo
+        let anchoCelda = 40;
+        let altoCelda = 40;
+        let radioCirculo = 20; // Tamaño reducido del círculo
     
         // Dibujar las posiciones objetivo como flechas
         this.posicionesObjetivo.forEach(pos => {
             const x = pos.x + anchoCelda; // Centro de la celda
-            const y = pos.y + altoCelda +15; // Centro de la celda
+            const y = pos.y + altoCelda ; // Centro de la celda
             
             // Dibujar flecha
             ctx.beginPath();
-            ctx.moveTo(x, y + 25); // Parte superior de la flecha
-            ctx.lineTo(x + 15, y); // Parte izquierda de la flecha
-            ctx.lineTo(x - 15, y); // Parte derecha de la flecha
+            ctx.moveTo(x, y + 35); // Parte superior de la flecha
+            ctx.lineTo(x + 20, y); // Parte izquierda de la flecha
+            ctx.lineTo(x - 20, y); // Parte derecha de la flecha
             ctx.closePath();
             
             if (pos === posObjetivo) {
@@ -162,7 +167,7 @@ class Ficha {
     constructor(x, y, color, imagen) {
         this.x = x;
         this.y = y;
-        this.color = color;
+        this.color = "black";
         this.imagen = imagen;
         this.activa = false;
         this.fija = false;
@@ -171,7 +176,7 @@ class Ficha {
     }
 
     dibujar() {
-        const radioFicha = 22.5; // Nuevo radio de la ficha
+        const radioFicha = 19; // Nuevo radio de la ficha
     
         ctx.save();
         ctx.beginPath();
@@ -185,7 +190,7 @@ class Ficha {
         // Dibuja el contorno de la ficha
         ctx.beginPath();
         ctx.arc(this.x, this.y, radioFicha, 0, Math.PI * 2);
-        ctx.lineWidth = 2;
+        ctx.lineWidth = 1;
         ctx.strokeStyle = this.color;
         ctx.stroke();
     }
@@ -206,14 +211,24 @@ class Ficha {
 let f=null;
 let c=null;
 
+let ladoCelda =40;
+
+
+let canvasWidth = canvas.width;
+let canvasHeight = canvas.height;
+
+
+
 let tablero=new Tablero();;
 const fichasRojas = [];
 const fichasAzules = [];
-
+const imagenBackground = new Image();
 const imagenFicha = new Image();
 const imagenAzul = new Image();
+
 imagenFicha.src = "images.jpeg";
 imagenAzul.src = "images2.jpeg";
+imagenBackground.src = "images/back4.jpg";
 
 
 
@@ -257,59 +272,103 @@ document.querySelectorAll(".modo").forEach(boton => {
         nombreJugadorAzul = document.getElementById('nombreJugadorAzul').value;
         // Crear fichas
         for (let i = cantFichas; i > 0; i--) {
-                fichasRojas.push(new Ficha(150, 100 + i * 15, "red", imagenFicha));
-                fichasAzules.push(new Ficha(950, 100 + i * 15, "blue", imagenAzul));
+                fichasRojas.push(new Ficha(150, 100 + i * 8, "red", imagenFicha)); 
+                fichasAzules.push(new Ficha(950, 100 + i * 8, "blue", imagenAzul));
         }
         
         opcionesModo.style.display = "none";
         contenedorJuego.style.display = "block";
-        
+        iniciarReloj();
         dibujar(); // Función que inicia el juego con el modo elegido
+        
     });
 });
 
+canvas.addEventListener("click", function(e) {
+    // Obtener la posición del clic
+    tiempoRestante=300;
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
 
-let tiempoRestante = 5 * 60; // 5 minutos en segundos
+    // Verificar si el clic está dentro del área del botón
+    if (x >= xBoton && x <= 400 && y >= yBoton && y <= 45) {
+        volverAlMenu();
+    }
+});
+
+function volverAlMenu() {
+    opcionesModo.style.display = "block";
+        contenedorJuego.style.display = "none";
+}
+
+
+let tiempoRestante = 5 * 60; 
 let intervaloReloj;
 
 function dibujarReloj() {
-    const minutos = Math.floor(tiempoRestante / 60);
-    const segundos = tiempoRestante % 60;
+    let minutos = Math.floor(tiempoRestante / 60);
+    let segundos = tiempoRestante % 60;
 
     // Formatea el tiempo en dos dígitos
-    const tiempoTexto = `${minutos < 10 ? "0" + minutos : minutos}:${segundos < 10 ? "0" + segundos : segundos}`;
+    let tiempoTexto = `${minutos < 10 ? "0" + minutos : minutos}:${segundos < 10 ? "0" + segundos : segundos}`;
 
     // Limpia el área del reloj
-    ctx.clearRect((canvas.width / 2) - 30, 0, 65, 20);
+    ctx.clearRect((canvas.width / 2) - 30, 0, 61, 20);
     // Dibuja el tiempo en el canvas
     ctx.font = "24px Arial";
-    ctx.fillStyle = "black";
+    ctx.fillStyle = "white";
     ctx.fillText(tiempoTexto, (canvas.width/2)-30, 20);
 }
 
+let relojCorriendo = false; // Flag para indicar si el reloj está corriendo
+
 function iniciarReloj() {
-    // Detiene el intervalo actual si ya está corriendo
+    if (!relojCorriendo) {
+        // Inicia el intervalo solo si no está corriendo
+        relojCorriendo = true;
+
+        intervaloReloj = setInterval(() => {
+            if (tiempoRestante > 0) {
+                dibujarReloj();
+                tiempoRestante--;
+            } else {
+                clearInterval(intervaloReloj);
+                relojCorriendo = false; // Reinicia el flag cuando el tiempo se termina
+                console.log("¡Tiempo terminado!");
+            }
+        }, 1000); // Disminuye el tiempo cada segundo
+    }
+}
+
+function detenerReloj() {
     if (intervaloReloj) {
         clearInterval(intervaloReloj);
+        relojCorriendo = false; // Reinicia el flag
     }
-
-    // Inicia un nuevo intervalo
-    intervaloReloj = setInterval(() => {
-        if (tiempoRestante > 0) {
-            tiempoRestante--;
-            dibujarReloj();
-        } else {
-            clearInterval(intervaloReloj);
-            console.log("¡Tiempo terminado!");
-        }
-    }, 1000); // Disminuye el tiempo cada segundo
 }
-iniciarReloj();
+
+let xBoton=300;
+let yBoton =5;
+function dibujarBotonVolver() {
+    ctx.fillStyle = "blue"; // Color de fondo del botón
+    ctx.fillRect(xBoton, yBoton, 100, 40); // Posición y tamaño del botón
+
+    ctx.font = "20px Arial";
+    ctx.fillStyle = "white"; // Color del texto
+    ctx.fillText("Volver", xBoton+10, yBoton+35); // Posición del texto
+    
+
+}
 
 function dibujar(posObjetivo) {
     
-    ctx.clearRect(0, 20, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     
+    ctx.drawImage(imagenBackground, 0, 0, canvas.width, canvas.height);
+    dibujarReloj();
+    
+    dibujarBotonVolver();
     
     // Mostrar nombres
     ctx.fillStyle = "white"; // Color del texto
@@ -340,6 +399,7 @@ function dibujar(posObjetivo) {
     fichasAzules.forEach(ficha => ficha.dibujar());
 }
 
+
 // Eventos del mouse
 canvas.addEventListener("mousedown", e => {
     const mouseX = e.offsetX, mouseY = e.offsetY;
@@ -357,13 +417,15 @@ canvas.addEventListener("mousedown", e => {
 
 canvas.addEventListener("mousemove", e => {
     if (fichaSeleccionada && fichaSeleccionada.activa) {
+        
+        
         fichaSeleccionada.x = e.offsetX - offsetX;
         fichaSeleccionada.y = e.offsetY - offsetY;
         
         // Ajustamos la detección de la posición objetivo con el nuevo tamaño de 60x60
         let posObjetivo = tablero.posicionesObjetivo.find(pos =>
-            fichaSeleccionada.x > pos.x && fichaSeleccionada.x < pos.x + 60 &&
-            fichaSeleccionada.y > pos.y && fichaSeleccionada.y < pos.y + 60
+            fichaSeleccionada.x > pos.x && fichaSeleccionada.x < pos.x + ladoCelda &&
+            fichaSeleccionada.y > pos.y && fichaSeleccionada.y < pos.y + ladoCelda
         );
         
         if (posObjetivo) {
@@ -395,8 +457,8 @@ canvas.addEventListener("mouseup", () => {
 
     // Ajustamos la detección de la posición objetivo con el nuevo tamaño de 60x60
     const posObjetivo = tablero.posicionesObjetivo.find(pos =>
-        fichaSeleccionada.x > pos.x && fichaSeleccionada.x < pos.x + 60 &&
-        fichaSeleccionada.y > pos.y && fichaSeleccionada.y < pos.y + 60
+        fichaSeleccionada.x > pos.x && fichaSeleccionada.x < pos.x + ladoCelda &&
+        fichaSeleccionada.y > pos.y && fichaSeleccionada.y < pos.y + ladoCelda
     );
 
     if (posObjetivo) {
@@ -427,9 +489,17 @@ canvas.addEventListener("mouseup", () => {
 
 function animarCaida(ficha, filaDestino, columnaDestino) {
     const velocidadCaida = 10; // Incremento de caída en píxeles (ajusta este valor para controlar la velocidad)
-    const yDestino = 140 + filaDestino * 60 + 30; // La posición final en el eje Y (centrado)
-    const xDestino = 380 + columnaDestino * 60 + 30; // La posición final en el eje X (centrado)
+    let anchoTablero = c * ladoCelda; // Número de columnas por el ancho de cada celda
+    let altoTablero = f * ladoCelda;
+    // Calcular la posición inicial para centrar el tablero
+    let xInicial = (canvasWidth - anchoTablero) / 2;
+    let yInicial = (canvasHeight - altoTablero) / 2;
 
+    // La posición final en el eje Y (centrado)
+    const yDestino = yInicial+20 + filaDestino * ladoCelda + ladoCelda / 2;
+
+    // La posición final en el eje X (centrado)
+    const xDestino = xInicial+20 + columnaDestino * ladoCelda + ladoCelda / 2;
     function pasoCaida() {
         // Mueve la ficha hacia abajo en incrementos
         ficha.x = xDestino;
@@ -482,4 +552,4 @@ function reiniciarJuego() {
 }
 
 
-imagenFicha.onload = imagenAzul.onload = dibujar;
+imagenFicha.onload = imagenAzul.onload = imagenBackground.onload = dibujar;
