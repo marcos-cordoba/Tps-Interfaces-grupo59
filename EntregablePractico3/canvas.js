@@ -79,7 +79,7 @@ class Tablero {
     
         this.celdas = Array.from({ length: filas }, (_, i) => 
             Array.from({ length: columnas }, (_, j) => 
-                new Celda(i, j, xInicial + j * anchoCelda, yInicial + i * altoCelda, "images/juegos/celda.png")
+                new Celda(i, j, xInicial + j * anchoCelda, yInicial + i * altoCelda, "images/juegos/starwars.svg")
             )
         );
     
