@@ -187,14 +187,25 @@ span{
 .opciones-modo{
     width: 1100px;
     height: 530px;
-    background-image: url("../images/juegos/fondo-starwars.jfif");
+    background-image: url("../images/juegos/fondo3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative; /* Para posicionar el pseudo-elemento correctamente */
+    overflow: hidden; /* Para asegurarse de que el pseudo-elemento no sobresalga */
 }
-
+.opciones-modo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Cambia el color y el nivel de opacidad */
+    z-index: 1; /* Para que el overlay quede detrás del contenido principal */
+}
 
 .modos{
     display: flex;
@@ -215,13 +226,15 @@ span{
     
 }
 .modo-seleccionado{
-    border: 2px solid var(--blanco);
+    box-shadow: 0px 0px 6px var(--blanco);
 }
 
 .contenedor-modos-jugadores{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .div-interno-modos{
@@ -241,8 +254,18 @@ span{
     flex-direction: column;
 }
 
-.nombre-jugador{
-    color: var(--blanco);
+.nombre-jugador, .txt-sel-ficha{
+    color: black; 
+    text-shadow: 
+    1px 1px 0px var(--blanco),  
+    -1px 1px 0px var(--blanco), 
+    1px -1px 0px var(--blanco), 
+    -1px -1px 0px var(--blanco), 
+    0px 1px 0px var(--blanco), 
+    1px 0px 0px var(--blanco), 
+    0px -1px 0px var(--blanco), 
+    -1px 0px 0px var(--blanco);
+        font-size: 20px;
 }
 
 .nombre-jugador, .input-n-jugador{
@@ -251,6 +274,33 @@ span{
 
 .invisibilisar{
     display: none;
+}
+.titulo-selecion-modo{
+    margin-top: 15px;
+    font-size: 28px;
+    color: black; 
+    text-shadow: 
+        1px 1px 0px yellow,  
+        -1px 1px 0px yellow, 
+        1px -1px 0px yellow, 
+        -1px -1px 0px yellow, 
+        0px 1px 0px yellow, 
+        1px 0px 0px yellow, 
+        0px -1px 0px yellow, 
+        -1px 0px 0px yellow;
+        
+    letter-spacing: 0.5px;    
+}
+    
+
+
+.input-n-jugador{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(233, 222, 7);
+    border-radius: 6px;
+    border: 1px solid var(--blanco);
+    box-shadow: 0px 0px 8px var(--blanco);
 }
 
 
@@ -286,10 +336,32 @@ span{
     margin: 30px;
 } */
 
+ .fichas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+
+.fichas div{
+    display: flex;
+
+}
 .ficha{
-    width: 50px;
-    height: 50px;
+    width: fit-content;
+    height: fit-content;
     background-color: red;
     border-radius: 50%;
+    margin: 20px;
+    box-shadow: 0px 0px 10px var(--blanco);
+    border: 1px solid var(--blanco);
+    cursor: pointer;
+    /* margin: 20px; */
+}
+.ficha img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
