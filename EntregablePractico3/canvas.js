@@ -42,7 +42,7 @@ class Celda {
         ctx.beginPath();
         ctx.arc(this.x + 40, this.y + 40, radioCirculo, 0, Math.PI * 2);
         ctx.lineWidth = 2;
-        ctx.strokeStyle = this.equipo ? (this.equipo === "rojo" ? "red" : "blue") : "white";
+        ctx.strokeStyle = this.equipo ? (this.equipo === "rojo" ? "red" : "blue") : "black";
         ctx.stroke();
     }
 
@@ -79,7 +79,7 @@ class Tablero {
     
         this.celdas = Array.from({ length: filas }, (_, i) => 
             Array.from({ length: columnas }, (_, j) => 
-                new Celda(i, j, xInicial + j * anchoCelda, yInicial + i * altoCelda, "images/juegos/starwars.svg")
+                new Celda(i, j, xInicial + j * anchoCelda, yInicial + i * altoCelda, "images/juegos/celda.png")
             )
         );
     
