@@ -42,7 +42,7 @@ class Celda {
         ctx.beginPath();
         ctx.arc(this.x + 40, this.y + 40, radioCirculo, 0, Math.PI * 2);
         ctx.lineWidth = 2;
-        ctx.strokeStyle = this.equipo ? (this.equipo === "rojo" ? "red" : "blue") : "black";
+        ctx.strokeStyle = "white";
         ctx.stroke();
     }
 
@@ -280,7 +280,7 @@ function dibujarReloj() {
     const tiempoTexto = `${minutos < 10 ? "0" + minutos : minutos}:${segundos < 10 ? "0" + segundos : segundos}`;
 
     // Limpia el área del reloj
-    ctx.clearRect((canvas.width / 2) - 30, 0, 100, 20);
+    ctx.clearRect((canvas.width / 2) - 30, 0, 65, 20);
     // Dibuja el tiempo en el canvas
     ctx.font = "24px Arial";
     ctx.fillStyle = "black";
@@ -426,12 +426,13 @@ canvas.addEventListener("mouseup", () => {
 });
 
 function animarCaida(ficha, filaDestino, columnaDestino) {
-    const velocidadCaida = 4; // Incremento de caída en píxeles (ajusta este valor para controlar la velocidad)
+    const velocidadCaida = 10; // Incremento de caída en píxeles (ajusta este valor para controlar la velocidad)
     const yDestino = 140 + filaDestino * 60 + 30; // La posición final en el eje Y (centrado)
     const xDestino = 380 + columnaDestino * 60 + 30; // La posición final en el eje X (centrado)
 
     function pasoCaida() {
         // Mueve la ficha hacia abajo en incrementos
+        ficha.x = xDestino;
         if (ficha.y < yDestino) {
             ficha.y += velocidadCaida; // Incrementa la posición Y de la ficha
             // Dibuja el tablero y la ficha en su nueva posición
