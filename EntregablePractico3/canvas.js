@@ -10,6 +10,7 @@ class Celda {
         this.y = y;
         this.equipo = null; // Guardará "rojo" o "azul" cuando se ocupe
         this.imagenFondo = null;
+       
 
         // Si se proporciona una URL, cargamos la imagen de fondo
         if (urlImagenFondo) {
@@ -49,7 +50,11 @@ class Celda {
     ocupar(equipo) {
         this.equipo = equipo;
     }
-
+    vaciar() {
+        this.imagenFondo=null;
+        this.equipo=null;
+       
+    }
     estaOcupada() {
         return this.equipo !== null;
     }
@@ -63,6 +68,17 @@ class Tablero {
         this.posicionesObjetivo = [];
         this.color = "#000000";
         this.victoria = 0;
+        this.yInicial;
+    }
+
+    vaciarCeldas(){
+        for (let i = 0; i < this.celdas.length; i++) {
+            for (let j = 0; j < this.celdas[i].length; j++) {
+                let celda = this.celdas[i][j];
+                
+                celda.vaciar();
+            }
+        }
     }
 
     setVictoria(victoria){
@@ -80,11 +96,11 @@ class Tablero {
 
         // Calcular la posición inicial para centrar el tablero
         let xInicial = (canvasWidth - anchoTablero) / 2;
-        let yInicial = (canvasHeight - altoTablero) / 2;
-    
+        this.yInicial = (canvasHeight - altoTablero) / 2;
+        
         this.celdas = Array.from({ length: filas }, (_, i) => 
             Array.from({ length: columnas }, (_, j) => 
-                new Celda(i, j, xInicial + j * anchoCelda, yInicial + i * altoCelda, "images/juegos/starwars.svg")
+                new Celda(i, j, xInicial + j * anchoCelda, this.yInicial + i * altoCelda, "images/juegos/starwars.svg")
             )
         );
     
@@ -104,13 +120,31 @@ class Tablero {
         // Dibujar las posiciones objetivo como flechas
         this.posicionesObjetivo.forEach(pos => {
             const x = pos.x + anchoCelda; // Centro de la celda
-            const y = pos.y + altoCelda ; // Centro de la celda
+            let y=0;
+            switch (cantVictoria) {
+                case '4':
+                    y = pos.y + altoCelda+50;
+                    break;
+                case '5':
+                    y = pos.y + altoCelda+20;
+                    break;
+                case '6':
+                    y = pos.y + altoCelda+10;
+                    break;
+                case '7':
+                    y = pos.y + altoCelda;
+                   
+                    
+                
+                    break;
+            }
+            
             
             // Dibujar flecha
             ctx.beginPath();
-            ctx.moveTo(x, y + 35); // Parte superior de la flecha
-            ctx.lineTo(x + 20, y); // Parte izquierda de la flecha
-            ctx.lineTo(x - 20, y); // Parte derecha de la flecha
+            ctx.moveTo(x, y + 25); // Parte superior de la flecha
+            ctx.lineTo(x + 15, y); // Parte izquierda de la flecha
+            ctx.lineTo(x - 15, y); // Parte derecha de la flecha
             ctx.closePath();
             
             if (pos === posObjetivo) {
@@ -210,9 +244,9 @@ class Ficha {
 // Configuración inicial
 let f=null;
 let c=null;
-
+let cantVictoria =0;
 let ladoCelda =40;
-
+let cantFichas =0;
 
 let canvasWidth = canvas.width;
 let canvasHeight = canvas.height;
@@ -220,11 +254,11 @@ let canvasHeight = canvas.height;
 
 
 let tablero=new Tablero();;
-const fichasRojas = [];
-const fichasAzules = [];
-const imagenBackground = new Image();
-const imagenFicha = new Image();
-const imagenAzul = new Image();
+let fichasRojas = [];
+let fichasAzules = [];
+let imagenBackground = new Image();
+let imagenFicha = new Image();
+let imagenAzul = new Image();
 
 imagenFicha.src = "images.jpeg";
 imagenAzul.src = "images2.jpeg";
@@ -269,7 +303,7 @@ document.querySelectorAll(".modo").forEach(boton => {
         cantVictoria = e.target.getAttribute("data-cantidad-victoria");
         tablero.setVictoria(cantVictoria)
         tablero.setFilasYColumnas(f,c);
-        let cantFichas = (f * c ) /2;
+        cantFichas = (f * c ) /2;
         nombreJugadorRojo = document.getElementById('nombreJugadorRojo').value;
         nombreJugadorAzul = document.getElementById('nombreJugadorAzul').value;
         // Crear fichas
@@ -288,22 +322,57 @@ document.querySelectorAll(".modo").forEach(boton => {
 
 canvas.addEventListener("click", function(e) {
     // Obtener la posición del clic
-    tiempoRestante=300;
+    
     const rect = canvas.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
     // Verificar si el clic está dentro del área del botón
-    if (x >= xBoton && x <= 400 && y >= yBoton && y <= 45) {
+    if (x >= xBoton && x <= 550 && y >= yBoton && y <= 45) {
         volverAlMenu();
+        tiempoRestante=300;
+        turnoRojo = true; 
+        
+        
     }
+    
 });
+canvas.addEventListener("click", function(e) {
+    // Obtener la posición del clic
+    
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    // Verificar si el clic está dentro del área del botón
+    if(x >= 600 && x <= 750 && y >= yBoton && y <= 45){
+        
+        tiempoRestante=300;
+        turnoRojo = true; 
+        fichasRojas = [];
+        fichasAzules = [];
+        // Crear fichas
+        for (let i = cantFichas; i > 0; i--) {
+            console.log("etra "+ i);
+            fichasRojas.push(new Ficha(150, 100 + i * 8, "red", imagenFicha)); 
+            fichasAzules.push(new Ficha(950, 100 + i * 8, "blue", imagenAzul));
+        }
+        tablero.setFilasYColumnas(f,c);
+        dibujar();
+    } 
+}  );
 
 function volverAlMenu() {
     opcionesModo.style.display = "block";
         contenedorJuego.style.display = "none";
 }
+function vaciarTablero() {
+    
+    
+    
 
+    
+}
 
 let tiempoRestante = 5 * 60; 
 let intervaloReloj;
@@ -316,11 +385,11 @@ function dibujarReloj() {
     let tiempoTexto = `${minutos < 10 ? "0" + minutos : minutos}:${segundos < 10 ? "0" + segundos : segundos}`;
 
     // Limpia el área del reloj
-    ctx.clearRect((canvas.width / 2) - 30, 0, 61, 20);
+    ctx.clearRect((canvas.width / 2) -30, 6, 61, 21);
     // Dibuja el tiempo en el canvas
     ctx.font = "24px Arial";
     ctx.fillStyle = "white";
-    ctx.fillText(tiempoTexto, (canvas.width/2)-30, 20);
+    ctx.fillText(tiempoTexto, (canvas.width/2), 20);
 }
 
 let relojCorriendo = false; // Flag para indicar si el reloj está corriendo
@@ -350,16 +419,49 @@ function detenerReloj() {
     }
 }
 
-let xBoton=300;
-let yBoton =5;
-function dibujarBotonVolver() {
-    ctx.fillStyle = "blue"; // Color de fondo del botón
-    ctx.fillRect(xBoton, yBoton, 100, 40); // Posición y tamaño del botón
+let xBoton=350;
+let yBoton =0;
 
-    ctx.font = "20px Arial";
-    ctx.fillStyle = "white"; // Color del texto
-    ctx.fillText("Volver", xBoton+10, yBoton+35); // Posición del texto
+function dibujarBoton(ctx, x, y, ancho, alto, texto) {
+    // Dibuja un fondo con esquinas redondeadas
+    ctx.beginPath();
+    ctx.moveTo(x + 10, y); // Esquina superior izquierda redondeada
+    ctx.lineTo(x + ancho - 10, y);
+    ctx.quadraticCurveTo(x + ancho, y, x + ancho, y + 10); // Esquina superior derecha redondeada
+    ctx.lineTo(x + ancho, y + alto - 10);
+    ctx.quadraticCurveTo(x + ancho, y + alto, x + ancho - 10, y + alto); // Esquina inferior derecha redondeada
+    ctx.lineTo(x + 10, y + alto);
+    ctx.quadraticCurveTo(x, y + alto, x, y + alto - 10); // Esquina inferior izquierda redondeada
+    ctx.lineTo(x, y + 10);
+    ctx.quadraticCurveTo(x, y, x + 10, y); // Cierre de la forma
+
+    // Agrega un degradado al fondo
+    let gradiente = ctx.createLinearGradient(x, y, x, y + alto);
+    gradiente.addColorStop(0, '#FF00ff'); // Azul más claro
+    gradiente.addColorStop(1, '#006bb3'); // Azul más oscuro
+    ctx.fillStyle = gradiente;
+    ctx.fill();
     
+    // Agrega sombra para dar un efecto de elevación
+    ctx.shadowColor = 'rgba(0, 0, 0, 0.2)';
+    ctx.shadowBlur = 10;
+    ctx.shadowOffsetX = 2;
+    ctx.shadowOffsetY = 2;
+
+    // Dibuja el texto
+    ctx.font = "20px Arial";
+    ctx.fillStyle = "white";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(texto, x + ancho / 2, y + alto / 2);
+    
+    // Resetea la sombra para evitar que afecte otros elementos
+    ctx.shadowColor = 'transparent';
+}
+function dibujarBotonVolver() {
+    
+    dibujarBoton(ctx, xBoton, yBoton, 150, 40, "Menu principal");
+    dibujarBoton(ctx, 600, yBoton, 150, 40, "Reiniciar juego");
 
 }
 
@@ -375,20 +477,20 @@ function dibujar(posObjetivo) {
     // Mostrar nombres
     ctx.fillStyle = "white"; // Color del texto
     ctx.font = "20px Arial"; // Fuente y tamaño
-    ctx.fillText(`Jugador: ${nombreJugadorRojo}`, 50, 50);
-    ctx.fillText(`Jugador: ${nombreJugadorAzul}`, canvas.width - 200, 50);
+    ctx.fillText(`Jugador: ${nombreJugadorRojo}`, canvas.width - 950, 75);
+    ctx.fillText(`Jugador: ${nombreJugadorAzul}`, canvas.width - 150, 75);
     
     if(turnoRojo){
         // Mostrar nombres
         ctx.fillStyle = "white"; // Color del texto
         ctx.font = "20px Arial"; // Fuente y tamaño
-        ctx.fillText(`Turno: ${nombreJugadorRojo}`, (canvas.width/2)-30, 50);
+        ctx.fillText(`Turno: ${nombreJugadorRojo}`, (canvas.width/2), 50);
     }
     else{
       // Mostrar nombres
         ctx.fillStyle = "white"; // Color del texto
         ctx.font = "20px Arial"; // Fuente y tamaño
-        ctx.fillText(`Turno: ${nombreJugadorAzul}`, (canvas.width/2)-30, 50);  
+        ctx.fillText(`Turno: ${nombreJugadorAzul}`, (canvas.width/2), 50);  
     }
 
 
@@ -442,7 +544,7 @@ canvas.addEventListener("mousemove", e => {
                     break;
                 }
             }
-            console.log("filaDisplonible"+filaDisponible);
+            
             if (filaDisponible == -1) {
                 posObjetivo=null;
             }
@@ -495,7 +597,7 @@ function animarCaida(ficha, filaDestino, columnaDestino) {
     let altoTablero = f * ladoCelda;
     // Calcular la posición inicial para centrar el tablero
     let xInicial = (canvasWidth - anchoTablero) / 2;
-    let yInicial = (canvasHeight - altoTablero) / 2;
+    let yInicial = tablero.yInicial;
 
     // La posición final en el eje Y (centrado)
     const yDestino = yInicial+20 + filaDestino * ladoCelda + ladoCelda / 2;
