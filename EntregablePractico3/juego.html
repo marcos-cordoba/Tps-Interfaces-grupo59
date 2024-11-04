@@ -55,19 +55,35 @@
       
       <button id="btn-jugar-juego"><h3>Jugar</h3></button> 
 
-      <div id="opciones-modo" style="display: none;">
-        <h3>Elige el modo de juego:</h3>
-        <button class="modo" data-filas="5" data-columnas="6">Tablero 5x6</button>
-        <button class="modo" data-filas="6" data-columnas="7">Tablero 6x7</button>
-        <button class="modo" data-filas="7" data-columnas="8">Tablero 7x8</button>
-        <div>
-          <label for="nombreJugadorRojo">Nombre Jugador Rojo:</label>
-          <input type="text" id="nombreJugadorRojo" placeholder="Ingrese el nombre del jugador rojo">
+      <div class="opciones-modo" id="opciones-modo" style="display: none;">
+        <div class="contenedor-modos-jugadores">
+          
+          <h3>Elige el modo de juego:</h3>
+          
+          <div class="div-interno-modos">
+            <div class="container-j1">
+              <label for="nombreJugadorRojo">Nombre Jugador Rojo:</label>
+              <input type="text" id="nombreJugadorRojo" placeholder="Ingrese el nombre del jugador rojo">
+            </div>
+  
+            <div class="modos">
+              <button class="modo" data-filas="5" data-columnas="6">4 linea</button>
+              <button class="modo" data-filas="6" data-columnas="7">6 linea</button>
+              <button class="modo" data-filas="7" data-columnas="8">7 linea</button>
+              <button class="modo" data-filas="8" data-columnas="9">8 linea</button>
+              
+            </div>
+            
+            <div class="container-j2">
+                <label for="nombreJugadorAzul">Nombre Jugador Azul:</label>
+                <input type="text" id="nombreJugadorAzul" placeholder="Ingrese el nombre del jugador azul">
+            </div>
+          </div>
+
+
         </div>
-        <div>
-            <label for="nombreJugadorAzul">Nombre Jugador Azul:</label>
-            <input type="text" id="nombreJugadorAzul" placeholder="Ingrese el nombre del jugador azul">
-        </div>
+        
+
       </div>
 
       

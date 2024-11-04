@@ -183,3 +183,44 @@ span{
     font-size: 50px;
     
 }
+
+.opciones-modo{
+    width: 1100px;
+    height: 530px;
+    background-image: url("../images/juegos/starwars.svg");
+}
+
+
+.modos{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+}
+
+.modo{
+    width: 150px;
+    height: 30px;
+}
+
+.contenedor-modos-jugadores{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.div-interno-modos{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+/* .div-interno-modos div{
+    margin-left: 5px;
+    margin-right: 5px;
+} */
+.container-j1, .container-j2{
+    display: flex;
+    flex-direction: column;
+}
