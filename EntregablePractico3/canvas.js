@@ -257,11 +257,64 @@ let tablero=new Tablero();;
 let fichasRojas = [];
 let fichasAzules = [];
 let imagenBackground = new Image();
+
+
 let imagenFicha = new Image();
 let imagenAzul = new Image();
 
-imagenFicha.src = "images.jpeg";
-imagenAzul.src = "images2.jpeg";
+
+document.querySelectorAll(".ficha").forEach(boton => {
+    boton.addEventListener("click", (e) => {
+        let ficha = e.currentTarget.getAttribute("ficha"); // Usar e.currentTarget en lugar de e.target
+        console.log("ficha " + ficha);
+
+        switch(ficha) {
+            case '1':
+                imagenFicha.src = "images.jpeg";
+                console.log("image " + imagenFicha.src);
+                break;
+            case '2':
+                imagenFicha.src = "images2.jpeg";
+                break;
+            case '3':
+                imagenFicha.src = "image3.jfif";
+                break;
+            case '4':
+                imagenFicha.src = "image4.jfif";
+                break;
+            default:
+                console.log("Ficha no válida");
+                break;
+        }
+    });
+});
+document.querySelectorAll(".fj2").forEach(boton => {
+    boton.addEventListener("click", (e) => {
+        let ficha = e.currentTarget.getAttribute("ficha"); // Usar e.currentTarget en lugar de e.target
+        console.log("ficha " + ficha);
+
+        switch(ficha) {
+            case '5':
+                imagenAzul.src = "images.jpeg";
+                console.log("image " + imagenFicha.src);
+                break;
+            case '6':
+                imagenAzul.src = "images2.jpeg";
+                break;
+            case '7':
+                imagenAzul.src = "image3.jfif";
+                break;
+            case '8':
+                imagenAzul.src = "image4.jfif";
+                break;
+            default:
+                console.log("Ficha no válida");
+                break;
+        }
+    });
+});
+
+
 imagenBackground.src = "images/back4.jpg";
 
 
@@ -282,6 +335,14 @@ const opcionesModo = document.getElementById("opciones-modo");
 
 let nombreJugadorRojo = null;
 let nombreJugadorAzul = null;
+let botonJugar=document.getElementById("btn-jugar");
+botonJugar.addEventListener("click", () => {
+    opcionesModo.style.display = "none";
+    contenedorJuego.style.display = "block";
+    iniciarReloj();
+    dibujar(); // Función que inicia el juego con el modo elegido
+    
+});
 
 // Función para mostrar el juego al hacer clic en el botón
 botonInicio.addEventListener("click", () => {
@@ -307,15 +368,13 @@ document.querySelectorAll(".modo").forEach(boton => {
         nombreJugadorRojo = document.getElementById('nombreJugadorRojo').value;
         nombreJugadorAzul = document.getElementById('nombreJugadorAzul').value;
         // Crear fichas
+        
         for (let i = cantFichas; i > 0; i--) {
                 fichasRojas.push(new Ficha(150, 100 + i * 8, "red", imagenFicha)); 
                 fichasAzules.push(new Ficha(950, 100 + i * 8, "blue", imagenAzul));
         }
         
-        opcionesModo.style.display = "none";
-        contenedorJuego.style.display = "block";
-        iniciarReloj();
-        dibujar(); // Función que inicia el juego con el modo elegido
+        
         
     });
 });
@@ -332,7 +391,15 @@ canvas.addEventListener("click", function(e) {
         volverAlMenu();
         tiempoRestante=300;
         turnoRojo = true; 
-        
+        fichasRojas = [];
+        fichasAzules = [];
+        // Crear fichas
+        for (let i = cantFichas; i > 0; i--) {
+            fichasRojas.push(new Ficha(150, 100 + i * 8, "red", imagenFicha)); 
+            fichasAzules.push(new Ficha(950, 100 + i * 8, "blue", imagenAzul));
+        }
+        tablero.setFilasYColumnas(f,c);
+        dibujar();
         
     }
     
@@ -353,7 +420,6 @@ canvas.addEventListener("click", function(e) {
         fichasAzules = [];
         // Crear fichas
         for (let i = cantFichas; i > 0; i--) {
-            console.log("etra "+ i);
             fichasRojas.push(new Ficha(150, 100 + i * 8, "red", imagenFicha)); 
             fichasAzules.push(new Ficha(950, 100 + i * 8, "blue", imagenAzul));
         }
