@@ -365,3 +365,7 @@ span{
     object-fit: cover;
 }
 
+.seleccionado{
+    box-shadow: 0 0 15px rgb(233, 222, 7);
+    border: 1px solid rgb(233, 222, 7);
+}
