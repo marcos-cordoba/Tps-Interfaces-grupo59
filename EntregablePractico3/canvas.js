@@ -507,7 +507,7 @@ document.querySelectorAll(".fj2").forEach(boton => {
 });
 
 
-imagenBackground.src = "images/back4.jpg";
+imagenBackground.src = "fondojuego3.webp";
 
 
 
@@ -682,22 +682,19 @@ function dibujarReloj() {
     let minutos = Math.floor(tiempoRestante / 60);
     let segundos = tiempoRestante % 60;
 
-    // Formatea el tiempo en dos dígitos
+   
     let tiempoTexto = `${minutos < 10 ? "0" + minutos : minutos}:${segundos < 10 ? "0" + segundos : segundos}`;
 
-    // Limpia el área del reloj
     ctx.clearRect((canvas.width / 2) -30, 6, 61, 21);
-    // Dibuja el tiempo en el canvas
     ctx.font = "24px Arial";
     ctx.fillStyle = "white";
     ctx.fillText(tiempoTexto, (canvas.width/2), 20);
 }
 
-let relojCorriendo = false; // Flag para indicar si el reloj está corriendo
+let relojCorriendo = false;
 
 function iniciarReloj() {
     if (!relojCorriendo) {
-        // Inicia el intervalo solo si no está corriendo
         relojCorriendo = true;
 
         intervaloReloj = setInterval(() => {
@@ -705,18 +702,18 @@ function iniciarReloj() {
                 dibujarReloj();
                 tiempoRestante--;
             } else {
+                document.getElementById("resultados").innerHTML = `<div class="contenedor-victoria" style="opacity: 1;"><p class="victoria">Se acabo el tiempo:¡Empate!</p></div>`;
                 clearInterval(intervaloReloj);
-                relojCorriendo = false; // Reinicia el flag cuando el tiempo se termina
-                // console.log("¡Tiempo terminado!");
+                setTimeout(reiniciarJuego, 4000);
             }
-        }, 1000); // Disminuye el tiempo cada segundo
+        }, 1000); 
     }
 }
 
 function detenerReloj() {
     if (intervaloReloj) {
         clearInterval(intervaloReloj);
-        relojCorriendo = false; // Reinicia el flag
+        relojCorriendo = false; 
     }
 }
 
@@ -860,7 +857,7 @@ canvas.addEventListener("mouseup", () => {
 
     fichaSeleccionada.activa = false;
 
-    // Ajustamos la detección de la posición objetivo con el nuevo tamaño de 60x60
+   
     const posObjetivo = tablero.posicionesObjetivo.find(pos =>
         fichaSeleccionada.x > pos.x && fichaSeleccionada.x < pos.x + ladoCelda &&
         fichaSeleccionada.y > pos.y && fichaSeleccionada.y < pos.y + ladoCelda
@@ -870,7 +867,7 @@ canvas.addEventListener("mouseup", () => {
         const columna = tablero.posicionesObjetivo.indexOf(posObjetivo);
         let filaDisponible = -1;
 
-        // Buscar la primera fila disponible desde abajo hacia arriba
+        
         for (let i = f - 1; i >= 0; i--) {
             if (!tablero.celdas[i][columna].estaOcupada()) {
                 filaDisponible = i;
@@ -925,7 +922,8 @@ function animarCaida(ficha, filaDestino, columnaDestino) {
 
             // Verificar si hay una victoria después de colocar la ficha
             if (tablero.verificarVictoria(filaDestino, columnaDestino, turnoRojo ? "rojo" : "azul")) {
-                document.getElementById("resultados").innerHTML = `<p class="victoria">¡Victoria para ${turnoRojo ? nombreJugadorRojo : nombreJugadorAzul}!</p>`;
+                // canvas.style.opacity = "0.33";    
+                document.getElementById("resultados").innerHTML = `<div class="contenedor-victoria" style="opacity: 1;"><p class="victoria">¡Victoria para ${turnoRojo ? nombreJugadorRojo : nombreJugadorAzul}!</p></div>`;
                 setTimeout(reiniciarJuego, 3000);
             } else {
                 turnoRojo = !turnoRojo;
@@ -950,6 +948,7 @@ function reiniciarJuego() {
     turnoRojo = true;
     document.getElementById("resultados").innerHTML = ``;
     dibujar();
+    canvas.style.opacity = "1";
     // Oculta el contenedor del juego
     contenedorJuego.style.display = "none";
     // Muestra las opciones de modo
