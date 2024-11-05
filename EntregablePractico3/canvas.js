@@ -335,6 +335,16 @@ document.querySelectorAll(".ficha").forEach(boton => {
                 });
                 break;
         }
+        //console.log("imagenAzul = "+imagenAzul.src + " imagenFicha = "+imagenFicha.src);
+        document.querySelectorAll('.modo').forEach(modo => {
+            if((modo.classList.contains("seleccionado"))&&(imagenAzul.src!="")&&(imagenFicha.src!="")){
+
+                //console.log("entro a for con imagenAzul = "+imagenAzul.src + " imagenFicha = "+imagenFicha.src);
+                if(!document.querySelector('.btn-empezar-partida').classList.contains("seleccionado")){
+                    document.querySelector('.btn-empezar-partida').classList.toggle("seleccionado");
+                }
+            }
+        });
     });
 });
 document.querySelectorAll(".fj2").forEach(boton => {
@@ -410,6 +420,17 @@ document.querySelectorAll(".fj2").forEach(boton => {
                 break; 
           
         }
+
+        //console.log("imagenAzul = "+imagenAzul.src + " imagenFicha = "+imagenFicha.src);
+        document.querySelectorAll('.modo').forEach(modo => {
+            if((modo.classList.contains("seleccionado"))&&(imagenAzul.src!="")&&(imagenFicha.src!="")){
+
+                //console.log("entro a for con imagenAzul = "+imagenAzul.src + " imagenFicha = "+imagenFicha.src);
+                if(!document.querySelector('.btn-empezar-partida').classList.contains("seleccionado")){
+                    document.querySelector('.btn-empezar-partida').classList.toggle("seleccionado");
+                }
+            }
+        });
     });
 });
 
@@ -461,6 +482,17 @@ botonInicio.addEventListener("click", () => {
 // Manejar el clic en cada opción de modo de juego
 document.querySelectorAll(".modo").forEach(boton => {
     boton.addEventListener("click", (e) => {
+
+        document.querySelectorAll('.modo').forEach(aux => {
+            
+            if(aux.classList.contains("seleccionado")){
+
+                aux.classList.remove("seleccionado");
+            }
+        })
+        
+        boton.classList.toggle('seleccionado');
+
         juego.style.display = "block";
         f = e.target.getAttribute("data-filas");
         c = e.target.getAttribute("data-columnas");
@@ -476,7 +508,22 @@ document.querySelectorAll(".modo").forEach(boton => {
                 fichasRojas.push(new Ficha(150, 100 + i * 8, "red", imagenFicha)); 
                 fichasAzules.push(new Ficha(950, 100 + i * 8, "blue", imagenAzul));
         }
+
         
+        if((imagenAzul.src!="")&&(imagenFicha.src)!=""){
+            
+            if(!document.querySelector('.btn-empezar-partida').classList.contains("seleccionado")){
+                document.querySelector('.btn-empezar-partida').classList.toggle("seleccionado");
+            }
+        };
+
+        // document.querySelectorAll('.modo').forEach(aux => {
+        //     console.log("entro a for aux 2");
+        //     if(aux.classList.contains("seleccionado")&&(!imagenAzul.src==null)&&(!imagenFicha.src==null)){
+        //         console.log("entro a aux for 2");
+        //         document.querySelector('.btn-empezar-partida').classList.toggle("seleccionado");
+        //     }
+        // });
         
         
     });
@@ -504,6 +551,12 @@ canvas.addEventListener("click", function(e) {
         imagenFicha = new Image();
         imagenAzul = new Image();
         document.querySelectorAll(".ficha").forEach(aux => {
+            if (aux.classList.contains("seleccionado")) {
+                // Si la tiene, la elimina
+                aux.classList.remove("seleccionado");
+            }
+        });
+        document.querySelectorAll(".modo").forEach(aux => {
             if (aux.classList.contains("seleccionado")) {
                 // Si la tiene, la elimina
                 aux.classList.remove("seleccionado");
