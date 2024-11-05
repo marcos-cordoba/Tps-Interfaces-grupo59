@@ -263,27 +263,76 @@ let imagenFicha = new Image();
 let imagenAzul = new Image();
 
 
+
 document.querySelectorAll(".ficha").forEach(boton => {
     boton.addEventListener("click", (e) => {
         let ficha = e.currentTarget.getAttribute("ficha"); // Usar e.currentTarget en lugar de e.target
-        console.log("ficha " + ficha);
 
         switch(ficha) {
             case '1':
-                imagenFicha.src = "images.jpeg";
-                console.log("image " + imagenFicha.src);
-                break;
+               
+            document.querySelectorAll(".fj2").forEach(aux => {
+                if (!aux.classList.contains("seleccionado")&&aux.getAttribute("ficha") === "5"){ 
+                    document.querySelectorAll(".fj1").forEach(aux => {
+                        if (aux.classList.contains("seleccionado")) {
+                            // Si la tiene, la elimina
+                            aux.classList.remove("seleccionado");
+                        }});
+                    boton.classList.toggle("seleccionado");
+                    imagenFicha.src = "images.jpeg";
+                
+                    
+                } 
+                
+            });
+            break;
             case '2':
-                imagenFicha.src = "images2.jpeg";
+                document.querySelectorAll(".fj2").forEach(aux => {
+                    if (!aux.classList.contains("seleccionado")&&aux.getAttribute("ficha") === "6"){ 
+                        document.querySelectorAll(".fj1").forEach(aux => {
+                            if (aux.classList.contains("seleccionado")) {
+                                // Si la tiene, la elimina
+                                aux.classList.remove("seleccionado");
+                            }});
+                        boton.classList.toggle("seleccionado");
+                        imagenFicha.src = "images2.jpeg";
+                    
+                        
+                    } 
+                    
+                });
                 break;
             case '3':
-                imagenFicha.src = "image3.jfif";
+                document.querySelectorAll(".fj2").forEach(aux => {
+                    if (!aux.classList.contains("seleccionado")&&aux.getAttribute("ficha") === "7"){ 
+                        document.querySelectorAll(".fj1").forEach(aux => {
+                            if (aux.classList.contains("seleccionado")) {
+                                // Si la tiene, la elimina
+                                aux.classList.remove("seleccionado");
+                            }});
+                        boton.classList.toggle("seleccionado");
+                        imagenFicha.src = "image3.jfif";
+                    
+                        
+                    } 
+                    
+                });
                 break;
             case '4':
-                imagenFicha.src = "image4.jfif";
-                break;
-            default:
-                console.log("Ficha no válida");
+                document.querySelectorAll(".fj2").forEach(aux => {
+                    if (!aux.classList.contains("seleccionado")&&aux.getAttribute("ficha") === "8"){ 
+                        document.querySelectorAll(".fj1").forEach(aux => {
+                            if (aux.classList.contains("seleccionado")) {
+                                // Si la tiene, la elimina
+                                aux.classList.remove("seleccionado");
+                            }});
+                        boton.classList.toggle("seleccionado");
+                        imagenFicha.src = "image4.jfif";
+                    
+                        
+                    } 
+                    
+                });
                 break;
         }
     });
@@ -291,25 +340,75 @@ document.querySelectorAll(".ficha").forEach(boton => {
 document.querySelectorAll(".fj2").forEach(boton => {
     boton.addEventListener("click", (e) => {
         let ficha = e.currentTarget.getAttribute("ficha"); // Usar e.currentTarget en lugar de e.target
-        console.log("ficha " + ficha);
 
         switch(ficha) {
             case '5':
-                imagenAzul.src = "images.jpeg";
-                console.log("image " + imagenFicha.src);
-                break;
+               
+                document.querySelectorAll(".fj1").forEach(aux => {
+                    if (!aux.classList.contains("seleccionado")&&aux.getAttribute("ficha") === "1"){ 
+                        document.querySelectorAll(".fj2").forEach(aux => {
+                            if (aux.classList.contains("seleccionado")) {
+                                // Si la tiene, la elimina
+                                aux.classList.remove("seleccionado");
+                            }});
+                        boton.classList.toggle("seleccionado");
+                        imagenAzul.src = "images.jpeg";
+                    
+                        
+                    } 
+                    
+                });
+                break; 
             case '6':
-                imagenAzul.src = "images2.jpeg";
-                break;
+                document.querySelectorAll(".fj1").forEach(aux => {
+                    if (!aux.classList.contains("seleccionado")&&aux.getAttribute("ficha") === "2"){ 
+                        document.querySelectorAll(".fj2").forEach(aux => {
+                            if (aux.classList.contains("seleccionado")) {
+                                // Si la tiene, la elimina
+                                aux.classList.remove("seleccionado");
+                            }});
+                        boton.classList.toggle("seleccionado");
+                        imagenAzul.src = "images2.jpeg";
+                    
+                        
+                    } 
+                    
+                });
+                break; 
+                
             case '7':
-                imagenAzul.src = "image3.jfif";
-                break;
+                document.querySelectorAll(".fj1").forEach(aux => {
+                    if (!aux.classList.contains("seleccionado")&&aux.getAttribute("ficha") === "3"){ 
+                        document.querySelectorAll(".fj2").forEach(aux => {
+                            if (aux.classList.contains("seleccionado")) {
+                                // Si la tiene, la elimina
+                                aux.classList.remove("seleccionado");
+                            }});
+                        boton.classList.toggle("seleccionado");
+                        imagenAzul.src = "image3.jfif";
+                    
+                        
+                    } 
+                    
+                });
+                break; 
             case '8':
-                imagenAzul.src = "image4.jfif";
-                break;
-            default:
-                console.log("Ficha no válida");
-                break;
+                document.querySelectorAll(".fj1").forEach(aux => {
+                    if (!aux.classList.contains("seleccionado")&&aux.getAttribute("ficha") === "4"){ 
+                        document.querySelectorAll(".fj2").forEach(aux => {
+                            if (aux.classList.contains("seleccionado")) {
+                                // Si la tiene, la elimina
+                                aux.classList.remove("seleccionado");
+                            }});
+                        boton.classList.toggle("seleccionado");
+                        imagenAzul.src = "image4.jfif";
+                    
+                        
+                    } 
+                    
+                });
+                break; 
+          
         }
     });
 });
@@ -337,10 +436,14 @@ let nombreJugadorRojo = null;
 let nombreJugadorAzul = null;
 let botonJugar=document.getElementById("btn-jugar");
 botonJugar.addEventListener("click", () => {
-    opcionesModo.style.display = "none";
-    contenedorJuego.style.display = "block";
-    iniciarReloj();
-    dibujar(); // Función que inicia el juego con el modo elegido
+    
+    if((imagenAzul.src) && (imagenFicha.src)){
+        console.log("entra");
+        opcionesModo.style.display = "none";
+        contenedorJuego.style.display = "block";
+        iniciarReloj();
+        dibujar(); // Función que inicia el juego con el modo elegido
+    }
     
 });
 
@@ -391,15 +494,22 @@ canvas.addEventListener("click", function(e) {
         volverAlMenu();
         tiempoRestante=300;
         turnoRojo = true; 
-        fichasRojas = [];
-        fichasAzules = [];
-        // Crear fichas
-        for (let i = cantFichas; i > 0; i--) {
-            fichasRojas.push(new Ficha(150, 100 + i * 8, "red", imagenFicha)); 
-            fichasAzules.push(new Ficha(950, 100 + i * 8, "blue", imagenAzul));
-        }
+         fichasRojas = [];
+         fichasAzules = [];
+        
+        cantFichas=0;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         tablero.setFilasYColumnas(f,c);
         dibujar();
+        imagenFicha = new Image();
+        imagenAzul = new Image();
+        document.querySelectorAll(".ficha").forEach(aux => {
+            if (aux.classList.contains("seleccionado")) {
+                // Si la tiene, la elimina
+                aux.classList.remove("seleccionado");
+            }
+        });
+
         
     }
     
@@ -472,7 +582,7 @@ function iniciarReloj() {
             } else {
                 clearInterval(intervaloReloj);
                 relojCorriendo = false; // Reinicia el flag cuando el tiempo se termina
-                console.log("¡Tiempo terminado!");
+                // console.log("¡Tiempo terminado!");
             }
         }, 1000); // Disminuye el tiempo cada segundo
     }
