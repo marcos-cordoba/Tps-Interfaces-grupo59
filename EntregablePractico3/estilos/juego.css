@@ -227,7 +227,7 @@ span{
     border: 0px;
     border-radius: 8px;
     cursor: pointer;
-    /* box-shadow: 0px 0px 4px var(--blanco); */
+    box-shadow: 0px 0px 7px var(--negro3);
     
 }
 .modo-seleccionado{
@@ -324,6 +324,7 @@ span{
     align-items: center;
     width: 150px; /* Ajusta el tamaño del botón según sea necesario */
     height: 50px;
+    border-radius: 10px;
 }
 
 .btn-empezar-partida button {
@@ -332,8 +333,11 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--acento);
+    background-color: var(--violeta);
     box-shadow: 0px 0px 4px var(--blanco);
+    cursor: pointer;
+    border: 1px solid var(--blanco);
+    border-radius: 10px;
 }
 
 
@@ -377,4 +381,8 @@ p a span{
 .seleccionado{
     box-shadow: 0 0 15px rgb(233, 222, 7);
     border: 1px solid rgb(233, 222, 7);
+}
+
+.bloquear{
+    opacity: 0.33;
 }

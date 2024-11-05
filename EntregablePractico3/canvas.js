@@ -279,6 +279,7 @@ document.querySelectorAll(".ficha").forEach(boton => {
                             aux.classList.remove("seleccionado");
                         }});
                     boton.classList.toggle("seleccionado");
+                    aux.classList.toggle("bloquear");
                     imagenFicha.src = "images.jpeg";
                 
                     
@@ -295,6 +296,7 @@ document.querySelectorAll(".ficha").forEach(boton => {
                                 aux.classList.remove("seleccionado");
                             }});
                         boton.classList.toggle("seleccionado");
+                        aux.classList.toggle("bloquear");
                         imagenFicha.src = "images2.jpeg";
                     
                         
@@ -311,6 +313,7 @@ document.querySelectorAll(".ficha").forEach(boton => {
                                 aux.classList.remove("seleccionado");
                             }});
                         boton.classList.toggle("seleccionado");
+                        aux.classList.toggle("bloquear");
                         imagenFicha.src = "image3.jfif";
                     
                         
@@ -327,6 +330,7 @@ document.querySelectorAll(".ficha").forEach(boton => {
                                 aux.classList.remove("seleccionado");
                             }});
                         boton.classList.toggle("seleccionado");
+                        aux.classList.toggle("bloquear");
                         imagenFicha.src = "image4.jfif";
                     
                         
@@ -362,6 +366,7 @@ document.querySelectorAll(".fj2").forEach(boton => {
                                 aux.classList.remove("seleccionado");
                             }});
                         boton.classList.toggle("seleccionado");
+                        aux.classList.toggle("bloquear");
                         imagenAzul.src = "images.jpeg";
                     
                         
@@ -378,6 +383,7 @@ document.querySelectorAll(".fj2").forEach(boton => {
                                 aux.classList.remove("seleccionado");
                             }});
                         boton.classList.toggle("seleccionado");
+                        aux.classList.toggle("bloquear");
                         imagenAzul.src = "images2.jpeg";
                     
                         
@@ -395,6 +401,7 @@ document.querySelectorAll(".fj2").forEach(boton => {
                                 aux.classList.remove("seleccionado");
                             }});
                         boton.classList.toggle("seleccionado");
+                        aux.classList.toggle("bloquear");
                         imagenAzul.src = "image3.jfif";
                     
                         
@@ -411,6 +418,7 @@ document.querySelectorAll(".fj2").forEach(boton => {
                                 aux.classList.remove("seleccionado");
                             }});
                         boton.classList.toggle("seleccionado");
+                        aux.classList.toggle("bloquear");
                         imagenAzul.src = "image4.jfif";
                     
                         
