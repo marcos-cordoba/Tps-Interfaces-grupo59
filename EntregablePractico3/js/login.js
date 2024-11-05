@@ -9,6 +9,7 @@ const checkmarkCheck = document.querySelector('.checkmarkCheck');
 
 // añade un evento click, a cada boton de registro
 botonRegistro.forEach(boton => {
+  
     boton.addEventListener('click', () => {
         successAnimation.classList.toggle('successAnimationAppear');
         checkmark.classList.toggle('checkmarkAnimation');
@@ -36,57 +37,33 @@ function cambioDeForm(){
     });
 }
 
+function cambioDeForm() {
+    console.log("Cambio de formulario");
+    form.forEach(Element => {
+        Element.classList.toggle('formHidden');
+    });
+}
 
+function procesarFormulario(event) {
+  event.preventDefault(); // Evita el envío del formulario
 
+  const user = document.getElementById("user").value;
+  const password = document.getElementById("password").value;
+  const feedbackMessage = document.getElementById("feedbackMessage");
 
-
-
-
-
-
-
-
-
-
-
-// // Seleccionamos los formularios y elementos clave
-// const formLogin = document.querySelector('.login-box-arriba form');
-// const formRegistro = document.querySelector('.form-container form');
-// //const successAnimation = document.querySelector('.successAnimation');
-// // const checkmark = document.querySelector('.checkmark');
-// // const checkmarkCircle = document.querySelector('.checkmarkCircle');
-// // const checkmarkCheck = document.querySelector('.checkmarkCheck');
-// const waitTime = 4000; // Duración de la animación en ms
-
-// // Función para simular el inicio de sesión correcto
-// function loginExitoso() {
-//     // Aquí puedes realizar la validación que necesites antes de proceder con la animación
-
-//     // Aplicar animación de éxito
-//     successAnimation.classList.remove('formHidden'); // Muestra la animación
-//     checkmark.classList.add('checkmarkAnimation');
-//     checkmarkCircle.classList.add('checkmarkCircleAnimation');
-//     checkmarkCheck.classList.add('checkmarkCheckAnimation');
-
-//     setTimeout(() => {
-//         // Al finalizar la animación, ocultar nuevamente
-//         successAnimation.classList.add('formHidden');
-//         checkmark.classList.remove('checkmarkAnimation');
-//         checkmarkCircle.classList.remove('checkmarkCircleAnimation');
-//         checkmarkCheck.classList.remove('checkmarkCheckAnimation');
-        
-//         // Aquí podrías redirigir al usuario o cambiar el contenido
-//         window.location.href = '/dashboard'; // Redirige a la página principal
-//     }, waitTime);
-// }
-
-// // Eventos para manejar el envío de los formularios
-// formLogin.addEventListener('submit', (event) => {
-//     event.preventDefault(); // Evita el envío inmediato del formulario
-//     loginExitoso(); // Llama a la animación de éxito
-// });
-
-// formRegistro.addEventListener('submit', (event) => {
-//     event.preventDefault(); // Evita el envío inmediato del formulario
-//     loginExitoso(); // Llama a la animación de éxito (registro exitoso)
-// });
+  if (user === "admin" && password === "admin") {
+    // Éxito: muestra mensaje y aplica animación de éxito
+    feedbackMessage.textContent = "¡Inicio de sesión exitoso!";
+    feedbackMessage.classList.remove("error");
+    feedbackMessage.classList.add("visible", "success");
+    // Redirigir a home.html después de 6 segundos
+    setTimeout(() => {
+      window.location.href = "loading.html";
+    }, 2000);
+  } else {
+    // Error: muestra mensaje y mantiene el color rojo
+    feedbackMessage.textContent = "Error: Credenciales incorrectas";
+    feedbackMessage.classList.remove("success");
+    feedbackMessage.classList.add("visible", "error");
+  }
+}
