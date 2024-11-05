@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .carousel-container {
     position: relative;
     width: 80%;
@@ -16,13 +17,8 @@
 }
 
 .carousel {
-    display: flex;
-    
+    display: flex; 
 }
-
-/* Estilo para las cards */
-
-
 
 /* Ocultamos los radios */
 #slide1 , #slide2 , #slide3{
@@ -30,22 +26,6 @@
 }
 
 /* Mostrar la card correspondiente al radio button seleccionado */
-
-
-/* Animaciones para cada card */
-/* @keyframes wave2 {
-   
-    10% { transform: translateX(20px) scale(1.3) rotate3d(2, 2, 2, 40deg)}
-    20% { transform: translateX(40px) scale(1.3) rotate3d(2, 2, 2, 80deg)}
-    30% { transform: translateX(60px) scale(1.3) rotate3d(2, 2, 2, 120deg)}
-    40% { transform: translateX(80px) scale(1.3) rotate3d(2, 2, 2, 160deg) }
-    50% { transform: translateX(100px) scale(1.3) rotate3d(2, 2, 2, 200deg)  }
-    60% { transform: translateX(120px) scale(1.3)  rotate3d(2, 2, 2, 240deg) }
-    70% { transform: translateX(140px) scale(1.3) rotate3d(2, 2, 2, 280deg) }
-    80% { transform: translateX(160px) scale(1.3) rotate3d(2, 2, 2, 320deg) }
-    90% { transform: translateX(180px) scale(1.3) rotate3d(2, 2, 2, 360deg) }
-    100% { transform: translateX(200px) scale(1.3)  rotate3d(2, 2, 2, 360deg) }
-} */
 
 #slide1:checked ~ .carousel #card1 {
     transform:translateX(80%) scale(1.2)   ;
@@ -66,42 +46,6 @@
     
 }
 
-
- @keyframes wave1 {
-      /* 0% {
-         transform:   scale(1.3); 
-    }
-  
-    80% {
-        transform:   scale(1.3);
-    }
-    85% {
-        transform:   scale(1.3);
-    }
-    86% {
-        transform:  skew(10deg)  scale(1.3);
-    }
-    90% { 
-        transform: skew(0deg)  scale(1.3);
-    }
-    95% {
-        transform: skew(-10deg) scale(1.3);
-    }
-    100% {
-        transform: skew(0deg) scale(1.3) ;
-    } */
-}/*
-    10% { transform:  scale(1.3) rotate3d(2, 2, 2, 40deg)}
-    20% { transform:  scale(1.3) rotate3d(2, 2, 2, 80deg)}
-    30% { transform:  scale(1.3) rotate3d(2, 2, 2, 120deg)}
-    40% { transform:  scale(1.3) rotate3d(2, 2, 2, 160deg) }
-    50% { transform:  scale(1.3) rotate3d(2, 2, 2, 200deg)  }
-    60% { transform:  scale(1.3)  rotate3d(2, 2, 2, 240deg) }
-    70% { transform:  scale(1.3) rotate3d(2, 2, 2, 280deg) }
-    80% { transform:  scale(1.3) rotate3d(2, 2, 2, 320deg) }
-    90% { transform:  scale(1.3) rotate3d(2, 2, 2, 360deg) }
-    100% { transform: scale(1.3)  rotate3d(2, 2, 2, 360deg) }
-} */
 #slide2:checked ~ .carousel #card1 {
     transform: scale(0.8) translateX(55%) skew(2deg, 0);
     z-index: 0;
@@ -145,18 +89,6 @@
         transform:  translateX(-80%) scale(1.2);
     }
 }
-/*     
-    10% { transform: translateX(-20px) scale(1.3) rotate3d(2, 2, 0, 5deg)}
-    20% { transform: translateX(-40px) scale(1.3) rotate3d(2, 2, 0, 5deg)}
-    30% { transform: translateX(-60px) scale(1.3) rotate3d(2, 2, 0, 5deg)}
-    40% { transform: translateX(-80px) scale(1.3) rotate3d(2, 2, 0, 5deg) }
-    50% { transform: translateX(-100px) scale(1.3) rotate3d(2, 2, 0, 5deg)  }
-    60% { transform: translateX(-130px) scale(1.3)  rotate3d(2, 2, 0, 5deg) }
-    70% { transform: translateX(-150px) scale(1.3) rotate3d(2, 2, 0, 5deg) }
-    80% { transform: translateX(-170px) scale(1.3) rotate3d(2, 2, 0, 5deg) }
-    90% { transform: translateX(-190px) scale(1.3) rotate3d(2, 2, 0, 5deg) }
-    100% { transform: translateX(-200px) scale(1.3)  rotate3d(2, 2, 0, 5deg) }
-} */ 
 
 #slide3:checked ~ .carousel #card1 {
     transform: scale(0.8) translateX(120px);
@@ -175,7 +107,7 @@
 
 /* Estilos para las flechas */
 /* Control de las animaciones y transiciones */
-.next1, .next2, .prev1, .prev2 {
+.next1, .next2, .next3, .prev1, .prev2, .prev3 {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -186,43 +118,55 @@
     transition: opacity 0.3s;
 }
 
-
 /* Cambiar el z-index de .next2 cuando slide1 está seleccionado */
 #slide1:checked ~ .next2 {
     z-index: 1; /* Mantener .next2 arriba cuando .next1 está activa */
 }
+
 /* Ocultar la flecha derecha cuando estamos en la última slide */
 #slide1:checked ~ .prev1 {
     display: none; /* Ocultar la flecha derecha en la slide 3 */
 }
 
-
-
 /* Cambiar el z-index de .next1 cuando slide2 está seleccionado */
 #slide2:checked ~ .next1 {
     z-index: 1; /* Mantener .next1 arriba cuando .next2 está activa */
 }
+
 #slide2:checked ~ .prev2 {
     z-index: 1; /* Mantener .next1 arriba cuando .next2 está activa */
 }
 
-/* Ocultar la flecha derecha cuando estamos en la última slide */
-#slide3:checked ~ .next2 {
-    display: none; /* Ocultar la flecha derecha en la slide 3 */
+#slide3:checked ~ .prev3 {
+    display: none; 
 }
 
-
-.next1{ right: 5%;
+.next1{ 
+    right: 5%;
 }
-.next2 { right:5%;
-     }
-.prev1 { left: 5%;
-    }
-.prev2 { left: 5%;
-     }
+
+.next2 { 
+    right:5%;
+}
+
+.prev1 { 
+    left: 5%;
+}
+
+.prev2 { 
+    left: 5%;
+}
+
+.next3 { 
+    right: 5%;
+}
+
+.prev3 { 
+    left: 5%;
+}
 
 /* Efecto al pasar el mouse */
-.next1:hover, .next2:hover, .prev1:hover, .prev2:hover {
+.next1:hover, .next2:hover, .next3:hover, .prev1:hover, .prev2:hover, .prev3:hover {
     opacity: 1;
 }
 
@@ -249,15 +193,15 @@
     cursor: pointer;
 }
 
-
 .imagen-juego img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-
-
+.contenidoCarrusel {
+    transition: transform 0.4s ease; /* Suavizar la transformación */
+}
 
 .subImagen{
     display: flex;
@@ -288,7 +232,6 @@
 .nombre-precio{
     width: 200px;
     height: 100%;
-    /* background-color: brown; */
     display: flex;
     flex-direction: column;
     padding-left: 8px;
@@ -300,7 +243,6 @@
     padding-right: 5px;
     width: fit-content;
     height: 100%;
-    /* background-color: burlywood; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -318,10 +260,12 @@
 .comprar{
     background-color: var(--verde);
 }
+
 .comprar:hover{
     background-color: var(--verde-1);
     cursor: pointer;
 }
+
 .jugar{
     background-color: var(--acento);
 }
@@ -344,6 +288,7 @@
     justify-content: center;
     display: flex;
 }
+
 .card-pag-juego{
     margin: 5px;
     width: 240px;
@@ -354,13 +299,16 @@
     box-shadow: 0px 0px 6px var(--negro3);
     cursor: pointer;
 }
+
 .card-pag-juego:hover{
     border: 1px var(--acento) solid;
 }
+
 .img-card-juego{
     width: 100px;
     height: 100%;
 }
+
 .img-card-juego img{
     width: 100%;
     height: 100%;
@@ -368,7 +316,6 @@
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-
 
 .contenido-card-juego{
     display: grid;
@@ -385,6 +332,7 @@
     /* background-color: black; */
     grid-area: titulo;
 }
+
 .precio-card-juego{
     display: flex;
     justify-content: center;
@@ -392,6 +340,7 @@
     /* background-color: brown; */
     grid-area: precio;
 }
+
 .btn-card-pag-juego{
     display: flex;
     /* background-color: cadetblue; */
@@ -408,11 +357,4 @@
     border-radius: 12px;
     box-shadow: 0px 0px 3px var(--negro3); 
     cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-    .carousel-container{
-        display: none;
-    }
-   
 }
