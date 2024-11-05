@@ -325,6 +325,7 @@ span{
     width: 150px; /* Ajusta el tamaño del botón según sea necesario */
     height: 50px;
     border-radius: 10px;
+    opacity: 0.33;
 }
 
 .btn-empezar-partida button {
@@ -338,6 +339,7 @@ span{
     cursor: pointer;
     border: 1px solid var(--blanco);
     border-radius: 10px;
+    /* opacity: 0.33; */
 }
 
 
@@ -381,6 +383,7 @@ p a span{
 .seleccionado{
     box-shadow: 0 0 15px rgb(233, 222, 7);
     border: 1px solid rgb(233, 222, 7);
+    opacity: 1;
 }
 
 .bloquear{

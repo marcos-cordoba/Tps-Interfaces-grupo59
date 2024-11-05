@@ -277,9 +277,18 @@ document.querySelectorAll(".ficha").forEach(boton => {
                         if (aux.classList.contains("seleccionado")) {
                             // Si la tiene, la elimina
                             aux.classList.remove("seleccionado");
-                        }});
+                        }
+                    });
                     boton.classList.toggle("seleccionado");
-                    aux.classList.toggle("bloquear");
+                    document.querySelectorAll(".fj2").forEach(aux2 => {
+                        if(aux2.classList.contains("bloquear")){
+                            aux2.classList.remove("bloquear");
+                        }
+                    });
+                    if(!aux.classList.contains("bloquear")){
+                        aux.classList.toggle("bloquear");
+                    }
+                    
                     imagenFicha.src = "images.jpeg";
                 
                     
@@ -296,7 +305,15 @@ document.querySelectorAll(".ficha").forEach(boton => {
                                 aux.classList.remove("seleccionado");
                             }});
                         boton.classList.toggle("seleccionado");
-                        aux.classList.toggle("bloquear");
+                        document.querySelectorAll(".fj2").forEach(aux2 => {
+                            if(aux2.classList.contains("bloquear")){
+                                aux2.classList.remove("bloquear");
+                            }
+                        });
+                        if(!aux.classList.contains("bloquear")){
+                            aux.classList.toggle("bloquear");
+                        }
+                        
                         imagenFicha.src = "images2.jpeg";
                     
                         
@@ -313,7 +330,15 @@ document.querySelectorAll(".ficha").forEach(boton => {
                                 aux.classList.remove("seleccionado");
                             }});
                         boton.classList.toggle("seleccionado");
-                        aux.classList.toggle("bloquear");
+                        document.querySelectorAll(".fj2").forEach(aux2 => {
+                            if(aux2.classList.contains("bloquear")){
+                                aux2.classList.remove("bloquear");
+                            }
+                        });
+                        if(!aux.classList.contains("bloquear")){
+                            aux.classList.toggle("bloquear");
+                        }
+                        
                         imagenFicha.src = "image3.jfif";
                     
                         
@@ -330,7 +355,15 @@ document.querySelectorAll(".ficha").forEach(boton => {
                                 aux.classList.remove("seleccionado");
                             }});
                         boton.classList.toggle("seleccionado");
-                        aux.classList.toggle("bloquear");
+                        document.querySelectorAll(".fj2").forEach(aux2 => {
+                            if(aux2.classList.contains("bloquear")){
+                                aux2.classList.remove("bloquear");
+                            }
+                        });
+                        if(!aux.classList.contains("bloquear")){
+                            aux.classList.toggle("bloquear");
+                        }
+                        
                         imagenFicha.src = "image4.jfif";
                     
                         
@@ -366,7 +399,15 @@ document.querySelectorAll(".fj2").forEach(boton => {
                                 aux.classList.remove("seleccionado");
                             }});
                         boton.classList.toggle("seleccionado");
-                        aux.classList.toggle("bloquear");
+                        document.querySelectorAll(".fj1").forEach(aux2 => {
+                            if(aux2.classList.contains("bloquear")){
+                                aux2.classList.remove("bloquear");
+                            }
+                        });
+                        if(!aux.classList.contains("bloquear")){
+                            aux.classList.toggle("bloquear");
+                        }
+                      
                         imagenAzul.src = "images.jpeg";
                     
                         
@@ -383,7 +424,15 @@ document.querySelectorAll(".fj2").forEach(boton => {
                                 aux.classList.remove("seleccionado");
                             }});
                         boton.classList.toggle("seleccionado");
-                        aux.classList.toggle("bloquear");
+                        document.querySelectorAll(".fj1").forEach(aux2 => {
+                            if(aux2.classList.contains("bloquear")){
+                                aux2.classList.remove("bloquear");
+                            }
+                        });
+                        if(!aux.classList.contains("bloquear")){
+                            aux.classList.toggle("bloquear");
+                        }
+                        
                         imagenAzul.src = "images2.jpeg";
                     
                         
@@ -401,7 +450,15 @@ document.querySelectorAll(".fj2").forEach(boton => {
                                 aux.classList.remove("seleccionado");
                             }});
                         boton.classList.toggle("seleccionado");
-                        aux.classList.toggle("bloquear");
+                        document.querySelectorAll(".fj1").forEach(aux2 => {
+                            if(aux2.classList.contains("bloquear")){
+                                aux2.classList.remove("bloquear");
+                            }
+                        });
+                        if(!aux.classList.contains("bloquear")){
+                            aux.classList.toggle("bloquear");
+                        }
+                        
                         imagenAzul.src = "image3.jfif";
                     
                         
@@ -418,7 +475,14 @@ document.querySelectorAll(".fj2").forEach(boton => {
                                 aux.classList.remove("seleccionado");
                             }});
                         boton.classList.toggle("seleccionado");
-                        aux.classList.toggle("bloquear");
+                        document.querySelectorAll(".fj1").forEach(aux2 => {
+                            if(aux2.classList.contains("bloquear")){
+                                aux2.classList.remove("bloquear");
+                            }
+                        });
+                        if(!aux.classList.contains("bloquear")){
+                            aux.classList.toggle("bloquear");
+                        }
                         imagenAzul.src = "image4.jfif";
                     
                         
