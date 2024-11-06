@@ -1,0 +1,9 @@
+
+body{
+    max-width: 1280px;
+    max-height: 1080px;
+    background-color: aqua;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0 auto;
+}
