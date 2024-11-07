@@ -2,8 +2,168 @@
 body{
     max-width: 1280px;
     max-height: 1080px;
-    background-color: aqua;
+    background-color: white;
     overflow-x: hidden;
     padding: 0;
     margin: 0 auto;
+}
+
+/*Barra de navegación*/
+
+.navbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top: 0;
+    width: 1280px;
+    height: 120px;
+    background: linear-gradient(180deg, #00CED6 0%, #00CED6 80%, rgba(84, 153, 248, 0.00) 100%);;
+    z-index: 2000;
+    transition: top 0.3s ease;
+}
+
+.navbarContainer {
+    width: 1080px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto auto 32px auto;
+}
+
+.navbarContainer>* {
+    flex: 1;
+}
+
+.navbarMedio {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbarMedio .logo{
+    transform: translateY(3px);
+}
+.navbarDerecha {
+    display: flex;
+    justify-content: end;
+}
+
+
+/*Botón hamburguesa*/
+.hamburguesa {
+    width: 46px;
+    height: 39px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+/* Animación de hamburguesa a cruz */
+@keyframes hamburguesaACruzBarra1 {
+    0% {
+        transform: rotate(0) translate(0, 0);
+    }
+    100% {
+        transform: rotate(45deg) translate(4px, -8px);
+    }
+}
+
+@keyframes hamburguesaACruzBarra3 {
+    0% {
+        transform: rotate(0) translate(0, 0);
+    }
+    100% {
+        transform: rotate(-45deg) translate(-18px, -2px);
+    }
+}
+
+/* Animación de cruz a hamburguesa */
+@keyframes cruzAHamburguesaBarra1 {
+    0% {
+        transform: rotate(45deg)translate(4px, -8px);
+    }
+    100% {
+        transform: rotate(0) translate(0, 0);
+    }
+}
+
+@keyframes cruzAHamburguesaBarra3 {
+    0% {
+        transform: rotate(-45deg) translate(-18px, -2px);
+    }
+    100% {
+        transform: rotate(0) translate(0, 0);
+    }
+}
+
+/* Barra central se desvanece */
+@keyframes ocultarBarra {
+    0% {
+        opacity: 1;
+        stroke-opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        stroke-opacity: 0;
+    }
+}
+
+@keyframes mostrarBarra {
+    0% {
+        opacity: 0;
+        stroke-opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        stroke-opacity: 1;
+    }
+}
+
+/* Aplicar las animaciones a las barras */
+.hamburguesa.cruz #barra1 {
+    animation: hamburguesaACruzBarra1 0.4s forwards;
+}
+
+.hamburguesa.cruz #barra2 {
+    animation: ocultarBarra 0.2s forwards;
+}
+
+.hamburguesa.cruz #barra3 {
+    animation: hamburguesaACruzBarra3 0.4s forwards;
+}
+
+.hamburguesa.volver #barra1 {
+    animation: cruzAHamburguesaBarra1 0.4s forwards;
+}
+
+.hamburguesa.volver #barra2 {
+    animation: mostrarBarra 0.2s forwards;
+}
+
+.hamburguesa.volver #barra3 {
+    animation: cruzAHamburguesaBarra3 0.4s forwards;
+}
+
+/*Boton de Comprar*/
+.boton {
+    width: 200px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 111px;
+    border: 8px solid white;
+    background: #83C252;
+    box-shadow: 4px 5px 0px 0px #02187E;
+    cursor: pointer;
+}
+
+.btnAnimado {
+    transition: all 0.3s ease;
+}
+
+.boton h4 {
+    margin: auto;
+    color: white;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 94.5%;
 }
