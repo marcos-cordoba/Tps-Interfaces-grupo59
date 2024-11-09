@@ -16,8 +16,8 @@ body{
     align-items: center;
     top: 0;
     width: 1280px;
-    height: 120px;
-    background: linear-gradient(180deg, #00CED6 0%, #00CED6 80%, rgba(84, 153, 248, 0.00) 100%);;
+    height: 113px;
+    background: linear-gradient(180deg, #00CED6 0%, #00CED6 87.91%, rgba(84, 153, 248, 0.00) 100%);;
     z-index: 2000;
     transition: top 0.3s ease;
 }
@@ -40,9 +40,12 @@ body{
     justify-content: center;
 }
 
-.navbarMedio .logo{
+.navbarMedio .logo {
+    width: 50%; /* Ajusta el ancho deseado */
+    height: auto; /* Mantiene la relación de aspecto */
     transform: translateY(3px);
 }
+
 .navbarDerecha {
     display: flex;
     justify-content: end;
@@ -167,3 +170,155 @@ body{
     font-weight: 900;
     line-height: 94.5%;
 }
+
+/*Capas*/
+.fondo {
+    margin-top: 100px;
+    width: 1280px;
+    height: 799px;
+    position: relative;
+}
+
+.parallax {
+    position: relative;
+    height: 850px;
+    overflow: hidden;
+}
+
+.layerInicial {
+    position: absolute;
+}
+
+.layer {
+    position: absolute;
+
+}
+
+/* .invisible {
+    opacity: 0;
+} */
+
+.animacion {
+    animation: aparecer 1s cubic-bezier(0.42, 0, 0.58, 1);
+    /* Otras propiedades de estilo para la entrada */
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+        /* Otras propiedades de inicio */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        /* Otras propiedades para cuando está completamente visible */
+    }
+}
+
+#fondo {
+    width: 1280px;
+    top: 0%;
+    z-index: 1;
+}
+
+#arbolGrande {
+    left: -12%;
+    z-index: 2;
+    bottom: 10%;
+}
+
+#arbolMedio {
+    top: 5%;
+    left: 69%;
+    z-index: 3;
+}
+
+#arbolChico {
+    top: 21%;
+    left: 85%;
+    z-index: 2;
+}
+
+#arbusto1 {
+    right: 4%;
+    z-index: 1;
+    top: 63%;
+}
+
+#arbusto2 {
+    right: -3%;
+    z-index: 2;
+    top: 66%;
+}
+
+#arbusto3 {
+    right: 73%;
+    z-index: 3;
+    top: 85%;
+}
+
+#arbusto4 {
+    z-index: 1;
+    right: 68%;
+    top: 73%;
+}
+
+#titulo {
+    right: 27%;
+    z-index: 3;
+    top: 4%;
+}
+
+#piedra1 {
+    right: 7%;
+    z-index: 4;
+    top: 74%;
+}
+
+#piedra2 {
+    right: 78%;
+    z-index: 2;
+    top: 81%;
+}
+
+#piedra3 {
+    right: 14%;
+    z-index: 3;
+    top: 75%;
+}
+
+#piedra4 {
+    right: 14%;
+    z-index: 4;
+    top: 79%;
+}
+
+#personaje1 {
+    right: 47%;
+    z-index: 3;
+    top: 54%;
+}
+
+#personaje2 {
+    right: 40%;
+    z-index: 2;
+    top: 46%;
+}
+
+#personaje3 {
+    right: 27%;
+    z-index: 1;
+    top: 38%;
+}
+
+/* .invisible {
+    opacity: 0;
+} */
+
+/* css del modelo 3d
+model-viewer {
+    width: 25%;    /* Ocupa el ancho completo del contenedor */
+    /* height: 500px;  Ajusta la altura según sea necesario 
+}*/
