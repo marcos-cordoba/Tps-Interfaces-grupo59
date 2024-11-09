@@ -57,11 +57,10 @@ const cargarElemento = () => {
         c.style.opacity = '1';
         c.classList.add('animacion') // activa la animacion
     });
-    setTimeout(() => { titulo.style.transition = `` }, 1000); // Después de 1 segundo, elimina la transición CSS del elemento "titulo"
 };
-// Llama a la función después de 5 segundos (para que ocurra despúes del loader)
-setTimeout(cargarElemento, 5000);
 
+cargarElemento();
+// Llama a la función después de 5 segundos (para que ocurra despúes del loader)
 //Parallax
 //Definimos 2 arreglos distintos ya que los personajes se moveran hacia arriba y el fondo hacia abajo
 const capasPersonajes = [titulo, personaje1, personaje2, personaje3];
