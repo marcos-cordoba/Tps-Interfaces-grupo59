@@ -6,6 +6,7 @@ body{
     overflow-x: hidden;
     padding: 0;
     margin: 0 auto;
+    font-family: Arial, sans-serif;
 }
 
 /*Barra de navegación*/
@@ -172,7 +173,7 @@ body{
 }
 
 /*Capas*/
-.fondo {
+.seccion1 {
     margin-top: 100px;
     width: 1280px;
     height: 799px;
@@ -191,7 +192,6 @@ body{
 
 .layer {
     position: absolute;
-
 }
 
 /* .invisible {
@@ -312,13 +312,3 @@ body{
     z-index: 1;
     top: 38%;
 }
-
-/* .invisible {
-    opacity: 0;
-} */
-
-/* css del modelo 3d
-model-viewer {
-    width: 25%;    /* Ocupa el ancho completo del contenedor */
-    /* height: 500px;  Ajusta la altura según sea necesario 
-}*/

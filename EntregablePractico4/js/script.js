@@ -88,3 +88,30 @@ window.addEventListener("scroll", () => {
         e.style.transform = `translateY(${window.scrollY * velocidad}px)`; //Mueve los elementos hacia abajo
     });
 });
+
+//Punto 8
+const imagen1 = document.getElementById('personajes1-2-5');
+const imagen2 = document.getElementById('personaje9');
+const imagen3 = document.getElementById('personajes2-4');
+
+document.addEventListener("mousemove", parallaxVengadores);
+
+function parallaxVengadores(e) {
+    console.log("ESTO ANDA")
+    //Determina el centro de la pantalla
+    let w = window.innerWidth / 2;
+    let h = window.innerHeight / 2;
+
+    //Determina la posicion del mouse
+    let mouseX = e.clientX;
+    let mouseY = e.clientY;
+
+    //Calcula la diferencia de la posición del mouse respecto del centro de la ventana
+    let desplazamientoX = mouseX - w;
+    let desplazamientoY = mouseY - h;
+
+    //Calcula el desplazamiento de cada capa en proporción al desplazamiento calculado anteriormente
+    imagen1.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.04 + 'px, ' + -desplazamientoY * 0.04 + 'px, 0px)');
+    imagen2.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.05 + 'px, ' + -desplazamientoY * 0.05 + 'px, 0px)');
+    imagen3.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.06 + 'px, ' + -desplazamientoY * 0.06 + 'px, 0px)');
+}

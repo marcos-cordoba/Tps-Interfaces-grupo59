@@ -1,0 +1,28 @@
+.seccion3 {
+    position: relative;
+    height: 850px;
+    overflow: hidden;
+}
+
+#fondo3 {
+    width: 1280px;
+    top: 0%;
+    z-index: 1;
+}
+
+#personajes1-2-5 {
+    z-index: 2;
+    top: 38%;
+}
+
+#personaje9 {
+    z-index: 2;
+    right: 36%;
+    top: 62%;
+}
+
+#personajes2-4 {
+    z-index: 2;
+    right: -5%;
+    top: 37%;
+}

@@ -1,0 +1,30 @@
+.seccion6 {
+    display: flex;
+    max-width: 1280px;
+    align-items: center;
+    padding: 10%;
+}
+
+.text-content  {
+    max-width: 50%;
+    margin-right: 20px;
+}
+
+ .text-content h1 {
+    color: #8B0000;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+}
+
+.text-content p {
+    line-height: 1.5;
+}
+
+model-viewer {
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    border-radius: 10px;
+}
