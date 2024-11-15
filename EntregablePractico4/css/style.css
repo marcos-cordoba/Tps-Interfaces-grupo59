@@ -18,7 +18,7 @@ body{
     top: 0;
     width: 1280px;
     height: 113px;
-    background: linear-gradient(180deg, #00CED6 0%, #00CED6 87.91%, rgba(84, 153, 248, 0.00) 100%);;
+    background: linear-gradient(180deg, #00CED6 0%, #00CED6 87.91%, rgba(84, 153, 248, 0.00) 100%);
     z-index: 2000;
     transition: top 0.3s ease;
 }
@@ -159,9 +159,18 @@ body{
     cursor: pointer;
 }
 
-.btnAnimado {
-    transition: all 0.3s ease;
+.btnAnimado:hover {
+    animation: boton-animacion 0.3s ease;
 }
+
+@keyframes boton-animacion {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+} 
 
 .boton h4 {
     margin: auto;
@@ -184,10 +193,6 @@ body{
     position: relative;
     height: 850px;
     overflow: hidden;
-}
-
-.layerInicial {
-    position: absolute;
 }
 
 .layer {

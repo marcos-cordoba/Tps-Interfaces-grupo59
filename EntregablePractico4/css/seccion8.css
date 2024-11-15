@@ -1,0 +1,135 @@
+.seccion8 {
+    position: relative;
+    width: 1280px;
+    height: 1570px;
+    overflow: hidden;
+}
+
+#fondo8 {
+    width: 1280px;
+    height: 1296px;
+    z-index: 1;
+    top: 280px;
+}
+
+#h1 {
+    width: 816px;
+    height: 171px;
+    z-index: 2;
+    margin: 80px;
+}
+
+#paisajeSeccion8 {
+    z-index: 2;
+    top: 1179px;
+}
+
+#personaje2gif {
+    z-index: 4;
+    top: 1045px;
+    width: 480px;
+    height: 480px;
+}
+
+#personaje3gif {
+    z-index: 4;
+    top: 1017px;
+    width: 509px;
+    height: 509px;
+    right: 384px;
+}
+
+#personaje7gif {
+    z-index: 4;
+    top: 616px;
+    right: -30px;
+    width: 561px;
+    height: 997px;
+}
+
+#nube1 {
+    z-index: 3;
+    width: 387px;
+    height: 181px;
+    top: 828px;
+    left: 0;
+    animation: movebg 5s linear infinite;
+}
+
+#nube2 {
+    z-index: 2;
+    width: 265px;
+    height: 124px;
+    top: 472px;
+    left: 872px;
+    animation: movebg 8s linear infinite;
+}
+
+#nube3 {
+    z-index: 3;
+    width: 387px;
+    height: 181px;
+    top: 520px;
+    left: 1000px;
+    animation: movebg 10s linear infinite;
+}
+
+/* efecto parallax horizontal infinito */
+@keyframes movebg {
+    0% { left: -400px; }
+    100% { left: 1280px; }
+}
+
+/*Input para suscribirse*/
+.suscripcion {
+    display: flex;
+    width: 780px;
+    height: 100px;
+    z-index: 2;
+    top: 330px;
+    left: 110px;
+}
+
+.sub {
+    width: 580px;
+    font-size: 18px;
+    border-radius: 50px 0px 0px 50px;
+    border-top: 9px solid white;
+    border-bottom: 9px solid white;
+    border-left: 9px solid white;
+    background: #ECECEC;
+    box-shadow: 0px 5px 0px 0px white;
+}
+
+.btnSub {
+    width: 200px;
+    height: 101px;
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: 0px 50px 50px 0px;
+    border: 9px solid white;
+    background: #83C252;
+    box-shadow: 0px 5px 0px 0px white;
+}
+
+.advertencias {
+    z-index: 5;
+    top: 480px;
+    left: 125px;
+}
+.advertencias p {
+    width: 578px;
+    height: 95px;
+    font-size: 21px;
+}
+
+.advertencias img {
+    width: 231px;
+    height: 145px;
+    margin-top: 30px;
+}
+
+.subrayado {
+    text-decoration: underline;
+}
+

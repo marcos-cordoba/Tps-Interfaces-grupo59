@@ -1,0 +1,18 @@
+.seccion7 {
+    position: relative;
+    height: 729px;
+    overflow: hidden;
+    width: 1280px;
+}
+
+#fondo7 {
+    width: 1280px;
+    top: 0px;
+    z-index: 1;
+}
+
+
+#personaje1seccion7{
+    z-index: 2;
+    right: 81%;
+}
