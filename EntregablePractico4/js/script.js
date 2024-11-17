@@ -107,15 +107,10 @@ function parallaxVengadores(e) {
     let desplazamientoX = mouseX - w;
     let desplazamientoY = mouseY - h;
     // Aplica el desplazamiento a la imagen
-    imagen.style.transform = 'translate3d(' + desplazamientoX * 0.05 + 'px, ' + -desplazamientoY * 0.05 + 'px, 0px)';
+    imagen.style.transform = 'translate3d(' + desplazamientoX * 0.05 + 'px, ' + desplazamientoY * 0.05 + 'px, 0px) scale(1.05)';
 }
 
 function resetPosition() {
     // Restablece la posición de la imagen al centro
     imagen.style.transform = 'translate3d(0px, 0px, 0px)';
 }
-
-// Ajusta las posiciones iniciales de las nubes duplicadas
-document.getElementById('nube1-duplicate').style.left = '100%';
-document.getElementById('nube2-duplicate').style.left = '100%';
-document.getElementById('nube3-duplicate').style.left = '100%';

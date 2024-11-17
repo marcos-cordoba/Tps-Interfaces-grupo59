@@ -133,3 +133,50 @@
     text-decoration: underline;
 }
 
+#spriteSheet2 {
+    z-index: 2;
+    width: 70px; /* Ancho de cada fotograma */
+    height: 78px; /* Alto de cada fotograma */
+    background: url(../imagenes/spritesheet-2.png) left center;
+    background-size: 1012px 78px;
+    animation: mover2 1.905s steps(12) infinite;
+}
+
+@keyframes mover2 {
+    0% { background-position: 0 0; } /* Comienza desde el inicio */
+    100% { background-position: -1012px 0; } /* 97px * 8 viñetas = 776px */
+}
+
+#spriteSheet5 {
+    z-index: 2;
+    left: 1480px;
+    width: 90px; /* Ancho de cada fotograma */
+    height: 85px; /* Alto de cada fotograma */
+    background: url(../imagenes/spritesheet-5.png) left center;
+    background-size: 1146px 85px;
+    animation: mover5 2.30s steps(12) infinite;
+}
+
+@keyframes mover5 {
+    0% { background-position: 0 0; } /* Comienza desde el inicio */
+    100% { background-position: -1146px 0; } /* 97px * 8 viñetas = 776px */
+}
+
+#spriteSheet8 {
+    z-index: 2;
+    width: 70px;
+    height: 71px;
+    background: url(../imagenes/spritesheet-8.png) left center;
+    background-size: 772px 82px;
+    animation: mover8 0.905s steps(12) infinite;
+    left: 890px;
+}
+
+@keyframes mover8 {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -772px 0px;
+    }
+  }
