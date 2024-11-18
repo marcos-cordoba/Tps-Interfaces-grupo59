@@ -11,3 +11,16 @@
     height: 767px;
     top: 389px;
 }
+
+#boton {
+    width: 540px;
+    height: 66px;
+    top: 337px;
+    border-radius: 111px;
+    border: 8px solid white;
+    background: #83C252;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    left: 360px;
+}
