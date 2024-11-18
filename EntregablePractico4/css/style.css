@@ -17,7 +17,7 @@ body{
     align-items: center;
     top: 0;
     width: 1280px;
-    height: 113px;
+    height: 103px;
     background: linear-gradient(180deg, #00CED6 0%, #00CED6 87.91%, rgba(84, 153, 248, 0.00) 100%);;
     z-index: 2000;
     transition: top 0.3s ease;
@@ -176,7 +176,7 @@ body{
 .seccion1 {
     margin-top: 100px;
     width: 1280px;
-    height: 799px;
+    height: 959px;
     position: relative;
 }
 
