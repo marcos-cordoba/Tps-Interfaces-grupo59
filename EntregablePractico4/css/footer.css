@@ -1,0 +1,28 @@
+/*Fondo donde se encuentran las consolas que corren el juego*/
+.fondoConsolas {
+    display: flex;
+    width: 1280px;
+    background: #242424;
+    height: 80px;
+}
+
+.fondoDerechosYRedes {
+    background: #5E5E5D;
+    height: 515px;
+    width: 1280px;
+}
+
+.derechosYRedes {
+    width: 820px;
+    letter-spacing: 3px;
+    font-size: 15px;
+    color: white;
+    height: 361px;
+    padding: 100px;
+}
+
+#consolas {
+    width: 1080px;
+    height: 75px;
+    padding-left: 102px;
+}

@@ -147,7 +147,7 @@ body{
     animation: cruzAHamburguesaBarra3 0.4s forwards;
 }
 
-/*Boton de Comprar*/
+/*Botón de Comprar*/
 .boton {
     width: 200px;
     height: 60px;
@@ -157,11 +157,28 @@ body{
     background: #83C252;
     box-shadow: 4px 5px 0px 0px #02187E;
     cursor: pointer;
+    color: white; /* Color del texto en estado normal */
+    font-weight: bold;
 }
 
-.btnAnimado {
-    transition: all 0.3s ease;
+.boton:hover {
+    border: 8px solid #83C252; /* Cambia el borde al color de fondo original */
+    background: white; /* Cambia el fondo a blanco */
+    animation: boton-animacion 0.3s ease;
 }
+
+.boton:hover h4 {
+    color: #83C252; /* Cambia el color del texto al verde original */
+}
+
+@keyframes boton-animacion {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+} 
 
 .boton h4 {
     margin: auto;
@@ -184,10 +201,6 @@ body{
     position: relative;
     height: 850px;
     overflow: hidden;
-}
-
-.layerInicial {
-    position: absolute;
 }
 
 .layer {

@@ -21,10 +21,10 @@
 }
 
 model-viewer {
-    max-width: 50%;
+    width: 667px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 800px;
+    height: 973px;
     border-radius: 10px;
 }

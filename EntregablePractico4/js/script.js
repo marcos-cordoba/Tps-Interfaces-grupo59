@@ -53,7 +53,7 @@ const personaje3 = document.getElementById('personaje3');
 const capas = [arbolGrande,arbolMedio,arbolChico,arbusto1,arbusto2,arbusto3,arbusto4,titulo,piedra1,piedra2,piedra3,piedra4,personaje1,personaje2,personaje3];
 const cargarElemento = () => {
     capas.forEach((c,index) => {
-        c.style.transition = `opacity 0.5s ease ${index * 0.2}s`; // Ajusta la duración y el retraso de la transición
+        c.style.transition = `opacity 0.2s ease ${index * 0.2}s`; // Ajusta la duración y el retraso de la transición
         c.style.opacity = '1';
         c.classList.add('animacion') // activa la animacion
     });
@@ -90,28 +90,27 @@ window.addEventListener("scroll", () => {
 });
 
 //Punto 8
-const imagen1 = document.getElementById('personajes1-2-5');
-const imagen2 = document.getElementById('personaje9');
-const imagen3 = document.getElementById('personajes2-4');
+const imagen = document.getElementById('personajes');
 
 document.addEventListener("mousemove", parallaxVengadores);
-
+imagen.addEventListener("mouseleave", resetPosition);
 function parallaxVengadores(e) {
-    console.log("ESTO ANDA")
-    //Determina el centro de la pantalla
+    // Verifica si el mouse está sobre la imagen antes de aplicar el efecto
+    if (e.target !== imagen) return;
+    // Determina el centro de la pantalla
     let w = window.innerWidth / 2;
     let h = window.innerHeight / 2;
-
-    //Determina la posicion del mouse
+    // Determina la posición del mouse
     let mouseX = e.clientX;
     let mouseY = e.clientY;
-
-    //Calcula la diferencia de la posición del mouse respecto del centro de la ventana
+    // Calcula la diferencia de la posición del mouse respecto del centro de la ventana
     let desplazamientoX = mouseX - w;
     let desplazamientoY = mouseY - h;
+    // Aplica el desplazamiento a la imagen
+    imagen.style.transform = 'translate3d(' + desplazamientoX * 0.05 + 'px, ' + desplazamientoY * 0.05 + 'px, 0px) scale(1.05)';
+}
 
-    //Calcula el desplazamiento de cada capa en proporción al desplazamiento calculado anteriormente
-    imagen1.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.04 + 'px, ' + -desplazamientoY * 0.04 + 'px, 0px)');
-    imagen2.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.05 + 'px, ' + -desplazamientoY * 0.05 + 'px, 0px)');
-    imagen3.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.06 + 'px, ' + -desplazamientoY * 0.06 + 'px, 0px)');
+function resetPosition() {
+    // Restablece la posición de la imagen al centro
+    imagen.style.transform = 'translate3d(0px, 0px, 0px)';
 }
