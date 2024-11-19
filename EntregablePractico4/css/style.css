@@ -207,10 +207,6 @@ body{
     position: absolute;
 }
 
-/* .invisible {
-    opacity: 0;
-} */
-
 .animacion {
     animation: aparecer 1s cubic-bezier(0.42, 0, 0.58, 1);
     /* Otras propiedades de estilo para la entrada */
