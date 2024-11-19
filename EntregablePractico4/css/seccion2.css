@@ -105,14 +105,14 @@
 .contenedor-card{
     width: 332.96px;
     height: 302.69px;
-    background-color: red;
-    border-radius: 41px;
+    /* background-color: red; */
+    border-radius: 52px;
     border: 9px solid #2982FF;
 }
 .contenedor-card img{
     width: 100%;
     height: 100%;
-    border-radius: 33px;
+    /* border-radius: 35px; */
 }
 
 .card-text{
