@@ -2,18 +2,22 @@
 //Punto 2
 // Selecciona el ícono de la hamburguesa
 const hamburguesa = document.querySelector('.hamburguesa');
+let menuCategorias = document.querySelector('.menuCategorias')
 // Añade un evento de clic al ícono de la hamburguesa
 hamburguesa.addEventListener('click', () => {
     if (hamburguesa.classList.contains('cruz')) {
         // Cambia a la animación de volver a hamburguesa
         hamburguesa.classList.remove('cruz');
         hamburguesa.classList.add('volver');
+        menuCategorias.style.display = `none`;
     } else {
         // Cambia a la animación de cruz
         hamburguesa.classList.remove('volver');
         hamburguesa.classList.add('cruz');
+        menuCategorias.style.display = `block`;
     }
-});
+}
+);
 
 //Punto 3
 const logoGrande = document.querySelector("#titulo");
@@ -107,7 +111,7 @@ function parallaxVengadores(e) {
     let desplazamientoX = mouseX - w;
     let desplazamientoY = mouseY - h;
     // Aplica el desplazamiento a la imagen
-    imagen.style.transform = 'translate3d(' + desplazamientoX * 0.05 + 'px, ' + desplazamientoY * 0.05 + 'px, 0px) scale(1.05)';
+    imagen.style.transform = 'translate3d(' + desplazamientoX * -0.05 + 'px, ' + desplazamientoY * -0.05 + 'px, 0px) scale(1.05)';
 }
 
 function resetPosition() {
