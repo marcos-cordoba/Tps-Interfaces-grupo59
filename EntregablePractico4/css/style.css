@@ -9,6 +9,11 @@ body{
     font-family: Arial, sans-serif;
 }
 
+.container{
+    width: 1280px;
+    height: 14780px;
+}
+
 /*Barra de navegación*/
 
 .navbar {
