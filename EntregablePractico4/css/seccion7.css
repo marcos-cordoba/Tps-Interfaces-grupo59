@@ -1,0 +1,125 @@
+.seccion7 {
+    position: relative;
+    height: 729px;
+    overflow: hidden;
+    width: 1280px;
+}
+
+#fondo7 {
+    width: 1280px;
+    height: 729px;
+    z-index: 1;
+}
+
+#personaje1seccion7 {
+    z-index: 2;
+    transition: transform 0.6s ease, box-shadow 0.6s ease; /* Aumenta el tiempo de transición */
+}
+
+#personaje1seccion7:hover {
+    transform: scale(1.1); /* Agrandamiento sutil */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+}
+
+#personaje2seccion7 {
+    z-index: 2;
+    left: 279px;
+    transition: transform 0.6s ease, box-shadow 0.6s ease; /* Aumenta el tiempo de transición */
+}
+
+#personaje2seccion7:hover {
+    transform: scale(1.1); /* Agrandamiento sutil */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+}
+
+#personaje3seccion7 {
+    z-index: 2;
+    right: 499px;
+    transition: transform 0.6s ease, box-shadow 0.6s ease; /* Aumenta el tiempo de transición */
+}
+
+#personaje3seccion7:hover {
+    transform: scale(1.1); /* Agrandamiento sutil */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+}
+
+#personaje4seccion7 {
+    z-index: 2;
+    right: 243px;
+    transition: transform 0.6s ease, box-shadow 0.6s ease; /* Aumenta el tiempo de transición */
+}
+
+#personaje4seccion7:hover {
+    transform: scale(1.1); /* Agrandamiento sutil */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+}
+
+#personaje5seccion7 {
+    z-index: 2;
+    right: 1px;
+    transition: transform 0.6s ease, box-shadow 0.6s ease; /* Aumenta el tiempo de transición */
+}
+
+#personaje5seccion7:hover {
+    transform: scale(1.1); /* Agrandamiento sutil */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+}
+
+#personaje6seccion7 {
+    z-index: 2;
+    top: 404px;
+    transition: transform 0.6s ease, box-shadow 0.6s ease; /* Aumenta el tiempo de transición */
+}
+
+#personaje6seccion7:hover {
+    transform: scale(1.1); /* Agrandamiento sutil */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+}
+
+#personaje7seccion7 {
+    z-index: 2;
+    top: 404px;
+    left: 281px;
+    transition: transform 0.6s ease, box-shadow 0.6s ease; /* Aumenta el tiempo de transición */
+}
+
+#personaje7seccion7:hover {
+    transform: scale(1.1); /* Agrandamiento sutil */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+}
+
+#personaje8seccion7 {
+    z-index: 2;
+    top: 408px;
+    right: 499px;
+    transition: transform 0.6s ease, box-shadow 0.6s ease; /* Aumenta el tiempo de transición */
+}
+
+#personaje8seccion7:hover {
+    transform: scale(1.1); /* Agrandamiento sutil */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+}
+
+#personaje9seccion7 {
+    z-index: 2;
+    top: 408px;
+    right: 245px;
+    transition: transform 0.6s ease, box-shadow 0.6s ease; /* Aumenta el tiempo de transición */
+}
+
+#personaje9seccion7:hover {
+    transform: scale(1.1); /* Agrandamiento sutil */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+}
+
+#personaje10seccion7 {
+    z-index: 2;
+    top: 406px;
+    right: 1px;
+    transition: transform 0.6s ease, box-shadow 0.6s ease; /* Aumenta el tiempo de transición */
+}
+
+#personaje10seccion7:hover {
+    transform: scale(1.1); /* Agrandamiento sutil */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+}

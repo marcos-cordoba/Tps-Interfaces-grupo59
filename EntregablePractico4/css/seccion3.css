@@ -1,28 +1,26 @@
 .seccion3 {
     position: relative;
-    height: 850px;
+    height: 1157px;
     overflow: hidden;
-}
-
-#fondo3 {
     width: 1280px;
-    top: 0%;
-    z-index: 1;
 }
 
-#personajes1-2-5 {
+#personajes {
     z-index: 2;
-    top: 38%;
+    width: 1280px;
+    height: 767px;
+    top: 389px;
 }
 
-#personaje9 {
-    z-index: 2;
-    right: 36%;
-    top: 62%;
-}
-
-#personajes2-4 {
-    z-index: 2;
-    right: -5%;
-    top: 37%;
+#boton {
+    width: 540px;
+    height: 66px;
+    top: 337px;
+    border-radius: 111px;
+    border: 8px solid white;
+    background: #83C252;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    left: 360px;
 }
