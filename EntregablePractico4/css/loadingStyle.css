@@ -33,15 +33,76 @@ body, html {
     transition: width 0.3s ease;
 }
 
-.loading-text {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
+ 
+    .loading-text {
+        margin-top: 30px;
+        font-size: 30px;
+        letter-spacing: 1px;
+        animation: text-fade 2s infinite ease-in-out;
+    }
+    
+    
+    @keyframes text-fade {
+        0%, 100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.5;
+        }
+    }
 
 .percentage {
     font-size: 2rem;
+    animation: text-fade 2s infinite ease-in-out;
 }
+
+#personaje1{
+    width: 200px;
+    height: 250px;
+    animation: bounce 1.5s infinite ease-in-out, fade 3s infinite ease-in-out;
+}
+
+#personaje_1,#personaje_2{
+    
+    
+    animation: bounce 1.5s infinite ease-in-out, fade 3s infinite ease-in-out;
+}
+#personaje_2{
+    position: absolute;
+    top: 20px;
+    right: 250px;
+    height: 500px;
+    width: 300px;
+
+}
+#personaje_1{
+    height: 500px;
+    width: 300px;
+    position: absolute;
+    top: 20px;
+    left: 300px;
+}
+
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fade {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
 
 /* Nueva animación */
 @keyframes completeAnimation {

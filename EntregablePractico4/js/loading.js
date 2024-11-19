@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", function(){
                 window.location.href = 'index.html'; // Cambia a la URL de tu home
             }, 0); // 500 ms para esperar a que termine la animación
         }
-    }, 50);
+    }, 500);
 });
 
-const imagen1 = document.getElementById('personajes1-2-5');
+const imagen1 = document.getElementById('personaje_1');
 
 document.addEventListener("mousemove", parallaxVengadores);
 
