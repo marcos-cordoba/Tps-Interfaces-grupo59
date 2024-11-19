@@ -5,8 +5,16 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #711EB0; /* Fondo violeta */
     font-family: 'Arial', sans-serif;
+    width: 1280xpx;
+}
+.mainContainer{
+    width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #711EB0; /* Fondo violeta */
+    height: 100%;
 }
 
 .loader-container {
@@ -31,6 +39,7 @@ body, html {
     width: 0;
     border-radius: 15px;
     transition: width 0.3s ease;
+    
 }
 
  
@@ -39,6 +48,7 @@ body, html {
         font-size: 30px;
         letter-spacing: 1px;
         animation: text-fade 2s infinite ease-in-out;
+        
     }
     
     
@@ -51,6 +61,10 @@ body, html {
         }
     }
 
+
+
+
+
 .percentage {
     font-size: 2rem;
     animation: text-fade 2s infinite ease-in-out;
@@ -59,7 +73,9 @@ body, html {
 #personaje1{
     width: 200px;
     height: 250px;
-    animation: bounce 1.5s infinite ease-in-out, fade 3s infinite ease-in-out;
+    animation: bounce1 1.5s infinite ease-in-out, fade 3s infinite ease-in-out;
+    animation-delay: 0s;
+    
 }
 
 #personaje_1,#personaje_2{
@@ -69,18 +85,19 @@ body, html {
 }
 #personaje_2{
     position: absolute;
-    top: 20px;
+    top: 80px;
     right: 250px;
-    height: 500px;
-    width: 300px;
-
+    height: 400px;
+    width: 250px;
+    animation-delay: 0.2s;
 }
 #personaje_1{
-    height: 500px;
+    height: 400px;
     width: 300px;
     position: absolute;
-    top: 20px;
-    left: 300px;
+    top: 50px;
+    left: 200px;
+    animation-delay: 0.4s;
 }
 
 
@@ -91,6 +108,14 @@ body, html {
     }
     50% {
         transform: translateY(-20px);
+    }
+}
+@keyframes bounce1 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
     }
 }
 
