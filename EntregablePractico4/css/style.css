@@ -1,4 +1,7 @@
-
+*{
+    margin: 0px;
+    padding: 0px;
+}
 body{
     max-width: 1280px;
     max-height: 1080px;
@@ -176,14 +179,14 @@ body{
 .seccion1 {
     margin-top: 100px;
     width: 1280px;
-    height: 799px;
+    height: 959px;
     position: relative;
 }
 
 .parallax {
     position: relative;
-    height: 850px;
-    overflow: hidden;
+    height:959px;
+    /* overflow: hidden; */
 }
 
 .layerInicial {
@@ -219,6 +222,7 @@ body{
 
 #fondo {
     width: 1280px;
+    height: 959px;
     top: 0%;
     z-index: 1;
 }
@@ -311,4 +315,11 @@ body{
     right: 27%;
     z-index: 1;
     top: 38%;
+}
+.text-content  {
+    max-width: 50%;
+    margin-right: 20px;
+    background-color: transparent;
+    z-index: 1;
+    position: absolute;
 }
