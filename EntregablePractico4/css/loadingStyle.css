@@ -1,0 +1,162 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    width: 1280xpx;
+}
+.mainContainer{
+    width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #711EB0; /* Fondo violeta */
+    height: 100%;
+}
+
+.loader-container {
+    text-align: center;
+    color: #fff;
+    z-index: 9999;
+}
+
+.loading-bar {
+    width: 300px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente para la barra */
+    border: 2px solid #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #00CCFF; /* Barra de carga celeste */
+    width: 0;
+    border-radius: 15px;
+    transition: width 0.3s ease;
+    
+}
+
+ 
+    .loading-text {
+        margin-top: 30px;
+        font-size: 30px;
+        letter-spacing: 1px;
+        animation: text-fade 2s infinite ease-in-out;
+        
+    }
+    
+    
+    @keyframes text-fade {
+        0%, 100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.5;
+        }
+    }
+
+
+
+
+
+.percentage {
+    font-size: 2rem;
+    animation: text-fade 2s infinite ease-in-out;
+}
+
+#personaje1{
+    width: 200px;
+    height: 250px;
+    animation: bounce1 1.5s infinite ease-in-out, fade 3s infinite ease-in-out;
+    animation-delay: 0s;
+    
+}
+
+#personaje_1,#personaje_2{
+    
+    
+    animation: bounce 1.5s infinite ease-in-out, fade 3s infinite ease-in-out;
+}
+#personaje_2{
+    position: absolute;
+    top: 80px;
+    right: 250px;
+    height: 400px;
+    width: 250px;
+    animation-delay: 0.2s;
+}
+#personaje_1{
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    top: 50px;
+    left: 200px;
+    animation-delay: 0.4s;
+}
+
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+@keyframes bounce1 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes fade {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+
+/* Nueva animación */
+@keyframes completeAnimation {
+    0% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(1.1);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.loading img {
+    
+    animation: rotate 2s linear infinite; /* 2s es la duración de la animación */
+}
+
+/* Animación de rotación */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.espacio{
+    height: 20px;
+}
