@@ -1,4 +1,7 @@
-
+*{
+    margin: 0px;
+    padding: 0px;
+}
 body{
     max-width: 1280px;
     max-height: 1080px;
@@ -199,13 +202,14 @@ body{
     margin-top: 100px;
     width: 1280px;
     height: 959px;
+    height: 959px;
     position: relative;
 }
 
 .parallax {
     position: relative;
     height: 850px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .layer {
@@ -233,6 +237,7 @@ body{
 
 #fondo {
     width: 1280px;
+    height: 959px;
     top: 0%;
     z-index: 1;
 }
@@ -308,6 +313,9 @@ body{
     z-index: 4;
     top: 79%;
 }
+#personajes{
+    transition: transform 0.5s ease-out;
+}
 
 #personaje1 {
     right: 47%;
@@ -325,4 +333,76 @@ body{
     right: 27%;
     z-index: 1;
     top: 38%;
+}
+
+.menuCategorias{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 60px;
+    position: fixed;
+    display:none;
+    z-index: 100000;
+    
+    
+}
+.menuCategorias p {
+    opacity: 0; /* Oculta los elementos inicialmente */font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    text-align: center;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    background: rgba(0, 206, 214,0.5);
+    backdrop-filter: blur(5px);
+    text-transform: uppercase;
+}
+
+/* Efecto de hover */
+.menuCategorias p:hover {
+    background: linear-gradient(90deg, #6a82fb, #fc5c7d);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+/* Animaciones en cascada */
+.catPersonaje1 {
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: 0s; /* Aparece inmediatamente */
+}
+
+.catPersonaje2 {
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: 0.5s; /* Aparece después de 0.3 segundos */
+}
+
+.catPersonaje3 {
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: 1s; /* Aparece después de 0.6 segundos */
+}
+
+/* Animación */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.text-content  {
+    max-width: 50%;
+    margin-right: 20px;
+    background-color: transparent;
+    z-index: 1;
+    position: absolute;
 }
