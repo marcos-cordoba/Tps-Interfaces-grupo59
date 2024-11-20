@@ -15,6 +15,7 @@ body{
 .container{
     width: 1280px;
     height: 14780px;
+    position: relative;
     overflow: hidden;
 }
 
@@ -207,14 +208,14 @@ header{
     height: 959px;
     position: absolute;
     top: -8px;
-    left: 120px;
+    
     
 }
 
 .parallax {
     position: relative;
     height: 959px;
-     overflow: hidden; 
+    
 }
 
 .layer {
@@ -244,7 +245,7 @@ header{
     width: 1512px;
     height: 959.98px;
     top: -100px;
-    left: -120px;
+    left: -116px;
     
     gap: 0px;
     opacity: 0px;
@@ -260,32 +261,48 @@ header{
     gap: 0px;
     opacity: 0px;
     z-index: 4;
-    position: relative;
-    
 }
 
 #arbolMedio {
-    top: 5%;
-    left: 69%;
+    width: 434.21px;
+    height: 672.52px;
+    top: 6.71px;
+    left: 881.03px;
+    gap: 0px;
+    opacity: 0px;
     z-index: 3;
+
 }
 
 #arbolChico {
-    top: 21%;
-    left: 85%;
+    width: 278.03px;
+    height: 430.85px;
+    top: 178.38px;
+    left: 1080.97px;
+    gap: 0px;
+    opacity: 0px;
+
     z-index: 2;
 }
 
 #arbusto1 {
-    right: 4%;
+    width: 191.19px;
+    height: 63.28px;
+    top: 630.46px;
+    left: 1028.46px;
+    gap: 0px;
+    opacity: 0px;
     z-index: 1;
-    top: 63%;
 }
 
 #arbusto2 {
-    right: -3%;
+    width: 244.37px;
+    height: 107.71px;
+    top: 662.1px;
+    left: 1080.97px;
+    gap: 0px;
+    opacity: 0px;
     z-index: 2;
-    top: 66%;
 }
 
 #arbusto3 {
@@ -311,27 +328,44 @@ header{
 }
 
 #piedra1 {
-    right: 7%;
-    z-index: 4;
-    top: 74%;
+    width: 113.77px;
+    height: 74.05px;
+    top: 637.5px;
+    left: 1072.22px;
+    gap: 0px;
+    opacity: 0px;
+    z-index: 5;    
 }
 
 #piedra2 {
-    right: 78%;
-    z-index: 2;
-    top: 81%;
+    width: 145.41px;
+    height: 78.09px;
+    top: 733.37px;
+    left: 129.07px;
+    gap: 0px;
+    opacity: 0px;
+    z-index: 5;
 }
 
 #piedra3 {
-    right: 14%;
+    width: 66.65px;
+    height: 56.55px;
+    top: 637.5px;
+    left: 1031.84px;
+    gap: 0px;
+    opacity: 0px;
     z-index: 3;
-    top: 75%;
 }
 
 #piedra4 {
-    right: 14%;
-    z-index: 4;
-    top: 79%;
+    width: 59.24px;
+    height: 35.01px;
+    top: 686.64px;
+    left: 1041.84px;
+    gap: 0px;
+    opacity: 0px;
+    z-index: 6;
+
 }
 #personajes{
     transition: transform 0.5s ease-out;
