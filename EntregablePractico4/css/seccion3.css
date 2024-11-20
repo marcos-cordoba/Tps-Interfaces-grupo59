@@ -13,9 +13,9 @@
 }
 
 #boton {
-    width: 540px;
+    width: 517px;
     height: 66px;
-    top: 337px;
+    top: 457px;
     border-radius: 111px;
     border: 8px solid white;
     background: #83C252;
@@ -23,4 +23,15 @@
     color: white;
     font-weight: bold;
     left: 360px;
+}
+
+.p-seccion-3{
+    width: 950px;
+    height: 153px;
+    font-size: 61.64px;
+    line-height: 67.25px;
+    font-weight: 600;
+    top: 3005px;
+    left: 165px;
+    text-align: center;
 }
