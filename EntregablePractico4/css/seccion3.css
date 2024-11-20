@@ -1,8 +1,9 @@
 .seccion3 {
-    position: relative;
+    position: absolute;
     height: 1157px;
     overflow: hidden;
     width: 1280px;
+    top: 2830px;
 }
 
 #personajes {
@@ -13,16 +14,39 @@
 }
 
 #boton {
-    width: 517px;
-    height: 66px;
-    top: 457px;
+    width: 380px;
+    height: 75px;
+    top: 337px;
     border-radius: 111px;
     border: 8px solid white;
     background: #83C252;
     cursor: pointer;
     color: white;
     font-weight: bold;
-    left: 360px;
+    left: 440px;
+}
+
+#titulo3 {
+    width: 560px;
+    height: 153px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 160px;
+    left: 350px;
+}
+
+#titulo3 h1 {
+    font-size: 36px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+}
+
+#titulo3 em {
+    font-style: italic;
+    font-weight: bold; /* negrita para resaltar la palabra */
 }
 
 .p-seccion-3{

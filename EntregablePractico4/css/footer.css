@@ -4,12 +4,15 @@
     width: 1280px;
     background: #242424;
     height: 80px;
+    top: 14185px;
 }
 
 .fondoDerechosYRedes {
     background: #5E5E5D;
     height: 515px;
     width: 1280px;
+    top: 14265px;
+    position: absolute;
 }
 
 .derechosYRedes {

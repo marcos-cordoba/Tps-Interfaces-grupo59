@@ -1,5 +1,6 @@
 .seccion7 {
-    position: relative;
+    position: absolute;
+    top: 11886px;
     height: 729px;
     overflow: hidden;
     width: 1280px;
@@ -18,7 +19,7 @@
 
 #personaje1seccion7:hover {
     transform: scale(1.1); /* Agrandamiento sutil */
-    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 1.9); /* Efecto de iluminación */
 }
 
 #personaje2seccion7 {
@@ -29,7 +30,7 @@
 
 #personaje2seccion7:hover {
     transform: scale(1.1); /* Agrandamiento sutil */
-    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 1.9); /* Efecto de iluminación */
 }
 
 #personaje3seccion7 {
@@ -40,7 +41,7 @@
 
 #personaje3seccion7:hover {
     transform: scale(1.1); /* Agrandamiento sutil */
-    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 1.9); /* Efecto de iluminación */
 }
 
 #personaje4seccion7 {
@@ -51,7 +52,7 @@
 
 #personaje4seccion7:hover {
     transform: scale(1.1); /* Agrandamiento sutil */
-    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 1.9); /* Efecto de iluminación */
 }
 
 #personaje5seccion7 {
@@ -62,7 +63,7 @@
 
 #personaje5seccion7:hover {
     transform: scale(1.1); /* Agrandamiento sutil */
-    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 1.9); /* Efecto de iluminación */
 }
 
 #personaje6seccion7 {
@@ -73,7 +74,7 @@
 
 #personaje6seccion7:hover {
     transform: scale(1.1); /* Agrandamiento sutil */
-    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 1.9); /* Efecto de iluminación */
 }
 
 #personaje7seccion7 {
@@ -85,7 +86,7 @@
 
 #personaje7seccion7:hover {
     transform: scale(1.1); /* Agrandamiento sutil */
-    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 1.9); /* Efecto de iluminación */
 }
 
 #personaje8seccion7 {
@@ -97,7 +98,7 @@
 
 #personaje8seccion7:hover {
     transform: scale(1.1); /* Agrandamiento sutil */
-    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 1.9); /* Efecto de iluminación */
 }
 
 #personaje9seccion7 {
@@ -109,7 +110,7 @@
 
 #personaje9seccion7:hover {
     transform: scale(1.1); /* Agrandamiento sutil */
-    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 1.9); /* Efecto de iluminación */
 }
 
 #personaje10seccion7 {
@@ -121,5 +122,5 @@
 
 #personaje10seccion7:hover {
     transform: scale(1.1); /* Agrandamiento sutil */
-    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6); /* Efecto de iluminación */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 1.9); /* Efecto de iluminación */
 }

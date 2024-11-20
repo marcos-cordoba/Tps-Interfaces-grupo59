@@ -1,4 +1,7 @@
-
+*{
+    margin: 0px;
+    padding: 0px;
+}
 body{
     max-width: 1280px;
     max-height: 1080px;
@@ -9,8 +12,16 @@ body{
     font-family: Arial, sans-serif;
 }
 
-/*Barra de navegación*/
+.container{
+    width: 1280px;
+    height: 14780px;
+    overflow: hidden;
+}
 
+/*Barra de navegación*/
+header{
+    height: 103px;
+}
 .navbar {
     position: fixed;
     display: flex;
@@ -194,22 +205,21 @@ body{
     margin-top: 100px;
     width: 1280px;
     height: 959px;
-    position: relative;
+    position: absolute;
+    top: -8px;
+    left: 120px;
+    
 }
 
 .parallax {
     position: relative;
-    height: 850px;
-    overflow: hidden;
+    height: 959px;
+     overflow: hidden; 
 }
 
 .layer {
     position: absolute;
 }
-
-/* .invisible {
-    opacity: 0;
-} */
 
 .animacion {
     animation: aparecer 1s cubic-bezier(0.42, 0, 0.58, 1);
@@ -231,15 +241,27 @@ body{
 }
 
 #fondo {
-    width: 1280px;
-    top: 0%;
+    width: 1512px;
+    height: 959.98px;
+    top: -100px;
+    left: -120px;
+    
+    gap: 0px;
+    opacity: 0px;
     z-index: 1;
+
 }
 
 #arbolGrande {
-    left: -12%;
-    z-index: 2;
-    bottom: 10%;
+    width: 560.1px;
+    height: 867.75px;
+    top: -73px;
+    left: -153px;
+    gap: 0px;
+    opacity: 0px;
+    z-index: 4;
+    position: relative;
+    
 }
 
 #arbolMedio {
@@ -279,9 +301,13 @@ body{
 }
 
 #titulo {
-    right: 27%;
-    z-index: 3;
-    top: 4%;
+    width: 560px;
+    height: 320px;
+    
+    left: 360px;
+    gap: 0px;
+    opacity: 0px;
+    z-index: 5;
 }
 
 #piedra1 {
@@ -312,28 +338,44 @@ body{
 }
 
 #personaje1 {
-    right: 47%;
-    z-index: 3;
-    top: 54%;
+    width: 240.4px;
+    height: 314.48px;
+    top: 407.28px;
+    left: 420px;
+    gap: 0px;
+    opacity: 0px;
+    transform: rotate(10deg);
+    z-index: 5;
+    
 }
 
 #personaje2 {
-    right: 40%;
-    z-index: 2;
-    top: 46%;
+    width: 197px;
+height: 270px;
+top: 326.04px;
+left: 536px;
+gap: 0px;
+opacity: 0px;
+z-index: 2;
+
 }
 
 #personaje3 {
-    right: 27%;
-    z-index: 1;
-    top: 38%;
+    width: 174px;
+height: 384px;
+top: 238px;
+left: 752.25px;
+gap: 0px;
+opacity: 0px;
+z-index: 1;
+
 }
 
 .menuCategorias{
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 60px;
+    left: 160px;
     position: fixed;
     display:none;
     z-index: 100000;
@@ -393,3 +435,10 @@ body{
     }
 }
 
+.text-content  {
+    max-width: 50%;
+    margin-right: 20px;
+    background-color: transparent;
+    z-index: 1;
+    position: absolute;
+}

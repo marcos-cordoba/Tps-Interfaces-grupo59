@@ -1,0 +1,47 @@
+.seccion5 {
+    position: absolute;
+    overflow: hidden;
+    width: 1280px;
+    height: 1443.83px;
+    top: 9408.17px;
+}
+
+#fondo5 { 
+    width: 1280px;
+    height: 1443.83px;
+    z-index: 1;
+}
+
+#personaje3Seccion5{
+    width: 638px;
+    height: 989px;
+    z-index: 3;
+    top: 300px;
+    right: 10px;
+    opacity: 0;
+    transition: transform 1.3s ease-in-out, opacity 1.3s ease-in-out;
+}
+
+.video-frame {
+    z-index: 2;
+    top: 430px;
+    left: 113px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    opacity: 0;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.textoSeccion5 {
+    z-index: 2;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    width: 802px;
+    height: 171px;
+    top: 200px;
+    left: 90px;
+}

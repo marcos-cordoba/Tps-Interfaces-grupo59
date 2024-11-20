@@ -7,24 +7,45 @@
 
 .text-content  {
     max-width: 50%;
-    margin-right: 20px;
+    position: absolute;
+    top: 11072px;
 }
 
- .text-content h1 {
-    color: #8B0000;
+.text-content h1 {
+    width: 746px;
+    height: 285px;
+   
+    color: #A02727;
     font-weight: bold;
-    margin: 0 0 20px 0;
+    line-height: 56.7px;
+    font-size: 60px;
+    font-weight: 600;
+    
 }
 
 .text-content p {
-    line-height: 1.5;
+    
+    width: 467px;
+    height: 190px;
+    font-family: Lato;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 18.9px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    position: relative;
+    top: 40px;
+
 }
+
+
 
 model-viewer {
     width: 667px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 973px;
-    border-radius: 10px;
+    position: absolute;
+    top: 10859px;
+    right: 100px;
+    
 }

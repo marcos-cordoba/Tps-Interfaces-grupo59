@@ -70,7 +70,6 @@ cargarElemento();
 const capasPersonajes = [titulo, personaje1, personaje2, personaje3];
 const capasNaturaleza = [arbolGrande, arbolMedio, arbolChico, arbusto1, arbusto2, arbusto3, arbusto4, piedra1, piedra2, piedra3, piedra4];
 window.addEventListener("scroll", () => {
-    console.log("ANDA1")
     capasPersonajes.forEach((e) => {
         let velocidad = e.getAttribute('data-velocidad'); // Obtiene la velocidad de desplazamiento
         e.style.transform = `translateY(-${window.scrollY * velocidad}px)`;
@@ -118,3 +117,63 @@ function resetPosition() {
     // Restablece la posición de la imagen al centro
     imagen.style.transform = 'translate3d(0px, 0px, 0px)';
 }
+
+//Punto 10
+// Selecciona el contenedor amarillo y los elementos
+const sectionVideo = document.querySelector(".seccion5");
+const personaje3Seccion5 = document.getElementById("personaje3Seccion5");
+const videoFrame = document.getElementById("videoFrame");
+// Agrega el evento para mostrar los elementos cuando el mouse entra en el contenedor
+sectionVideo.addEventListener("mouseenter", () => {
+    // Aparecer desde la derecha (personaje)
+    personaje3Seccion5.style.transform = "translateX(0)"; // El personaje se mueve a su posición original
+    personaje3Seccion5.style.opacity = "1"; // Muestra el personaje
+    // Aparecer desde la izquierda (video)
+    videoFrame.style.transform = "translateX(0)"; // El video se mueve a su posición original
+    videoFrame.style.opacity = "1"; // Muestra el video
+});
+//Oculta los elementos cuando el mouse sale de la sección
+sectionVideo.addEventListener("mouseleave", () => {
+    // Mueve el personaje hacia la derecha
+    personaje3Seccion5.style.transform = "translateX(200px)"; // Desplaza el personaje fuera de la pantalla hacia la derecha
+    personaje3Seccion5.style.opacity = "0"; // Oculta el personaje
+
+    // Mueve el video hacia la izquierda
+    videoFrame.style.transform = "translateX(-200px)"; // Desplaza el video fuera de la pantalla hacia la izquierda
+    videoFrame.style.opacity = "0"; // Oculta el video
+});
+
+//Punto 9
+document.addEventListener("scroll", () => {
+    // function clean() {
+    //     console.log("ESto esta andando")
+    //     document.querySelectorAll(".demoImag").forEach((e) => {
+    //         e.classList.remove("active");
+    //     });
+    // }
+
+    const scrollPosition = window.scrollY;
+    console.log(scrollPosition)
+    if (scrollPosition < 4500) {
+        //clean();
+        console.log("entro en el primer if")
+        const infoImg0 = document.querySelector("#infoImg0");
+        if (infoImg0) {
+            infoImg0.classList.add("active");
+        } else {
+            console.error("Elemento #infoImg0 no encontrado");
+        }
+    } else if (scrollPosition >= 4500 && scrollPosition < 5000) {
+        //clean();
+        console.log("entro en el segundo if")
+        document.querySelector("#infoImg1").classList.add("active");
+    } else if (scrollPosition >= 5000 && scrollPosition < 5500) {
+        //clean();
+        console.log("entro en el tercer if")
+        document.querySelector("#infoImg2").classList.add("active");
+    } else if (scrollPosition >= 5500) {
+        //clean();
+        console.log("entro en el cuarto if")
+        document.querySelector("#infoImg3").classList.add("active");
+    }
+});
