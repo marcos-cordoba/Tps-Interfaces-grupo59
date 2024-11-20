@@ -1,8 +1,9 @@
 .seccion2{
     width: 1280px;
     height: 2228px;
-    position: relative;
-    top: 0px;
+    position: absolute;
+    
+    top: 959px;
     z-index: 5;
 }
 .seccion2  h1{

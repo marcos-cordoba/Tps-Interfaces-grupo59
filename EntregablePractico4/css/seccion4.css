@@ -1,0 +1,198 @@
+
+#titleContenedor {
+    width: 802px;
+    height: 57px;
+    font-size: 60px;
+    position: absolute;
+    top: 4161px;
+    left: 200px;
+}
+
+
+
+.demoImagContainer {
+    width: 552px;
+    height: 1650px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+
+}
+
+.demoImags {
+    width: 100%;
+    height: 302px;
+    position: sticky;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.demoImag img {
+    position: absolute;
+    height: auto;
+}
+
+#infoImg0{
+    width: 291px;
+    height: 436px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#infoImg1{
+    width: 379px;
+    height: 509px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#infoImg2{
+    width: 266px;
+    height: 479px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#infoImg3{
+    width: 187px;
+    height: 497px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#infoImg4{
+    width: 475px;
+    height: 488px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#infoImg5{
+    width: 231px;
+    height: 509px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#infoImg6{
+    width: 338px;
+    height: 514px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#infoImg7{
+    width: 134px;
+    height: 482px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#infoImg8{
+    width: 437px;
+    height: 499px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#infoImg9{
+    width: 485px;
+    height: 509px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#infoImg10{
+    width: 359px;
+    height: 488px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+
+/* informacion de la demo */
+.demoInfos {
+    position: absolute;
+    right: -1200px;
+    width: 467px;
+    height: 4469px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    box-sizing: border-box;
+    top: 4300px;
+
+}
+
+
+.info h1 {
+    margin-top: 0;
+    font-size: 37px;
+    font-weight: 100;
+    line-height: 94.5%;
+}
+
+.info p {
+    line-height: 94.5%;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+#info1{
+    width: 467px;
+    height: 167px;
+}
+
+#info2{
+    width: 467px;
+    height: 148px;
+}
+
+#info3{
+    width: 467px;
+    height: 148px;
+}
+
+#info4{
+    width: 467px;
+    height: 186px;
+}
+
+#info5{
+    width: 467px;
+    height: 148px;
+}
+
+#info6{
+    width: 467px;
+    height: 186px;
+}
+
+#info7{
+    width: 467px;
+    height: 186px;
+}
+
+#info8{
+    width: 467px;
+    height: 148px;
+}
+
+#info9{
+    width: 467px;
+    height: 148px;
+}
+
+#info10{
+    width: 467px;
+    height: 148px;
+}
+
+.active {
+    opacity: 1;
+    transform: scale(1.05); /* Efecto de zoom suave */
+}

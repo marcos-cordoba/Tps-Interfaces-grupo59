@@ -154,17 +154,26 @@ document.addEventListener("scroll", () => {
 
     const scrollPosition = window.scrollY;
     console.log(scrollPosition)
-    if (scrollPosition < 4000) {
+    if (scrollPosition < 4500) {
         //clean();
-        document.querySelector("#infoImg0").classList.add("active");
-    } else if (scrollPosition >= 4000 && scrollPosition < 4500) {
+        console.log("entro en el primer if")
+        const infoImg0 = document.querySelector("#infoImg0");
+        if (infoImg0) {
+            infoImg0.classList.add("active");
+        } else {
+            console.error("Elemento #infoImg0 no encontrado");
+        }
+    } else if (scrollPosition >= 4500 && scrollPosition < 5000) {
         //clean();
+        console.log("entro en el segundo if")
         document.querySelector("#infoImg1").classList.add("active");
-    } else if (scrollPosition >= 4500 && scrollPosition < 4900) {
+    } else if (scrollPosition >= 5000 && scrollPosition < 5500) {
         //clean();
+        console.log("entro en el tercer if")
         document.querySelector("#infoImg2").classList.add("active");
-    } else if (scrollPosition >= 4900) {
+    } else if (scrollPosition >= 5500) {
         //clean();
+        console.log("entro en el cuarto if")
         document.querySelector("#infoImg3").classList.add("active");
     }
 });
