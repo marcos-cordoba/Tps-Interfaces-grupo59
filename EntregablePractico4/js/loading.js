@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 window.location.href = 'index.html'; // Cambia a la URL de tu home
             }, 0); // 500 ms para esperar a que termine la animación
         }
-    }, 500);
+    }, 50);
 });
 
 const imagen1 = document.getElementById('personaje_1');
