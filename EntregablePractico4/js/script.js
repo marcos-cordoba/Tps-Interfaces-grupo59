@@ -24,19 +24,19 @@ const logoGrande = document.querySelector("#titulo");
 const logoChico = document.querySelector(".navbarMedio");
 document.addEventListener("scroll", () => {
     // Control de la opacidad del logo en función del desplazamiento vertical
-    if (window.scrollY < 130) {
+    if (window.scrollY < 150) {
         logoChico.style.opacity = 0; // Si el scroll es menor a 100, establece la opacidad del logo chico en 0
         logoGrande.style.opacity=1;
         console.log("scroll"+window.scrollY);
     }
     
-    if (window.scrollY > 130) {
+    if (window.scrollY > 150) {
         logoGrande.style.opacity=0;
         logoChico.style.opacity = 1; // Ajusta la opacidad del logo chico en función del desplazamiento
     }
     // Control de la opacidad y escala del logo grande en función del desplazamiento
     // logoGrande.style.opacity = 1 - window.scrollY / 120;
-    const scaleValue = Math.max(1 - window.scrollY / 200, 0.0);
+    const scaleValue = Math.max(1 - window.scrollY / 240, 0.0);
     logoGrande.style.scale = scaleValue; // Ajusta la escala del logo grande
 });
 
@@ -80,12 +80,34 @@ window.addEventListener("scroll", () => {
         let velocidadFondo = fondo.getAttribute('data-velocidad');
         fondo.style.transform = `translateY(${window.scrollY * velocidadFondo}px)`;
         let velocidadPersonaje1 = personaje1.getAttribute('data-velocidad');
-        personaje1.style.transform = `translate(-${window.scrollY * velocidadPersonaje1}px,-${window.scrollY * velocidadPersonaje1}px)`;
-        let velocidadPersonaje2 = personaje2.getAttribute('data-velocidad');
-        personaje2.style.transform =  `translate(0px,-${window.scrollY * velocidadPersonaje2}px)`;
-        let velocidadPersonaje3 = personaje3.getAttribute('data-velocidad');
-        personaje3.style.transform =  `translate(${window.scrollY * velocidadPersonaje3}px,-${window.scrollY * velocidadPersonaje3}px)`;
+        // personaje1.style.transform = `translate(-${window.scrollY * velocidadPersonaje1}px,-${window.scrollY * velocidadPersonaje1}px)`;
+        // let velocidadPersonaje2 = personaje2.getAttribute('data-velocidad');
+        // personaje2.style.transform =  `translate(0px,-${window.scrollY * velocidadPersonaje2}px)`;
+        // let velocidadPersonaje3 = personaje3.getAttribute('data-velocidad');
+        // personaje3.style.transform =  `translate(${window.scrollY * velocidadPersonaje3}px,-${window.scrollY * velocidadPersonaje3}px)`;
+        let velocidadArbolGrande = arbolGrande.getAttribute('data-velocidad');
+        arbolGrande.style.transform =  `translate(${window.scrollY * velocidadArbolGrande}px,-${window.scrollY * velocidadArbolGrande}px)`;
          // Mueve el elemento hacia arriba o hacia abajo dependiendo del valor de la velocidad y del desplazamiento vertical de la ventana.
+        let velocidadArbolMedio = arbolMedio.getAttribute('data-velocidad');
+        arbolMedio.style.transform =  `translate(${window.scrollY * velocidadArbolMedio}px,-${window.scrollY * velocidadArbolMedio}px)`;
+        let velocidadArbolChico = arbolChico.getAttribute('data-velocidad');
+        arbolChico.style.transform =  `translate(${window.scrollY * velocidadArbolChico}px,-${window.scrollY * velocidadArbolChico}px)`;
+        let velocidadArbusto1 = arbusto1.getAttribute('data-velocidad');
+        arbusto1.style.transform =  `translate(${window.scrollY * velocidadArbusto1}px,-${window.scrollY * velocidadArbusto1}px)`;
+        let velocidadArbusto2 = arbusto1.getAttribute('data-velocidad');
+        arbusto2.style.transform =  `translate(${window.scrollY * velocidadArbusto2}px,-${window.scrollY * velocidadArbusto2}px)`;
+        let velocidadArbusto3 = arbusto1.getAttribute('data-velocidad');
+        arbusto3.style.transform =  `translate(${window.scrollY * velocidadArbusto3}px,-${window.scrollY * velocidadArbusto3}px)`;
+        let velocidadArbusto4 = arbusto1.getAttribute('data-velocidad');
+        arbusto4.style.transform =  `translate(${window.scrollY * velocidadArbusto4}px,-${window.scrollY * velocidadArbusto4}px)`;
+        let velocidadPiedra1 = piedra1.getAttribute('data-velocidad');
+        piedra1.style.transform =  `translate(${window.scrollY * velocidadPiedra1}px,-${window.scrollY * velocidadPiedra1}px)`;
+        let velocidadPiedra2 = piedra1.getAttribute('data-velocidad');
+        piedra2.style.transform =  `translate(${window.scrollY * velocidadPiedra2}px,-${window.scrollY * velocidadPiedra2}px)`;
+        let velocidadPiedra3 = piedra1.getAttribute('data-velocidad');
+        piedra3.style.transform =  `translate(${window.scrollY * velocidadPiedra3}px,-${window.scrollY * velocidadPiedra3}px)`;
+        let velocidadPiedra4 = piedra1.getAttribute('data-velocidad');
+        piedra4.style.transform =  `translate(${window.scrollY * velocidadPiedra4}px,-${window.scrollY * velocidadPiedra4}px)`;
     })
 });
 
