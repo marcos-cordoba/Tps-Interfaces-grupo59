@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="css/seccion7.css">
     <link rel="stylesheet" href="css/seccion8.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>NumberBlocks</title>
 </head>
 <body>
@@ -38,16 +41,16 @@
                         </div>
                         <div class="navbarDerecha">
                             <button class="boton">
-                                <h4>COMPRAR</h4>
+                                <h4 class="lato">COMPRAR</h4>
                             </button>
                         </div>
                     </div>
                 </nav>
             </header>
             <div class="menuCategorias">
-                <p class="catPersonaje1">Personajes</p>
-                <p class="catPersonaje2">Accion</p>
-                <p class="catPersonaje3">Numeros</p> 
+                <p class="catPersonaje1 lato">Personajes</p>
+                <p class="catPersonaje2 lato">Accion</p>
+                <p class="catPersonaje3 lato">Numeros</p> 
             </div>
             <div class="seccion1">
                 <div class="parallax">
@@ -71,19 +74,24 @@
             </div>
             <div class="seccion2">
                
-                <h1>La app mas divertida y educativa y para niños de 3 años</h2>
-                <p class="parrafo-s2">Numberblocks World es una divertida aplicacion de video a la carta y juegos por susbcripcion dirigida a niños a partir de 3 años, con un grupo de edad principal de 4 a 6 años, creada por el equipo de Alphablocks Ltd. y Blue Zoo Animations Studio, ganador de un premio BAFTA</p>
+                <h1 class="lato">La app mas divertida y educativa y para niños de 3 años</h2>
+                <p class="parrafo-s2 lato">Numberblocks World es una divertida aplicacion de video a la carta y juegos por susbcripcion dirigida a niños a partir de 3 años, con un grupo de edad principal de 4 a 6 años, creada por el equipo de Alphablocks Ltd. y Blue Zoo Animations Studio, ganador de un premio BAFTA</p>
                 
                 <div class="img-containter-s2">
-                    <img id="imagen" src="imagenes/seccion2/imagen4.svg" alt="imagen fondo">
+                    <div id="carrusel" class="carrousel-s2">
+                        <img class="carousel-img" id="imagen" src="imagenes/seccion2/imagen4.svg" alt="imagen fondo">
+                        <img class="carousel-img" src="imagenes/seccion2/imagen3.svg" alt="imagen fondo">
+                        <img class="carousel-img" src="imagenes/seccion2/imagen2.svg" alt="imagen fondo">
+                        <img class="carousel-img" id="imagen" src="imagenes/seccion2/imagen4.svg" alt="imagen fondo">
+                    </div>
 
                 </div>
 
                <div class="contenedor-img-personaje">
-                   <img class="personaje1" src="imagenes/seccion2/personaje1.png" alt="personaje 1">
+                   <img class="personaje1-s2" src="imagenes/seccion2/personaje1.png" alt="personaje 1">
                </div>
                <div class="contenedor-img-personaje2">
-                   <img class="personaje2" src="imagenes/seccion2/personaje2.png" alt="personaje 2">
+                   <img class="personaje2-s2" src="imagenes/seccion2/personaje2.png" alt="personaje 2">
                </div>
                 <div class="cards-seccion2">
                     <div class="card-s2">
@@ -96,16 +104,16 @@
                         <div class="contenedor-card">
                             <img src="imagenes/seccion2/card2.svg" alt="card 2">
                         </div>
-                        <p class="card-text">Con NumberBlocks, los niños encontrarán emocionantes retos en cada nivel, diseñados para hacer que el aprendizaje sea tan divertido como un juego. ¡Cada desafío es una nueva aventura matemática!. Diviértete e invita a tus amigos, desafíalos y gana premios.</p>
+                        <p class="card-text lato">Con NumberBlocks, los niños encontrarán emocionantes retos en cada nivel, diseñados para hacer que el aprendizaje sea tan divertido como un juego. ¡Cada desafío es una nueva aventura matemática!. Diviértete e invita a tus amigos, desafíalos y gana premios.</p>
                     </div>
                     <div class="card-s2">
                         <div class="contenedor-card">
                             <img src="imagenes/seccion2/card3.svg" alt="card 3">
                         </div>
-                        <p class="card-text">Entrena a UNO y Comparte lo que Aprendes!En NumberBlocks, deberás enseñar a UNO cada lección que aprendas, ayudándolo a crecer y superar nuevos desafíos matemáticos. ¡Conviértete en su mejor guía! Se su mejor amigo y diviértete con él.</p>
+                        <p class="card-text lato">Entrena a UNO y Comparte lo que Aprendes!En NumberBlocks, deberás enseñar a UNO cada lección que aprendas, ayudándolo a crecer y superar nuevos desafíos matemáticos. ¡Conviértete en su mejor guía! Se su mejor amigo y diviértete con él.</p>
                     </div>
                 </div>
-                <img class="layer" src="imagenes/segundaSeccionParte1.svg" alt="">  
+                <img id="fondo2" class="layer" src="imagenes/segundaSeccionParte1.svg" alt="">  
                 <img src="imagenes/segundaSeccionParte2.svg" alt="">
                 
 
@@ -113,17 +121,17 @@
             <div class="seccion3">
                 <img class="layer" id="fondo3"src="imagenes/seccion3.svg" alt="">
                 <div class="layer" id="titulo3">
-                    <h1>Descubre el juego que convierte las <em>Matemáticas</em> en diversión</h1>
+                    <h1 class="lato">Descubre el juego que convierte las <em>Matemáticas</em> en diversión</h1>
                 </div>
                 <button class="layer"  id="boton">
-                    <h2>¡Descarga NumberBlocks hoy!</h2>
+                    <h2 class="lato">¡Descarga NumberBlocks hoy!</h2>
                 </button>
                 <div class="personajes">
                     <img class="layer" id="personajes" src="imagenes/personajes.svg" alt="Personajes">
                 </div>
             </div>
             <div class="seccion4">
-                <h1  id="titleContenedor">Mas amigos, mas diversión!</h1>
+                <h1 class="lato" id="titleContenedor">Mas amigos, mas diversión!</h1>
                 <div class=" layer demo">
                     <div class="demoImagContainer">
                         <div class="demoImag">

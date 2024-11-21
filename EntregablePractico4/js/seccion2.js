@@ -1,21 +1,65 @@
-const imagenes = ["imagenes/seccion2/imagen2.svg", "imagenes/seccion2/imagen3.svg", "imagenes/seccion2/imagen4.svg"];
-let indice = 0;
 
-function cambiarImagen(){
-    if(indice === 2){
-        indice = -1;
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     const carousel = document.getElementById("carrusel");
+//     const images = carousel.querySelectorAll("img");
+//     const imageWidth = images[0].clientWidth; // Ancho de cada imagen
+//     let currentIndex = 0;
+
+//     function moveCarousel() {
+//         currentIndex++;
+//         // Aplica el desplazamiento al carrusel
+//         carousel.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+//         carousel.style.transition = "transform 3s ease-in-out";
+
+//         // Cuando llega al final de las imágenes visibles, reinicia sin transición
+//         if (currentIndex === images.length) {
+//             setTimeout(() => {
+//                 carousel.style.transition = "none"; // Desactiva la transición
+//                 currentIndex = 0; // Reinicia el índice
+//                 carousel.style.transform = `translateX(0px)`; // Reinicia la posición
+//             }, 0); // Espera a que termine la transición antes de reiniciar
+//         }
+//     }
+
+//     // Configura un intervalo para mover el carrusel automáticamente
+//     setInterval(moveCarousel, 3000); // Cambia cada 3 segundos
+// });
+
+const carousel = document.getElementById("carrusel")
+const images = document.querySelectorAll('.carousel-img');
+let currentIndex = 0;
+
+function nextSlide() {
+    currentIndex++;
+    
+    if (currentIndex ===     images.length -1) {
+      carousel.style.transition = 'transform 0.5s ease-in-out'; // Desactiva la animación temporalmente
+      carousel.style.transform = `translateX(-${currentIndex * 547.30}px)`;
+      currentIndex = 0; // Reinicia el índice
+      setTimeout(() => {
+        carousel.style.transition = 'none';
+        carousel.style.transform = `translateX(0px)`;
+      },500)
+    } else {
+      updateCarousel();
     }
-    indice = (indice + 1);
-    document.getElementById("imagen").src = imagenes[indice];
-}
+  }
+
+function updateCarousel() {
+    carousel.style.transition = 'transform 0.5s ease-in-out';
+    carousel.style.transform = `translateX(-${currentIndex * 547.38}px)`;
+  }
+
+  setInterval(nextSlide, 3000);
 
 
-setInterval(cambiarImagen, 3000);
+// setInterval(cambiarImagen, 3000);
 
 document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".card-s2");
 
-    const handleScroll = () => {
+    const moverCards = () => {
         const windowHeight = window.innerHeight;
 
         cards.forEach((card, index) => {
@@ -37,7 +81,85 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // Escucha el evento de scroll
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Ejecutar al inicio para detectar la posición inicial
+    window.addEventListener("scroll", moverCards);
+    moverCards()// Ejecutar al inicio para detectar la posición inicial
 });
+
+
+//*Opcional
+const seccion2 = document.querySelector('.seccion2');
+const imgFondo= document.getElementById("fondo2");
+const h1 = document.querySelector('h1.lato');
+const parrafo = document.querySelector('p.parrafo-s2');
+const personaje1s2 = document.querySelector('img.personaje1-s2');
+const personaje2s2 = document.querySelector('img.personaje2-s2');
+const cuadroImg = document.querySelector('.img-containter-s2');
+
+const elementos = [h1, parrafo, personaje1s2, personaje2s2, cuadroImg];
+
+let efectoActivo = true; // Flag para controlar el efecto
+
+// Se obtiene la altura de la sección
+const alturaSeccion = seccion2.offsetHeight;
+
+
+// const observerOptions = {
+//     root: null, // Usa el viewport como contenedor
+//     rootMargin: '0px', // Sin margen extra
+//     threshold: 0.2; // Se activa cuando el 10% de la sección es visible
+// };
+
+// const observerCallback = (entries, observer) => {
+//     entries.forEach(entry => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 // Cuando el 60% es visible
+//                 efectoActivo = false; // Desactivar el efecto
+//                 window.removeEventListener("scroll", handleScroll);
+//                 console.log("ENTRO A ENTRY.ISTERSECTING");
+//             } else {
+//                 // Si menos del 60% está visible
+//                 efectoActivo = true; // Reactivar el efecto
+//                 window.addEventListener("scroll", handleScroll);
+//             }
+//         });
+//     });
+// };
+
+// const observer = new IntersectionObserver(observerCallback, observerOptions);
+// observer.observe(seccion2);
+
+function handleScroll() {
+   
+   
+    console.log("Entro al scroll seccion 2");
+
+
+    const scrollY = window.scrollY;
+    console.log("Entro a seccion 2 SCROLL=" + scrollY)
+    
+    
+    if(scrollY > 400){
+        h1.style.transform = `translateY(1px)`;
+        parrafo.style.transform =  `translateY(1px)`;
+        
+        personaje1s2.style.transform =  `translateY(2px)`;
+        personaje2s2.style.transform =  `translateY(1px)`;
+       
+    
+        cuadroImg.style.transform =  `translateY(2px)`;
+
+    }
+    // const maxScroll = alturaSeccion - window.innerHeight;
+
+    // const scrollLimitado = Math.min(scrollY, maxScroll);
+    // imgFondo.style.transform = `translateY(${scrollY * -0.3}px)`;
+
+    // elementos.forEach((element) => {
+    //     if(!element.classList.contains('rebotar')) {
+    //         element.classList.add('rebotar') ;  
+    //     }
+    // })
+};
+document.addEventListener("scroll", handleScroll);
 

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 *{
     margin: 0px;
     padding: 0px;
@@ -9,7 +10,30 @@ body{
     overflow-x: hidden;
     padding: 0;
     margin: 0 auto;
-    font-family: Arial, sans-serif;
+    font-family: f;
+}
+
+.lato{
+    font-family: "Lato";
+
+}
+
+h1{
+    font-family: "Lato";
+}
+h2{
+    font-family: "Lato";
+}
+h3{
+    font-family: "Lato";
+}
+
+label{
+    font-family: "Lato";
+}
+
+p{
+    font-family: "Lato";
 }
 
 .container{
@@ -207,7 +231,7 @@ header{
     width: 1280px;
     height: 959px;
     position: absolute;
-    top: -8px;
+    top: 0px;
     
     
 }

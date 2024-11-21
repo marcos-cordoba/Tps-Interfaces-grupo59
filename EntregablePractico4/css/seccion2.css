@@ -18,6 +18,7 @@
    color: #1B428F;
    left: 100px;
    top:50px;
+   font-family: "Lato", sans-serif;
 }
 .seccion2 .parrafo-s2{
     width: 704px;
@@ -30,24 +31,27 @@
     top: 217px;
     font-size: 20px;
     line-height: 24px;
+    font-family: "Lato", sans-serif;
 }
 
 .img-containter-s2{
-    width: 576.38px;
-    height: 324.35px;
+    width: 547.38px;
+    height: 295.35px;
     position:absolute;
     left: 236px;
     top: 340px;
     border-radius: 77px;
     border: 29px solid #1B428F;
     z-index: 6;
+    overflow: hidden;
 }
 
 
-.img-containter-s2 img{
-    width: 100%;
-    height: 100%;
-    border-radius: 48px;
+.img-containter-s2 .carrousel-s2 img{
+    width: 547.38px;
+    height: 100%x;
+    /* border-radius: 48px; */
+    object-fit: cover;
 }
 
 .contenedor-img-personaje{
@@ -56,16 +60,17 @@
     perspective: 1000px;
     position: absolute;
     z-index: 7;
-    top: 610px;
+    top: 709px;
     left: 0;
 }
 
-.personaje1{
+.personaje1-s2{
     width: 664px;
     height: 543.24px;
-    /* left: 601.64px; */
+    left: -50px; 
     transform-origin: center center;
     transform: rotate3d(0, 1, 0, -180deg);
+    transition: transform 0.2s ease-out;
     
 }
 
@@ -76,12 +81,14 @@
     position: absolute;
     z-index: 7;
     top: -81px;
-    left: 840px;
+    left: 815px;
 }
 
-.personaje2{
+.personaje2-s2{
     width: 572px;
     height: 1259px;
+    left: -50px; 
+    transition: transform 0.2s ease-out;
 }
 
 .cards-seccion2{
@@ -99,8 +106,8 @@
     height: fit-content;
     display: flex;
     flex-direction: column;
-    opacity: 0; /* Oculta las tarjetas inicialmente */
-    transform: translateY(80px); /* Inicia fuera de la vista */
+    opacity: 0; 
+    transform: translateY(100px); 
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .contenedor-card{
@@ -124,12 +131,13 @@
     line-height: 24px;
     position: relative;
     top: 20px;
+    font-family: "Lato", sans-serif;
 }
 
 @keyframes elevate {
     0% {
-        transform: translateY(80px); /* Comienza desde abajo */
-        opacity: 0.7; /* Invisible */
+        transform: translateY(100px); /* Comienza desde abajo */
+        opacity: 0.5; /* Invisible */
     }
     100% {
         transform: translateY(0); /* Se eleva */
@@ -141,8 +149,49 @@
 .card-s2.floated {
     opacity: 1;
     transform: translateY(0);
-    animation: elevate 0.3s ease-in-out forwards;
+    animation: elevate 0.1s ease-in-out forwards;
 }
 
 
+.carrousel-s2 {
+    display: flex; /* Alinea las imágenes horizontalmente */
+    width: calc(547.38px * 4); /* Ajusta el ancho según el contenido */
+    height: 100%;
+    animation: none; /* JavaScript manejará la animación */
+    transition: transform 0.5s ease-in-out; /* Transición suave entre imágenes */
+}
 
+/* @keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+} */
+
+
+
+
+/* opcional */
+
+.img-containter-s2,
+h1.lato,
+p.parrafo-s2,
+.personaje2-s2 {
+  position: relative; 
+  will-change: transform; /* Mejora el rendimiento al animar */
+}
+
+@keyframes rebotar {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-60px);
+    }
+    60% {
+      transform: translateY(-50px);
+    }
+  }
+  .bouncing {
+    animation: rebotar 0.1s infinite ease-in-out;
+  }
