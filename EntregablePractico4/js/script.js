@@ -61,14 +61,14 @@ const personaje3 = document.getElementById('personaje3');
 const capas = [arbolGrande,arbolMedio,arbolChico,arbusto1,arbusto2,arbusto3,arbusto4,piedra1,piedra2,piedra3,piedra4,personaje1,personaje2,personaje3];
 const cargarElemento = () => {
     capas.forEach((c,index) => {
-        c.style.transition = `opacity 0.2s ease ${index * 0.2}s`; // Ajusta la duración y el retraso de la transición
+        c.style.transition = `opacity ease ${index * 0.1}s`; // Ajusta la duración y el retraso de la transición
         c.style.opacity = '1';
         c.classList.add('animacion') // activa la animacion
     });
 };
 
 cargarElemento();
-// Llama a la función después de 5 segundos (para que ocurra despúes del loader)
+
 //Parallax
 //Definimos 2 arreglos distintos ya que los personajes se moveran hacia arriba y el fondo hacia abajo
 const capasPersonajes = [titulo, personaje1, personaje2, personaje3];
@@ -148,36 +148,29 @@ sectionVideo.addEventListener("mouseleave", () => {
 });
 
 //Punto 9
-document.addEventListener("scroll", () => {
-    // function clean() {
-    //     console.log("ESto esta andando")
-    //     document.querySelectorAll(".demoImag").forEach((e) => {
-    //         e.classList.remove("active");
-    //     });
-    // }
+// Selecciona los elementos necesarios
+const imagenes = document.querySelectorAll(".demoImag img"); // Todas las imágenes
+const textos = document.querySelectorAll(".demoInfos > div"); // Todas las secciones de texto
 
-    const scrollPosition = window.scrollY;
-    console.log(scrollPosition)
-    if (scrollPosition < 4500) {
-        //clean();
-        console.log("entro en el primer if")
-        const infoImg0 = document.querySelector("#infoImg0");
-        if (infoImg0) {
-            infoImg0.classList.add("active");
-        } else {
-            console.error("Elemento #infoImg0 no encontrado");
-        }
-    } else if (scrollPosition >= 4500 && scrollPosition < 5000) {
-        //clean();
-        console.log("entro en el segundo if")
-        document.querySelector("#infoImg1").classList.add("active");
-    } else if (scrollPosition >= 5000 && scrollPosition < 5500) {
-        //clean();
-        console.log("entro en el tercer if")
-        document.querySelector("#infoImg2").classList.add("active");
-    } else if (scrollPosition >= 5500) {
-        //clean();
-        console.log("entro en el cuarto if")
-        document.querySelector("#infoImg3").classList.add("active");
+// Configuración del evento scroll
+window.addEventListener("scroll", () => {
+    // Calcula el punto medio de la ventana (en altura) para tener una referencia de posición
+    const centroVentana = window.innerHeight / 2;
+    // Itera sobre cada bloque de texto (descripciones) y su índice correspondiente
+    textos.forEach((texto, index) => {
+    const limitesTexto = texto.getBoundingClientRect();  // Obtiene las dimensiones y la posición del bloque de texto actual en relación a la ventana
+    const centroTexto = limitesTexto.top + limitesTexto.height / 2; // Calcula el centro vertical del bloque de texto sumando su altura dividida entre dos
+    const distancia = Math.abs(centroVentana - centroTexto); // Calcula la distancia entre el centro del bloque de texto y el centro de la ventana
+
+    // Activar la imagen y el texto cuando el centro del texto esté cerca del centro de la ventana
+    if (distancia < limitesTexto.height) {
+      // Desactiva todas las imágenes y textos
+      imagenes.forEach((img) => img.classList.add("inactive"));
+      textos.forEach((txt) => txt.classList.remove("active"));
+
+      // Activa la imagen y el texto actuales
+      imagenes[index].classList.remove("inactive");
+      textos[index].classList.add("active");
     }
+  });
 });
