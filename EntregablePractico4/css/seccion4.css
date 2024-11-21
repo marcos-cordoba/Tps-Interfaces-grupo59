@@ -175,6 +175,7 @@
   
 /* Estilos para imágenes inactivas */
 .inactive {
+
 opacity: 0;
 transform: scale(0.8);
 transition: opacity 0.5s, transform 0.5s;
@@ -182,18 +183,21 @@ transition: opacity 0.5s, transform 0.5s;
   
 /* Estilos para imágenes activas */
 .demoImag img:not(.inactive) {
+ 
 opacity: 1;
 animation: fadeZoomIn 0.5s ease-out;
 }
+
 
 /* Animación de fade-in y zoom-in */
 @keyframes fadeZoomIn {
     0% {
       opacity: 0;
-      transform: scale(0.8);
+     
     }
     100% {
       opacity: 1;
       transform: scale(1);
+      position:sticky;
     }
 }

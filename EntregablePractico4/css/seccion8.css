@@ -136,6 +136,8 @@
 }
 
 #spriteSheet2 {
+    position: absolute;
+    
     z-index: 2;
     width: 70px; /* Ancho de cada fotograma */
     height: 78px; /* Alto de cada fotograma */
@@ -150,6 +152,8 @@
 }
 
 #spriteSheet5 {
+    position: absolute;
+    top: 80px;
     z-index: 2;
     left: 1480px;
     width: 90px; /* Ancho de cada fotograma */
@@ -166,6 +170,8 @@
 
 #spriteSheet8 {
     z-index: 2;
+    position: absolute;
+    top: 20px;
     width: 70px;
     height: 71px;
     background: url(../imagenes/spritesheet-8.png) left center;
@@ -181,4 +187,29 @@
     100% {
       background-position: -772px 0px;
     }
+  }
+
+  
+  
+  .sprite1 {
+    width: 100%; /* Ajusta según el tamaño de tu sol */
+    height: 300px; /* Ajusta según el tamaño de tu sol */
+    background-image: url('../imagenes/spritesheet1.png'); /* Spritesheet del sol */
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    animation: rotate-sun 10s steps(255) infinite; /* 6 frames para la animación */
+    transform-origin: center center; /* Hacer que gire sobre su propio eje */
+    position: absolute;
+    top: 400px;
+    left: 10px;
+    z-index: 1;
+  }
+  
+  @keyframes rotate-sun {
+    0% {
+        background-position: -100px 0;
+      }
+      100% {
+        background-position: 1150px 0px;
+      }
   }

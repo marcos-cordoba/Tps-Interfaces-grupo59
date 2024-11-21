@@ -193,6 +193,7 @@ window.addEventListener("scroll", () => {
       // Activa la imagen y el texto actuales
       imagenes[index].classList.remove("inactive");
       textos[index].classList.add("active");
+      
     }
   });
 });
