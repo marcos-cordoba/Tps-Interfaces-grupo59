@@ -244,11 +244,11 @@ header{
 #fondo {
     width: 1512px;
     height: 959.98px;
-    top: -100px;
-    left: -116px;
-    
+    top: -71px;
+    left: -118px;
     gap: 0px;
     opacity: 0px;
+    
     z-index: 1;
 
 }
@@ -288,33 +288,45 @@ header{
 #arbusto1 {
     width: 191.19px;
     height: 63.28px;
-    top: 630.46px;
+    top: 560.46px;
     left: 1028.46px;
     gap: 0px;
     opacity: 0px;
+    
     z-index: 1;
 }
 
 #arbusto2 {
     width: 244.37px;
     height: 107.71px;
-    top: 662.1px;
+    top: 592.1px;
     left: 1080.97px;
     gap: 0px;
     opacity: 0px;
+    
     z-index: 2;
 }
 
 #arbusto3 {
-    right: 73%;
-    z-index: 3;
-    top: 85%;
+    width: 155.51px;
+    height: 102.33px;
+    top: 751.65px;
+    left: 197.06px;
+    gap: 0px;
+    opacity: 0px;
+    z-index: 6;
+
 }
 
 #arbusto4 {
+    width: 249.76px;
+    height: 114.44px;
+    top: 647.97px;
+    left: 161.38px;
+    gap: 0px;
+    opacity: 0px;
     z-index: 1;
-    right: 68%;
-    top: 73%;
+    
 }
 
 #titulo {
@@ -324,7 +336,7 @@ header{
     left: 360px;
     gap: 0px;
     opacity: 0px;
-    z-index: 5;
+    z-index: 10000000000;
 }
 
 #piedra1 {
@@ -374,33 +386,40 @@ header{
 #personaje1 {
     width: 240.4px;
     height: 314.48px;
-    top: 407.28px;
-    left: 420px;
+    top: 417.28px;
+    left: 451px;
     gap: 0px;
     opacity: 0px;
-    transform: rotate(10deg);
+
+    transform: rotate(-6deg);
+    
     z-index: 5;
     
 }
 
 #personaje2 {
     width: 197px;
-height: 270px;
-top: 326.04px;
-left: 536px;
-gap: 0px;
-opacity: 0px;
-z-index: 2;
-
+    height: 270px;
+    top: 330.04px;
+    left: 558px;
+    gap: 0px;
+    opacity: 0px;
+ 
+    transform: rotate(-6deg);
+    
+    z-index: 2;
+    
 }
 
 #personaje3 {
-    width: 174px;
-height: 384px;
-top: 238px;
-left: 752.25px;
-gap: 0px;
-opacity: 0px;
+    height: 38%;
+    top: 277px;
+    left: 705.25px;
+    gap: 0px;
+    opacity: 0px;
+    transform: rotate(4deg);
+    z-index: 1;
+    
 z-index: 1;
 
 }

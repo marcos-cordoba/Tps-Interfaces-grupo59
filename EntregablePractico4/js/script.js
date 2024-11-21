@@ -24,14 +24,18 @@ const logoGrande = document.querySelector("#titulo");
 const logoChico = document.querySelector(".navbarMedio");
 document.addEventListener("scroll", () => {
     // Control de la opacidad del logo en función del desplazamiento vertical
-    if (window.scrollY < 100) {
-        logoChico.style.opacity = 0; // Si el scroll es menor a 103, establece la opacidad del logo chico en 0
+    if (window.scrollY < 130) {
+        logoChico.style.opacity = 0; // Si el scroll es menor a 100, establece la opacidad del logo chico en 0
+        logoGrande.style.opacity=1;
+        console.log("scroll"+window.scrollY);
     }
-    if (window.scrollY > 100) {
-        logoChico.style.opacity = window.scrollY / 400; // Ajusta la opacidad del logo chico en función del desplazamiento
+    
+    if (window.scrollY > 130) {
+        logoGrande.style.opacity=0;
+        logoChico.style.opacity = 1; // Ajusta la opacidad del logo chico en función del desplazamiento
     }
     // Control de la opacidad y escala del logo grande en función del desplazamiento
-    logoGrande.style.opacity = 1 - window.scrollY / 120;
+    // logoGrande.style.opacity = 1 - window.scrollY / 120;
     const scaleValue = Math.max(1 - window.scrollY / 200, 0.0);
     logoGrande.style.scale = scaleValue; // Ajusta la escala del logo grande
 });
@@ -54,7 +58,7 @@ const piedra4 = document.getElementById('piedra4');
 const personaje1 = document.getElementById('personaje1');
 const personaje2 = document.getElementById('personaje2');
 const personaje3 = document.getElementById('personaje3');
-const capas = [arbolGrande,arbolMedio,arbolChico,arbusto1,arbusto2,arbusto3,arbusto4,titulo,piedra1,piedra2,piedra3,piedra4,personaje1,personaje2,personaje3];
+const capas = [arbolGrande,arbolMedio,arbolChico,arbusto1,arbusto2,arbusto3,arbusto4,piedra1,piedra2,piedra3,piedra4,personaje1,personaje2,personaje3];
 const cargarElemento = () => {
     capas.forEach((c,index) => {
         c.style.transition = `opacity 0.2s ease ${index * 0.2}s`; // Ajusta la duración y el retraso de la transición
