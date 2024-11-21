@@ -35,84 +35,75 @@
     height: auto;
 }
 
-#infoImg0{
+#infoImg0 {
     width: 291px;
     height: 436px;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    top: 4115px;
+    left: 303px;
 }
 
-#infoImg1{
+#infoImg1 {
     width: 379px;
     height: 509px;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    top: 4596px;
+    left: 243px;
 }
 
-#infoImg2{
+#infoImg2 {
     width: 266px;
     height: 479px;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    top: 5128px;
+    left: 303px;
 }
 
-#infoImg3{
+#infoImg3 {
     width: 187px;
     height: 497px;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    top: 5513px;
+    left: 380px;
 }
 
-#infoImg4{
+#infoImg4 {
     width: 475px;
     height: 488px;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    top: 6045px;
+    left: 196px;
 }
 
-#infoImg5{
+#infoImg5 {
     width: 231px;
     height: 509px;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    top: 6532px;
+    left: 375px;
 }
 
-#infoImg6{
+#infoImg6 {
     width: 338px;
     height: 514px;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    top: 7000px;
+    left: 312px;
 }
 
-#infoImg7{
+#infoImg7 {
     width: 134px;
     height: 482px;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    top: 7528px;
+    left: 440px;
 }
 
-#infoImg8{
+#infoImg8 {
     width: 437px;
     height: 499px;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    top: 8030px;
+    left: 243px;
 }
 
-#infoImg9{
+#infoImg9 {
     width: 485px;
     height: 509px;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    top: 8575px;
+    left: 243px;
 }
-
-#infoImg10{
-    width: 359px;
-    height: 488px;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-
 
 /* informacion de la demo */
 .demoInfos {
@@ -181,18 +172,28 @@
     width: 467px;
     height: 148px;
 }
-
-#info9{
-    width: 467px;
-    height: 148px;
+  
+/* Estilos para imágenes inactivas */
+.inactive {
+opacity: 0;
+transform: scale(0.8);
+transition: opacity 0.5s, transform 0.5s;
+}
+  
+/* Estilos para imágenes activas */
+.demoImag img:not(.inactive) {
+opacity: 1;
+animation: fadeZoomIn 0.5s ease-out;
 }
 
-#info10{
-    width: 467px;
-    height: 148px;
-}
-
-.active {
-    opacity: 1;
-    transform: scale(1.05); /* Efecto de zoom suave */
+/* Animación de fade-in y zoom-in */
+@keyframes fadeZoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
 }
