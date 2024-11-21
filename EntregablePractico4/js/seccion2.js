@@ -140,16 +140,16 @@ function handleScroll() {
     console.log("Entro a seccion 2 SCROLL=" + scrollY);
     
     
-    if((scrollY >800) && (scrollY < 1300)){
+    if((scrollY >800) && (scrollY < 1600)){
          console.log("Moviendo elementos en rango de scroll");
-        imgFondo.style.transform = `translateY(${scrollY * -0.3}px)  rotate3d(0, 1, 0, -180deg);`; // Fondo
-        h1.style.transform = `translateY(${scrollY * -0.05}px)`; // Título
-        parrafo.style.transform = `translateY(${scrollY * -0.05}px)`; // Párrafo
+        // imgFondo.style.transform = `translateY(${scrollY * -0.2}px);`; // Fondo
+        h1.style.transform = `translateY(${scrollY * 0.01}px)`; // Título
+        parrafo.style.transform = `translateY(${scrollY * 0.02}px)`; // Párrafo
 
-        personaje1s2.style.transform = `translateY(${scrollY * -0.01}px)`; // Personaje 1
-        personaje2s2.style.transform = `translateY(${scrollY * -0.1}px)`; // Personaje 2
+        personaje1s2.style.transform = `translateY(${scrollY * -0.02}px)  rotate3d(0, 1, 0, -180deg) translateX(${scrollY * 0.05}px`; // Personaje 1
+        personaje2s2.style.transform = `translateY(${scrollY * -0.03}px) translateX(${scrollY * 0.05}px`; // Personaje 2
 
-        cuadroImg.style.transform = `translateY(${scrollY * 0.005}px)`;
+        cuadroImg.style.transform = `translateY(${scrollY * -0.05}px translateX(${scrollY * -0.5}px)`;
 
     }
   

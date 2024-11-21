@@ -45,7 +45,7 @@
     height: 295.35px;
     position:absolute;
     left: 236px;
-    top: 340px;
+    top: 220px;
     border-radius: 77px;
     border: 29px solid #1B428F;
     z-index: 6;
@@ -66,7 +66,7 @@
     perspective: 1000px;
     position: absolute;
     z-index: 7;
-    top: 709px;
+    top: 600px;
     left: 0;
 }
 
