@@ -47,5 +47,7 @@ model-viewer {
     position: absolute;
     top: 10859px;
     right: 100px;
+    /* border: 2px solid red;
+    display: block; */
     
 }
