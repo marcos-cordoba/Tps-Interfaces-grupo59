@@ -6,6 +6,12 @@
     top: 959px;
     z-index: 6;
 }
+
+#fondo2{
+    position: absolute;
+    top: 0px;
+
+}
 .seccion2  h1{
     width: 508px;
     height: 132px;
