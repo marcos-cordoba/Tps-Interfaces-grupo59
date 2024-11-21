@@ -136,30 +136,23 @@ function handleScroll() {
 
 
     const scrollY = window.scrollY;
-    console.log("Entro a seccion 2 SCROLL=" + scrollY)
+    const rect = seccion2.getBoundingClientRect();
+    console.log("Entro a seccion 2 SCROLL=" + scrollY);
     
     
-    if(scrollY > 400){
-        h1.style.transform = `translateY(1px)`;
-        parrafo.style.transform =  `translateY(1px)`;
-        
-        personaje1s2.style.transform =  `translateY(2px)`;
-        personaje2s2.style.transform =  `translateY(1px)`;
-       
-    
-        cuadroImg.style.transform =  `translateY(2px)`;
+    if((scrollY >800) && (scrollY < 1300)){
+         console.log("Moviendo elementos en rango de scroll");
+        imgFondo.style.transform = `translateY(${scrollY * -0.3}px)  rotate3d(0, 1, 0, -180deg);`; // Fondo
+        h1.style.transform = `translateY(${scrollY * -0.05}px)`; // Título
+        parrafo.style.transform = `translateY(${scrollY * -0.05}px)`; // Párrafo
+
+        personaje1s2.style.transform = `translateY(${scrollY * -0.01}px)`; // Personaje 1
+        personaje2s2.style.transform = `translateY(${scrollY * -0.1}px)`; // Personaje 2
+
+        cuadroImg.style.transform = `translateY(${scrollY * 0.005}px)`;
 
     }
-    // const maxScroll = alturaSeccion - window.innerHeight;
-
-    // const scrollLimitado = Math.min(scrollY, maxScroll);
-    // imgFondo.style.transform = `translateY(${scrollY * -0.3}px)`;
-
-    // elementos.forEach((element) => {
-    //     if(!element.classList.contains('rebotar')) {
-    //         element.classList.add('rebotar') ;  
-    //     }
-    // })
-};
+  
+}
 document.addEventListener("scroll", handleScroll);
 
