@@ -22,7 +22,7 @@
 .demoImags {
     width: 100%;
     height: 302px;
-    position: sticky;
+    
     top: 40%;
     display: flex;
     flex-direction: column;
@@ -33,6 +33,7 @@
 .demoImag img {
     position: absolute;
     height: auto;
+    transition: transform 0s ease, opacity 0.3s ease;
 }
 
 #infoImg0 {
@@ -45,7 +46,7 @@
 #infoImg1 {
     width: 379px;
     height: 509px;
-    top: 4596px;
+    top: 4636px;
     left: 243px;
 }
 
@@ -59,35 +60,35 @@
 #infoImg3 {
     width: 187px;
     height: 497px;
-    top: 5513px;
+    top: 5613px;
     left: 380px;
 }
 
 #infoImg4 {
     width: 475px;
     height: 488px;
-    top: 6045px;
+    top: 6145px;
     left: 196px;
 }
 
 #infoImg5 {
     width: 231px;
     height: 509px;
-    top: 6532px;
+    top: 6632px;
     left: 375px;
 }
 
 #infoImg6 {
     width: 338px;
     height: 514px;
-    top: 7000px;
+    top: 7100px;
     left: 312px;
 }
 
 #infoImg7 {
     width: 134px;
     height: 482px;
-    top: 7528px;
+    top: 7588px;
     left: 440px;
 }
 
@@ -101,7 +102,7 @@
 #infoImg9 {
     width: 485px;
     height: 509px;
-    top: 8575px;
+    top: 8475px;
     left: 243px;
 }
 
@@ -185,7 +186,11 @@ transition: opacity 0.5s, transform 0.5s;
 .demoImag img:not(.inactive) {
  
 opacity: 1;
-animation: fadeZoomIn 0.5s ease-out;
+animation: fadeZoomIn 0s ease-out;
+
+}
+.sticky{
+    position:sticky;
 }
 
 
@@ -198,6 +203,5 @@ animation: fadeZoomIn 0.5s ease-out;
     100% {
       opacity: 1;
       transform: scale(1);
-      position:sticky;
     }
 }
