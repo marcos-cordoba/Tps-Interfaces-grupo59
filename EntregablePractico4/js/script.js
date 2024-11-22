@@ -58,7 +58,7 @@ const piedra4 = document.getElementById('piedra4');
 const personaje1 = document.getElementById('personaje1');
 const personaje2 = document.getElementById('personaje2');
 const personaje3 = document.getElementById('personaje3');
-const capas = [arbolGrande,arbolMedio,arbolChico,arbusto1,arbusto2,arbusto3,arbusto4,piedra1,piedra2,piedra3,piedra4,personaje1,personaje2,personaje3];
+const capas = [arbolGrande,arbolMedio,arbolChico,arbusto1,arbusto2,arbusto3,arbusto4,titulo,piedra1,piedra2,piedra3,piedra4,personaje1,personaje2,personaje3];
 const cargarElemento = () => {
     capas.forEach((c,index) => {
         c.style.transition = `opacity ease ${index * 0.1}s`; // Ajusta la duración y el retraso de la transición

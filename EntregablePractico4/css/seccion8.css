@@ -169,16 +169,13 @@
 #spriteSheet8 {
     z-index: 2;
     position: absolute;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    transform-origin: center center;
-    position: absolute;
-    top: 20px;
-    width: 60px;
-    height: 87px;
+    top: -78px;
+    width: 70px;
+    height: 71px;
     background: url(../imagenes/spritesheet-8.png) left center;
-    animation: mover8 0.90s steps(12) infinite;
-    left: 890px;
+    background-size: 772px 82px;
+    animation: mover8 0.905s steps(12) infinite;
+    left: 1200px;
 }
 
 @keyframes mover8 {
@@ -264,6 +261,34 @@
     position: absolute;
     top: 1341px;
     left: 399px;
+    z-index: 4;
+}
+
+.sprite6 {
+    width: 80px;
+    height: 176px;
+    background-image: url(../imagenes/sprite5.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    animation: planta-move 3.50s steps(7) infinite;
+    transform-origin: center center;
+    position: absolute;
+    top: 1341px;
+    left: 46px;
+    z-index: 4;
+}
+
+.sprite7 {
+    width: 80px;
+    height: 176px;
+    background-image: url(../imagenes/sprite5.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    animation: planta-move 3.50s steps(7) infinite;
+    transform-origin: center center;
+    position: absolute;
+    top: 1341px;
+    left: 815px;
     z-index: 4;
 }
 
