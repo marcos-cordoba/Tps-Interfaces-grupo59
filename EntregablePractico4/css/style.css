@@ -474,7 +474,8 @@ header{
     display: flex;
     flex-direction: column;
     position: absolute;
-    margin-left: 100px;
+    
+    left: 200px;
     position: fixed;
     display:none;
     z-index: 100000;
@@ -492,7 +493,7 @@ header{
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-    background: rgba(0, 206, 214,0.5);
+    background: #F39E46;
     backdrop-filter: blur(5px);
     text-transform: uppercase;
 }
