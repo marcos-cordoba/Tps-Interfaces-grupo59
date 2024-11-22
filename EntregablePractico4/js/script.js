@@ -58,7 +58,7 @@ const piedra4 = document.getElementById('piedra4');
 const personaje1 = document.getElementById('personaje1');
 const personaje2 = document.getElementById('personaje2');
 const personaje3 = document.getElementById('personaje3');
-const capas = [arbolGrande,arbolMedio,arbolChico,arbusto1,arbusto2,arbusto3,arbusto4,piedra1,piedra2,piedra3,piedra4,personaje1,personaje2,personaje3];
+const capas = [arbolGrande,arbolMedio,arbolChico,arbusto1,arbusto2,arbusto3,arbusto4,titulo,piedra1,piedra2,piedra3,piedra4,personaje1,personaje2,personaje3];
 const cargarElemento = () => {
     capas.forEach((c,index) => {
         c.style.transition = `opacity ease ${index * 0.1}s`; // Ajusta la duración y el retraso de la transición
@@ -185,15 +185,28 @@ window.addEventListener("scroll", () => {
     const distancia = Math.abs(centroVentana - centroTexto); // Calcula la distancia entre el centro del bloque de texto y el centro de la ventana
 
     // Activar la imagen y el texto cuando el centro del texto esté cerca del centro de la ventana
-    if (distancia < limitesTexto.height) {
+    if (distancia < (limitesTexto.height+60)) {
       // Desactiva todas las imágenes y textos
-      imagenes.forEach((img) => img.classList.add("inactive"));
+      imagenes.forEach((img) => {img.classList.add("inactive");
+                                 img.classList.remove("sticky");
+
+      });
       textos.forEach((txt) => txt.classList.remove("active"));
 
       // Activa la imagen y el texto actuales
       imagenes[index].classList.remove("inactive");
+      imagenes[index].classList.add("sticky");
       textos[index].classList.add("active");
-      
+       // Calcula la traslación en el eje Y según el scroll
+       if(window.scrollY>4084){
+
+           let desplazamientoY = (centroVentana - centroTexto);
+           imagenes[index].style.transform = `translateY(${desplazamientoY}px)`;
+       }
+       
     }
+    
+    
   });
 });
+console.log("scrooooool"+window.scrollY);
