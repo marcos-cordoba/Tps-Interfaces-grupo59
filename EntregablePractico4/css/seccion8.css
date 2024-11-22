@@ -142,13 +142,11 @@
     width: 70px; /* Ancho de cada fotograma */
     height: 78px; /* Alto de cada fotograma */
     background: url(../imagenes/spritesheet-2.png) left center;
-    background-size: 1012px 78px;
     animation: mover2 1.905s steps(12) infinite;
 }
 
 @keyframes mover2 {
-    0% { background-position: 0 0; } /* Comienza desde el inicio */
-    100% { background-position: -1012px 0; } /* 97px * 8 viñetas = 776px */
+    to { background-position: -1012px; }
 }
 
 #spriteSheet5 {
@@ -171,27 +169,23 @@
 #spriteSheet8 {
     z-index: 2;
     position: absolute;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    transform-origin: center center;
+    position: absolute;
     top: 20px;
-    width: 70px;
-    height: 71px;
+    width: 60px;
+    height: 87px;
     background: url(../imagenes/spritesheet-8.png) left center;
-    background-size: 772px 82px;
-    animation: mover8 0.905s steps(12) infinite;
+    animation: mover8 0.90s steps(12) infinite;
     left: 890px;
 }
 
 @keyframes mover8 {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: -772px 0px;
-    }
-  }
-
+    to { background-position: -772px; }
+} 
   
-  
-  .sprite1 {
+.sprite1 {
     width: 100%; /* Ajusta según el tamaño de tu sol */
     height: 300px; /* Ajusta según el tamaño de tu sol */
     background-image: url('../imagenes/spritesheet1.png'); /* Spritesheet del sol */
@@ -203,16 +197,16 @@
     top: 400px;
     left: 10px;
     z-index: 1;
-  }
-  
-  @keyframes rotate-sun {
-    0% {
-        background-position: -100px 0;
-      }
-      100% {
-        background-position: 1150px 0px;
-      }
-  }
+}
+
+@keyframes rotate-sun {
+0% {
+    background-position: -100px 0;
+    }
+    100% {
+    background-position: 1150px 0px;
+    }
+}
 
 .sprite2 {
     width: 76px;
@@ -257,5 +251,23 @@
 }
 @keyframes ave-volando {
     to { background-position: -376px; }
+}
+
+.sprite5 {
+    width: 80px;
+    height: 176px;
+    background-image: url(../imagenes/sprite5.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    animation: planta-move 3.50s steps(7) infinite;
+    transform-origin: center center;
+    position: absolute;
+    top: 1341px;
+    left: 399px;
+    z-index: 4;
+}
+
+@keyframes planta-move {
+    to { background-position: -645px; }
 }
 
