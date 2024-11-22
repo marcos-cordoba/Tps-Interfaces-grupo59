@@ -24,15 +24,19 @@ const logoGrande = document.querySelector("#titulo");
 const logoChico = document.querySelector(".navbarMedio");
 document.addEventListener("scroll", () => {
     // Control de la opacidad del logo en función del desplazamiento vertical
-    if (window.scrollY < 150) {
+    if (window.scrollY < 143) {
         logoChico.style.opacity = 0; // Si el scroll es menor a 100, establece la opacidad del logo chico en 0
         logoGrande.style.opacity=1;
         console.log("scroll"+window.scrollY);
+        
     }
-    
-    if (window.scrollY > 150) {
+   
+    if (window.scrollY > 143) {
         logoGrande.style.opacity=0;
-        logoChico.style.opacity = 1; // Ajusta la opacidad del logo chico en función del desplazamiento
+        
+        logoChico.style.opacity = 1;
+        logoChico.style.zindex = 100;
+        logoGrande.style.zindex = 0; // Ajusta la opacidad del logo chico en función del desplazamiento
     }
     // Control de la opacidad y escala del logo grande en función del desplazamiento
     // logoGrande.style.opacity = 1 - window.scrollY / 120;
