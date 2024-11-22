@@ -213,3 +213,49 @@
         background-position: 1150px 0px;
       }
   }
+
+.sprite2 {
+    width: 76px;
+    height: 87px;
+    background-image: url(../imagenes/sprite2.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    animation: ave-volando 0.75s steps(5) infinite;
+    transform-origin: center center;
+    position: absolute;
+    top: 628px;
+    left: 355px;
+    z-index: 1;
+}
+
+.sprite3 {
+    width: 76px;
+    height: 87px;
+    background-image: url(../imagenes/sprite2.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    animation: ave-volando 0.75s steps(5) infinite;
+    transform-origin: center center;
+    position: absolute;
+    top: 786px;
+    left: 451px;
+    z-index: 1;
+}
+
+.sprite4 {
+    width: 76px;
+    height: 87px;
+    background-image: url(../imagenes/sprite2.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    animation: ave-volando 0.75s steps(5) infinite;
+    transform-origin: center center;
+    position: absolute;
+    top: 679px;
+    left: 551px;
+    z-index: 1;
+}
+@keyframes ave-volando {
+    to { background-position: -376px; }
+}
+
