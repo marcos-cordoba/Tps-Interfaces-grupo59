@@ -171,13 +171,13 @@
 #spriteSheet8 {
     z-index: 2;
     position: absolute;
-    top: 20px;
+    top: -78px;
     width: 70px;
     height: 71px;
     background: url(../imagenes/spritesheet-8.png) left center;
     background-size: 772px 82px;
     animation: mover8 0.905s steps(12) infinite;
-    left: 890px;
+    left: 1200px;
 }
 
 @keyframes mover8 {
